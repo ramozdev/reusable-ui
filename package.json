@@ -6,7 +6,9 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
@@ -48,6 +50,15 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.5.1",
+    "@storybook/addon-interactions": "^7.5.1",
+    "@storybook/addon-links": "^7.5.1",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-styling-webpack": "^0.0.5",
+    "@storybook/blocks": "^7.5.1",
+    "@storybook/nextjs": "^7.5.1",
+    "@storybook/react": "^7.5.1",
+    "@storybook/testing-library": "^0.2.2",
     "@tailwindcss/forms": "^0.5.6",
     "@types/eslint": "^8.44.6",
     "@types/node": "^20.8.9",
@@ -56,11 +67,16 @@
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "autoprefixer": "^10.4.16",
+    "css-loader": "^6.8.1",
     "eslint": "^8.52.0",
     "eslint-config-next": "^13.5.6",
+    "eslint-plugin-storybook": "^0.6.15",
     "postcss": "^8.4.31",
+    "postcss-loader": "^7.3.3",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
+    "storybook": "^7.5.1",
+    "style-loader": "^3.3.3",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   },
