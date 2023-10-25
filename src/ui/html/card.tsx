@@ -1,0 +1,57 @@
+import * as React from "react";
+import { type VariantProps, cva } from "class-variance-authority";
+
+import { twMerge } from "tailwind-merge";
+import { BORDER, ROUNDED, SHADOW } from "@/ui/globals";
+
+const DEFAULT_COLOR = "white_black";
+const DEFAULT_VARIANT = "outline";
+
+const cardVariants = cva(
+  twMerge(
+    `w-full
+  p-4
+  m-px`,
+    ROUNDED,
+    SHADOW,
+    BORDER,
+  ),
+  {
+    variants: {
+      variant: {
+        outline: "",
+        plane: "border-transparent",
+      },
+      color: {
+        white_black: "bg-white",
+      },
+    },
+    compoundVariants: [
+      {
+        color: "white_black",
+        variant: "outline",
+        className: "border-neutral-300",
+      },
+    ],
+    defaultVariants: {
+      variant: DEFAULT_VARIANT,
+      color: DEFAULT_COLOR,
+    },
+  },
+);
+
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof cardVariants>
+>(({ className, color, variant, ...props }, ref) => {
+  return (
+    <div
+      {...props}
+      ref={ref}
+      className={twMerge(cardVariants({ variant, color }), className)}
+    />
+  );
+});
+Card.displayName = "Card";
+
+export { Card };
