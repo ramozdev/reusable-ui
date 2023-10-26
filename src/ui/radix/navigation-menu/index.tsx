@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { type VariantProps } from "class-variance-authority";

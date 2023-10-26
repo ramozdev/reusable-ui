@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import * as SwitchPrimitives from "@radix-ui/react-switch";
 import { type VariantProps } from "class-variance-authority";
