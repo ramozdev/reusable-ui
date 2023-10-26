@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Separator = React.forwardRef<
+const SeparatorRoot = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -18,8 +18,10 @@ const Separator = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Separator.displayName = SeparatorPrimitive.Root.displayName;
+SeparatorRoot.displayName = SeparatorPrimitive.Root.displayName;
 
-const Root = Separator;
+const Root = SeparatorRoot;
 
-export { Root };
+const Separator = { Root };
+
+export default Separator;

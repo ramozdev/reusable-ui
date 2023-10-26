@@ -1,9 +1,9 @@
 "use client";
 
-import * as Button from "@/ui/html/button";
-import * as Form from "@/ui/radix/form";
-import { Input } from "@/ui/html/input";
-import { Textarea } from "@/ui/html/textarea";
+import Button from "@/ui/html/button";
+import Input from "@/ui/html/input";
+import Textarea from "@/ui/html/textarea";
+import Form from "@/ui/radix/form";
 import * as React from "react";
 
 export function FormDemo() {

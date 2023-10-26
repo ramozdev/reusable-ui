@@ -1,5 +1,7 @@
-import * as AlertDialog from "@/ui/radix/alert-dialog";
-import * as Button from "@/ui/html/button";
+"use client";
+
+import AlertDialog from "@/ui/radix/alert-dialog";
+import Button from "@/ui/html/button";
 
 export function AlertDialogDemo() {
   return (

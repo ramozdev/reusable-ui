@@ -7,7 +7,7 @@ import { BORDER, ROUNDED, SHADOW } from "@/ui/globals";
 const DEFAULT_COLOR = "white_black";
 const DEFAULT_VARIANT = "outline";
 
-const cardVariants = cva(
+const card = cva(
   twMerge(
     `w-full
   p-4
@@ -42,16 +42,18 @@ const cardVariants = cva(
 
 const Card = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof cardVariants>
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof card>
 >(({ className, color, variant, ...props }, ref) => {
   return (
     <div
       {...props}
       ref={ref}
-      className={twMerge(cardVariants({ variant, color }), className)}
+      className={twMerge(card({ variant, color }), className)}
     />
   );
 });
 Card.displayName = "Card";
 
-export { Card };
+export { card as cardVariants };
+
+export default Card;

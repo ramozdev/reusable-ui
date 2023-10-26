@@ -11,7 +11,7 @@ const CONTENT_SIDE_OFFSET: HoverCardPrimitive.HoverCardContentProps["sideOffset"
 const CONTENT_ALIGN: HoverCardPrimitive.HoverCardContentProps["align"] =
   "center";
 
-const HoverCard = HoverCardPrimitive.Root;
+const HoverCardRoot = HoverCardPrimitive.Root;
 
 const HoverCardPortal = HoverCardPrimitive.Portal;
 
@@ -56,10 +56,12 @@ const HoverCardArrow = React.forwardRef<
 ));
 HoverCardArrow.displayName = HoverCardPrimitive.Arrow.displayName;
 
-const Root = HoverCard;
+const Root = HoverCardRoot;
 const Trigger = HoverCardTrigger;
 const Content = HoverCardContent;
 const Arrow = HoverCardArrow;
 const Portal = HoverCardPortal;
 
-export { Root, Trigger, Content, Arrow, Portal };
+const HoverCard = { Root, Trigger, Content, Arrow, Portal };
+
+export default HoverCard;

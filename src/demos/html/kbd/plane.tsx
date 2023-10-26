@@ -1,4 +1,4 @@
-import { Kbd } from "@/ui/html/kbd";
+import Kbd from "@/ui/html/kbd";
 
 export function Plane() {
   return (

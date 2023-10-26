@@ -36,4 +36,6 @@ const Fieldset = React.forwardRef<
 });
 Fieldset.displayName = "Fieldset";
 
-export { Fieldset, fieldset };
+export { fieldset };
+
+export default Fieldset;

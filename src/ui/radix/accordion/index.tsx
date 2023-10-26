@@ -8,7 +8,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Accordion = React.forwardRef<
+const AccordionRoot = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -19,7 +19,7 @@ const Accordion = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Accordion.displayName = AccordionPrimitive.Root.displayName;
+AccordionRoot.displayName = AccordionPrimitive.Root.displayName;
 
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
@@ -84,10 +84,12 @@ const AccordionContent = React.forwardRef<
 ));
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
-const Root = Accordion;
+const Root = AccordionRoot;
 const Header = AccordionHeader;
 const Item = AccordionItem;
 const Trigger = AccordionTrigger;
 const Content = AccordionContent;
 
-export { Root, Header, Item, Trigger, Content };
+const Accordion = { Root, Header, Item, Trigger, Content };
+
+export default Accordion;

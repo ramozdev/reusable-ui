@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const ToggleGroup = React.forwardRef<
+const ToggleGroupRoot = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -18,7 +18,7 @@ const ToggleGroup = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
+ToggleGroupRoot.displayName = ToggleGroupPrimitive.Root.displayName;
 
 const ToggleGroupItem = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Item>,
@@ -33,7 +33,9 @@ const ToggleGroupItem = React.forwardRef<
 ));
 ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
 
-const Root = ToggleGroup;
+const Root = ToggleGroupRoot;
 const Item = ToggleGroupItem;
 
-export { Root, Item };
+const ToggleGroup = { Root, Item };
+
+export default ToggleGroup;

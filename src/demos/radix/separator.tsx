@@ -1,4 +1,6 @@
-import * as Separator from "@/ui/radix/separator";
+"use client";
+
+import Separator from "@/ui/radix/separator";
 
 export function SeparatorDemo() {
   return (

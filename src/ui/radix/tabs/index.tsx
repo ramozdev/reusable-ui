@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Tabs = React.forwardRef<
+const TabsRoot = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -18,7 +18,7 @@ const Tabs = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Tabs.displayName = TabsPrimitive.Root.displayName;
+TabsRoot.displayName = TabsPrimitive.Root.displayName;
 
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
@@ -59,9 +59,11 @@ const TabsContent = React.forwardRef<
 ));
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 
-const Root = Tabs;
+const Root = TabsRoot;
 const List = TabsList;
 const Trigger = TabsTrigger;
 const Content = TabsContent;
 
-export { Root, List, Trigger, Content };
+const Tabs = { Root, List, Trigger, Content };
+
+export default Tabs;

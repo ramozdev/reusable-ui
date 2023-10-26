@@ -26,7 +26,7 @@ const MenubarSub = MenubarPrimitive.Sub;
 
 const MenubarRadioGroup = MenubarPrimitive.RadioGroup;
 
-const Menubar = React.forwardRef<
+const MenubarRoot = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -37,7 +37,7 @@ const Menubar = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Menubar.displayName = MenubarPrimitive.Root.displayName;
+MenubarRoot.displayName = MenubarPrimitive.Root.displayName;
 
 const MenubarTrigger = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Trigger>,
@@ -218,7 +218,7 @@ const MenubarRightSlot = React.forwardRef<
 ));
 MenubarRightSlot.displayName = "MenubarRightSlot";
 
-const Root = Menubar;
+const Root = MenubarRoot;
 const Menu = MenubarMenu;
 const Trigger = MenubarTrigger;
 const Content = MenubarContent;
@@ -237,7 +237,7 @@ const Group = MenubarGroup;
 const Sub = MenubarSub;
 const RightSlot = MenubarRightSlot;
 
-export {
+const Menubar = {
   Root,
   Menu,
   Trigger,
@@ -257,3 +257,5 @@ export {
   Sub,
   RightSlot,
 };
+
+export default Menubar;

@@ -54,4 +54,4 @@ const Kbd = React.forwardRef<
 });
 Kbd.displayName = "Kbd";
 
-export { Kbd };
+export default Kbd;

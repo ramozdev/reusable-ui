@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const RadioGroup = React.forwardRef<
+const RadioGroupRoot = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
@@ -19,7 +19,7 @@ const RadioGroup = React.forwardRef<
     />
   );
 });
-RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
+RadioGroupRoot.displayName = RadioGroupPrimitive.Root.displayName;
 
 const RadioGroupItem = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
@@ -61,8 +61,10 @@ const Radio = React.forwardRef<
 ));
 Radio.displayName = "Radio";
 
-const Root = RadioGroup;
+const Root = RadioGroupRoot;
 const Item = RadioGroupItem;
 const Indicator = RadioGroupIndicator;
 
-export { Root, Item, Indicator, Radio };
+const RadioGroup = { Root, Item, Indicator, Radio };
+
+export default RadioGroup;

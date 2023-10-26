@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Dialog = DialogPrimitive.Root;
+const DialogRoot = DialogPrimitive.Root;
 
 const DialogTrigger = DialogPrimitive.Trigger;
 
@@ -67,7 +67,7 @@ const DialogDescription = React.forwardRef<
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
 
-const Root = Dialog;
+const Root = DialogRoot;
 const Trigger = DialogTrigger;
 const Content = DialogContent;
 const Title = DialogTitle;
@@ -76,4 +76,15 @@ const Portal = DialogPortal;
 const Overlay = DialogOverlay;
 const Close = DialogClose;
 
-export { Root, Trigger, Content, Title, Description, Portal, Overlay, Close };
+const Dialog = {
+  Root,
+  Trigger,
+  Content,
+  Title,
+  Description,
+  Portal,
+  Overlay,
+  Close,
+};
+
+export default Dialog;

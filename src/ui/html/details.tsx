@@ -2,7 +2,7 @@ import * as React from "react";
 import { type VariantProps, cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const detailsVariants = cva(``, {
+const details = cva(``, {
   variants: {
     variant: {
       default: "",
@@ -14,22 +14,21 @@ const detailsVariants = cva(``, {
   },
 });
 
-const Details = React.forwardRef<
+const DetailsRoot = React.forwardRef<
   HTMLDetailsElement,
-  React.DetailsHTMLAttributes<HTMLDetailsElement> &
-    VariantProps<typeof detailsVariants>
+  React.DetailsHTMLAttributes<HTMLDetailsElement> & VariantProps<typeof details>
 >(({ className, variant, ...props }, ref) => {
   return (
     <details
       {...props}
       ref={ref}
-      className={twMerge(detailsVariants({ variant }), className)}
+      className={twMerge(details({ variant }), className)}
     />
   );
 });
-Details.displayName = "Details";
+DetailsRoot.displayName = "Details";
 
-const summaryVariants = cva(``, {
+const summary = cva(``, {
   variants: {
     variant: {
       default: "",
@@ -43,19 +42,23 @@ const summaryVariants = cva(``, {
 
 const DetailsSummary = React.forwardRef<
   HTMLElement,
-  React.HTMLAttributes<HTMLElement> & VariantProps<typeof summaryVariants>
+  React.HTMLAttributes<HTMLElement> & VariantProps<typeof summary>
 >(({ className, variant, ...props }, ref) => {
   return (
     <summary
       {...props}
       ref={ref}
-      className={twMerge(summaryVariants({ variant }), className)}
+      className={twMerge(summary({ variant }), className)}
     />
   );
 });
 DetailsSummary.displayName = "DetailsSummary";
 
-const Root = Details;
+const Root = DetailsRoot;
 const Summary = DetailsSummary;
 
-export { Root, Summary, summaryVariants, detailsVariants };
+const Details = { Root, Summary };
+
+export { summary as summaryVariants, details as detailsVariants };
+
+export default Details;

@@ -10,7 +10,7 @@ import { CheckIcon } from "@radix-ui/react-icons";
 
 const CONTENT_SIDE_OFFSET: SelectPrimitive.SelectContentProps["sideOffset"] = 5;
 
-const Select = SelectPrimitive.Root;
+const SelectRoot = SelectPrimitive.Root;
 
 const SelectGroup = SelectPrimitive.Group;
 
@@ -164,7 +164,7 @@ const SelectIcon = React.forwardRef<
 ));
 SelectIcon.displayName = SelectPrimitive.Icon.displayName;
 
-const Root = Select;
+const Root = SelectRoot;
 const Group = SelectGroup;
 const Value = SelectValue;
 const Trigger = SelectTrigger;
@@ -181,7 +181,7 @@ const ScrollDownButton = SelectScrollDownButton;
 const Icon = SelectIcon;
 const Arrow = SelectArrow;
 
-export {
+const Select = {
   Root,
   Group,
   Value,
@@ -199,3 +199,5 @@ export {
   Icon,
   Arrow,
 };
+
+export default Select;

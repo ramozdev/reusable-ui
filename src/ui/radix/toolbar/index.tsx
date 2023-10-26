@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Toolbar = React.forwardRef<
+const ToolbarRoot = React.forwardRef<
   React.ElementRef<typeof ToolbarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ToolbarPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -18,7 +18,7 @@ const Toolbar = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Toolbar.displayName = ToolbarPrimitive.Root.displayName;
+ToolbarRoot.displayName = ToolbarPrimitive.Root.displayName;
 
 const ToolbarButton = React.forwardRef<
   React.ElementRef<typeof ToolbarPrimitive.Button>,
@@ -84,11 +84,13 @@ const ToolbarToggleItem = React.forwardRef<
 ));
 ToolbarToggleItem.displayName = ToolbarPrimitive.ToggleItem.displayName;
 
-const Root = Toolbar;
+const Root = ToolbarRoot;
 const Button = ToolbarButton;
 const Link = ToolbarLink;
 const Separator = ToolbarSeparator;
 const ToggleGroup = ToolbarToggleGroup;
 const ToggleItem = ToolbarToggleItem;
 
-export { Root, Button, Link, Separator, ToggleGroup, ToggleItem };
+const Toolbar = { Root, Button, Link, Separator, ToggleGroup, ToggleItem };
+
+export default Toolbar;

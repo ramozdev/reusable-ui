@@ -5,7 +5,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Progress = React.forwardRef<
+const ProgressRoot = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -16,7 +16,7 @@ const Progress = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Progress.displayName = ProgressPrimitive.Root.displayName;
+ProgressRoot.displayName = ProgressPrimitive.Root.displayName;
 
 const ProgressIndicator = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Indicator>,
@@ -31,7 +31,9 @@ const ProgressIndicator = React.forwardRef<
 ));
 ProgressIndicator.displayName = ProgressPrimitive.Indicator.displayName;
 
-const Root = Progress;
+const Root = ProgressRoot;
 const Indicator = ProgressIndicator;
 
-export { Root, Indicator };
+const Progress = { Root, Indicator };
+
+export default Progress;

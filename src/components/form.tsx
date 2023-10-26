@@ -1,9 +1,9 @@
-import { Input } from "@/ui/html/input";
-import * as Button from "@/ui/html/button";
-import * as A from "@/ui/html/anchor";
-import { Label } from "@/ui/html/label";
-import { Card } from "@/ui/html/card";
-import { Textarea } from "@/ui/html/textarea";
+import Button from "@/ui/html/button";
+import A from "@/ui/html/anchor";
+import Card from "@/ui/html/card";
+import Label from "@/ui/html/label";
+import Input from "@/ui/html/input";
+import Textarea from "@/ui/html/textarea";
 
 export default function Form() {
   return (

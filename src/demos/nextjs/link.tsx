@@ -1,4 +1,4 @@
-import * as Link from "@/ui/nextjs/link";
+import Link from "@/ui/nextjs/link";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export function LinkDemo() {

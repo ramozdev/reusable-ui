@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Checkbox = React.forwardRef<
+const CheckboxRoot = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -18,7 +18,7 @@ const Checkbox = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Checkbox.displayName = CheckboxPrimitive.Root.displayName;
+CheckboxRoot.displayName = CheckboxPrimitive.Root.displayName;
 
 const CheckboxIndicator = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Indicator>,
@@ -33,7 +33,9 @@ const CheckboxIndicator = React.forwardRef<
 ));
 CheckboxIndicator.displayName = CheckboxPrimitive.Indicator.displayName;
 
-const Root = Checkbox;
+const Root = CheckboxRoot;
 const Indicator = CheckboxIndicator;
 
-export { Root, Indicator };
+const Checkbox = { Root, Indicator };
+
+export default Checkbox;

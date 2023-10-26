@@ -9,7 +9,7 @@ import * as variants from "./variants";
 
 const FALLBACK_DELAY_MS: AvatarPrimitive.AvatarFallbackProps["delayMs"] = 600;
 
-const Avatar = React.forwardRef<
+const AvatarRoot = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -20,7 +20,7 @@ const Avatar = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Avatar.displayName = AvatarPrimitive.Root.displayName;
+AvatarRoot.displayName = AvatarPrimitive.Root.displayName;
 
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
@@ -55,8 +55,10 @@ const AvatarFallback = React.forwardRef<
 ));
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
-const Root = Avatar;
+const Root = AvatarRoot;
 const Image = AvatarImage;
 const Fallback = AvatarFallback;
 
-export { Root, Image, Fallback };
+const Avatar = { Root, Image, Fallback };
+
+export default Avatar;

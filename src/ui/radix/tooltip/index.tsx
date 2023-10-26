@@ -14,7 +14,7 @@ const TooltipProvider = TooltipPrimitive.Provider;
 
 const TooltipPortal = TooltipPrimitive.Portal;
 
-const Tooltip = TooltipPrimitive.Root;
+const TooltipRoot = TooltipPrimitive.Root;
 
 const TooltipTrigger = TooltipPrimitive.Trigger;
 
@@ -45,11 +45,13 @@ const TooltipArrow = React.forwardRef<
 ));
 TooltipArrow.displayName = TooltipPrimitive.Arrow.displayName;
 
-const Root = Tooltip;
+const Root = TooltipRoot;
 const Trigger = TooltipTrigger;
 const Content = TooltipContent;
 const Arrow = TooltipArrow;
 const Portal = TooltipPortal;
 const Provider = TooltipProvider;
 
-export { Root, Trigger, Content, Arrow, Portal, Provider };
+const Tooltip = { Root, Trigger, Content, Arrow, Portal, Provider };
+
+export default Tooltip;

@@ -37,7 +37,7 @@ const ToastViewport = React.forwardRef<
 ));
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName;
 
-const Toast = React.forwardRef<
+const ToastRoot = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof variants.root>
@@ -48,7 +48,7 @@ const Toast = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Toast.displayName = ToastPrimitives.Root.displayName;
+ToastRoot.displayName = ToastPrimitives.Root.displayName;
 
 const ToastAction = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Action>,
@@ -86,13 +86,13 @@ const ToastDescription = React.forwardRef<
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
-type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>;
+type ToastProps = React.ComponentPropsWithoutRef<typeof ToastRoot>;
 
 type ToastActionElement = React.ReactElement<typeof ToastAction>;
 
 export type { ToastProps, ToastActionElement };
 
-const Root = Toast;
+const Root = ToastRoot;
 const Title = ToastTitle;
 const Description = ToastDescription;
 const Action = ToastAction;
@@ -100,4 +100,6 @@ const Close = ToastClose;
 const Viewport = ToastViewport;
 const Provider = ToastProvider;
 
-export { Root, Title, Description, Action, Close, Viewport, Provider };
+const Toast = { Root, Title, Description, Action, Close, Viewport, Provider };
+
+export default Toast;

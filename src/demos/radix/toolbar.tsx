@@ -1,4 +1,6 @@
-import * as Toolbar from "@/ui/radix/toolbar";
+"use client";
+
+import Toolbar from "@/ui/radix/toolbar";
 import {
   StrikethroughIcon,
   TextAlignLeftIcon,

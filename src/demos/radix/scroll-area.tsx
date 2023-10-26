@@ -1,7 +1,9 @@
-import * as ScrollArea from "@/ui/radix/scroll-area";
+"use client";
+
+import ScrollArea from "@/ui/radix/scroll-area";
 
 const tags = Array.from({ length: 50 }).map(
-  (_, i, a) => `v12.28.39-beta.${a.length - i}`
+  (_, i, a) => `v12.28.39-beta.${a.length - i}`,
 );
 
 export function ScrollAreaDemo() {

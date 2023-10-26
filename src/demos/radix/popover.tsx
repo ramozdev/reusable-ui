@@ -1,8 +1,10 @@
-import * as Popover from "@/ui/radix/popover";
+"use client";
+
+import Button from "@/ui/html/button";
+import Input from "@/ui/html/input";
+import Label from "@/ui/html/label";
+import Popover from "@/ui/radix/popover";
 import { MixerHorizontalIcon, Cross2Icon } from "@radix-ui/react-icons";
-import * as Button from "@/ui/html/button";
-import { Label } from "@/ui/html/label";
-import { Input } from "@/ui/html/input";
 
 export function PopoverDemo() {
   return (

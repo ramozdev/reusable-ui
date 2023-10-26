@@ -1,4 +1,6 @@
-import * as HoverCard from "@/ui/radix/hover-card";
+"use client";
+
+import HoverCard from "@/ui/radix/hover-card";
 import Image from "next/image";
 
 export function HoverCardDemo() {

@@ -1,4 +1,4 @@
-import * as Anchor from "@/ui/html/anchor";
+import Anchor from "@/ui/html/anchor";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export function AnchorDemo() {

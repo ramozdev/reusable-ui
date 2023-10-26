@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import * as Command from "@/ui/cmdk";
+import Command from "@/ui/cmdk";
 import {
   CalendarIcon,
   FaceIcon,

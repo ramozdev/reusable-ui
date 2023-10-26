@@ -1,4 +1,4 @@
-import * as Table from "@/ui/html/table";
+import Table from "@/ui/html/table";
 
 export function TableDemo() {
   return (

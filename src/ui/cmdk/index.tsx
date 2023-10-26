@@ -135,4 +135,16 @@ const Item = CommandItem;
 const Shortcut = CommandShortcut;
 const Separator = CommandSeparator;
 
-export { Root, Dialog, Input, List, Empty, Group, Item, Shortcut, Separator };
+const Cmdk = {
+  Root,
+  Dialog,
+  Input,
+  List,
+  Empty,
+  Group,
+  Item,
+  Shortcut,
+  Separator,
+};
+
+export default Cmdk;

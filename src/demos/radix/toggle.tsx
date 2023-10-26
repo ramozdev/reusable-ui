@@ -1,4 +1,6 @@
-import * as Toggle from "@/ui/radix/toggle";
+"use client";
+
+import Toggle from "@/ui/radix/toggle";
 import { FontItalicIcon } from "@radix-ui/react-icons";
 
 export function ToggleDemo() {

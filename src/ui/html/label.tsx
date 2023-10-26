@@ -20,4 +20,6 @@ const Label = React.forwardRef<
 });
 Label.displayName = "Label";
 
-export { Label, label };
+export { label };
+
+export default Label;

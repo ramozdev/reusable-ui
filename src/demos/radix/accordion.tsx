@@ -1,4 +1,6 @@
-import * as Accordion from "@/ui/radix/accordion";
+"use client";
+
+import Accordion from "@/ui/radix/accordion";
 
 export function AccordionDemo() {
   return (

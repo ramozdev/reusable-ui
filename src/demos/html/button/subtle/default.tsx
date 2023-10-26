@@ -1,4 +1,4 @@
-import * as Button from "@/ui/html/button";
+import Button from "@/ui/html/button";
 
 export function Default() {
   return (

@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Switch = React.forwardRef<
+const SwitchRoot = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root> &
     VariantProps<typeof variants.root>
@@ -18,7 +18,7 @@ const Switch = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Switch.displayName = SwitchPrimitives.Root.displayName;
+SwitchRoot.displayName = SwitchPrimitives.Root.displayName;
 
 const SwitchThumb = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Thumb>,
@@ -33,7 +33,9 @@ const SwitchThumb = React.forwardRef<
 ));
 SwitchThumb.displayName = SwitchPrimitives.Thumb.displayName;
 
-const Root = Switch;
+const Root = SwitchRoot;
 const Thumb = SwitchThumb;
 
-export { Root, Thumb };
+const Switch = { Root, Thumb };
+
+export default Switch;

@@ -1,4 +1,4 @@
-import * as Button from "@/ui/html/button";
+import Button from "@/ui/html/button";
 import { PlusIcon } from "@radix-ui/react-icons";
 
 export function ButtonDemo() {

@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import * as AspectRatio from "@/ui/radix/aspect-ratio";
+import AspectRatio from "@/ui/radix/aspect-ratio";
 
 export function AspectRatioDemo() {
   return (

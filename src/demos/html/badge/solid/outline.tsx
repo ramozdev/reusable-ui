@@ -1,4 +1,4 @@
-import * as Badge from "@/ui/html/badge";
+import Badge from "@/ui/html/badge";
 
 export function Outline() {
   return (

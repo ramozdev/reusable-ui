@@ -1,4 +1,4 @@
-import { Input } from "@/ui/html/input";
+import Input from "@/ui/html/input";
 
 export function Plane() {
   return (

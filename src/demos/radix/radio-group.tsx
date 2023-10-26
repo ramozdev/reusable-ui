@@ -1,5 +1,7 @@
-import * as Label from "@/ui/radix/label";
-import * as RadioGroup from "@/ui/radix/radio-group";
+"use client";
+
+import Label from "@/ui/radix/label";
+import RadioGroup from "@/ui/radix/radio-group";
 
 export function RadioGroupDemo() {
   return (

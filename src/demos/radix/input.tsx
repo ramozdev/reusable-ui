@@ -1,5 +1,5 @@
-import { Fieldset } from "@/ui/html/fieldset";
-import { Input } from "@/ui/html/input";
+import Fieldset from "@/ui/html/fieldset";
+import Input from "@/ui/html/input";
 
 export function InputDemo() {
   return (

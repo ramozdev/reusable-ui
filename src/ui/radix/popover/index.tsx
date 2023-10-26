@@ -10,7 +10,7 @@ import * as variants from "./variants";
 const CONTENT_SIDE_OFFSET: PopoverPrimitive.PopoverContentProps["sideOffset"] = 5;
 const CONTENT_ALIGN: PopoverPrimitive.PopoverContentProps["align"] = "center";
 
-const Popover = PopoverPrimitive.Root;
+const PopoverRoot = PopoverPrimitive.Root;
 
 const PopoverTrigger = PopoverPrimitive.Trigger;
 
@@ -59,7 +59,7 @@ const PopoverArrow = React.forwardRef<
 ));
 PopoverArrow.displayName = PopoverPrimitive.Arrow.displayName;
 
-const Root = Popover;
+const Root = PopoverRoot;
 const Trigger = PopoverTrigger;
 const Anchor = PopoverAnchor;
 const Content = PopoverContent;
@@ -67,4 +67,6 @@ const Arrow = PopoverArrow;
 const Portal = PopoverPortal;
 const Close = PopoverClose;
 
-export { Root, Trigger, Anchor, Content, Arrow, Portal, Close };
+const Popover = { Root, Trigger, Anchor, Content, Arrow, Portal, Close };
+
+export default Popover;

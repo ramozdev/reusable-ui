@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const AlertDialog = AlertDialogPrimitive.Root;
+const AlertDialogRoot = AlertDialogPrimitive.Root;
 
 const AlertDialogPortal = AlertDialogPrimitive.Portal;
 
@@ -73,7 +73,7 @@ const AlertDialogDescription = React.forwardRef<
 AlertDialogDescription.displayName =
   AlertDialogPrimitive.Description.displayName;
 
-const Root = AlertDialog;
+const Root = AlertDialogRoot;
 const Trigger = AlertDialogTrigger;
 const Overlay = AlertDialogOverlay;
 const Content = AlertDialogContent;
@@ -83,7 +83,7 @@ const Action = AlertDialogAction;
 const Cancel = AlertDialogCancel;
 const Portal = AlertDialogPortal;
 
-export {
+const AlertDialog = {
   Root,
   Trigger,
   Overlay,
@@ -94,3 +94,5 @@ export {
   Cancel,
   Portal,
 };
+
+export default AlertDialog;

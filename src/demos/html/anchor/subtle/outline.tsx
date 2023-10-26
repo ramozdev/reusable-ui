@@ -1,4 +1,4 @@
-import * as Anchor from "@/ui/html/anchor";
+import Anchor from "@/ui/html/anchor";
 
 export function Outline() {
   return (

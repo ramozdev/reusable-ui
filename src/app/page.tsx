@@ -29,12 +29,12 @@ import { SwitchDemo } from "@/demos/radix/switch";
 import { TableDemo } from "@/demos/radix/table";
 import { TabsDemo } from "@/demos/radix/tabs";
 import { TextareaDemo } from "@/demos/radix/textarea";
+import { CommandDemo } from "@/demos/cmdk";
 import { ToastDemo } from "@/demos/radix/toast";
 import { ToggleDemo } from "@/demos/radix/toggle";
 import { ToggleGroupDemo } from "@/demos/radix/toggle-group";
 import { ToolbarDemo } from "@/demos/radix/toolbar";
 import { TooltipDemo } from "@/demos/radix/tooltip";
-import { CommandDemo } from "@/demos/cmdk";
 
 export default function Page() {
   return (

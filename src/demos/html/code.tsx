@@ -1,4 +1,4 @@
-import { Code } from "@/ui/html/code";
+import Code from "@/ui/html/code";
 
 export function CodeDemo() {
   return (

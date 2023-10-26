@@ -1,4 +1,6 @@
-import * as Avatar from "@/ui/radix/avatar";
+"use client";
+
+import Avatar from "@/ui/radix/avatar";
 
 export function AvatarDemo() {
   return (

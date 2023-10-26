@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import * as DropdownMenu from "@/ui/radix/dropdown-menu";
-import * as Button from "@/ui/html/button";
 import {
   HamburgerMenuIcon,
   DotFilledIcon,
   CheckIcon,
   ChevronRightIcon,
 } from "@radix-ui/react-icons";
+import DropdownMenu from "@/ui/radix/dropdown-menu";
+import Button from "@/ui/html/button";
 
 export function DropdownMenuDemo() {
   const [bookmarksChecked, setBookmarksChecked] = React.useState(true);

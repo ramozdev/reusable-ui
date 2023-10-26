@@ -9,7 +9,7 @@ const FormValidityState = FormPrimitive.ValidityState;
 
 const FormSubmit = FormPrimitive.Submit;
 
-const Form = React.forwardRef<
+const FormRoot = React.forwardRef<
   React.ElementRef<typeof FormPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof FormPrimitive.Root>
 >(({ className, ...props }, ref) => (
@@ -19,7 +19,7 @@ const Form = React.forwardRef<
     className={twMerge(`w-[260px]`, className)}
   />
 ));
-Form.displayName = FormPrimitive.Root.displayName;
+FormRoot.displayName = FormPrimitive.Root.displayName;
 
 const FormField = React.forwardRef<
   React.ElementRef<typeof FormPrimitive.Field>,
@@ -70,7 +70,7 @@ const FormMessage = React.forwardRef<
 ));
 FormMessage.displayName = FormPrimitive.Message.displayName;
 
-const Root = Form;
+const Root = FormRoot;
 const Field = FormField;
 const Label = FormLabel;
 const Control = FormControl;
@@ -78,4 +78,6 @@ const Message = FormMessage;
 const ValidityState = FormValidityState;
 const Submit = FormSubmit;
 
-export { Root, Field, Label, Control, Message, ValidityState, Submit };
+const Form = { Root, Field, Label, Control, Message, ValidityState, Submit };
+
+export default Form;

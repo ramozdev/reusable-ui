@@ -37,4 +37,6 @@ const Code = React.forwardRef<
 });
 Code.displayName = "Code";
 
-export { Code, code };
+export { code as codeVariants };
+
+export default Code;

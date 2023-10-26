@@ -1,4 +1,6 @@
-import * as Slider from "@/ui/radix/slider";
+"use client";
+
+import Slider from "@/ui/radix/slider";
 
 export function SliderDemo() {
   return (

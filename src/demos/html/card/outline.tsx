@@ -1,4 +1,4 @@
-import { Card } from "@/ui/html/card";
+import Card from "@/ui/html/card";
 
 export function Outline() {
   return (

@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Slider = React.forwardRef<
+const SliderRoot = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
 >(({ className, ...props }, ref) => (
@@ -20,7 +20,7 @@ const Slider = React.forwardRef<
     )}
   />
 ));
-Slider.displayName = SliderPrimitive.Root.displayName;
+SliderRoot.displayName = SliderPrimitive.Root.displayName;
 
 const SliderTrack = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Track>,
@@ -61,9 +61,11 @@ const SliderThumb = React.forwardRef<
 ));
 SliderThumb.displayName = SliderPrimitive.Thumb.displayName;
 
-const Root = Slider;
+const Root = SliderRoot;
 const Track = SliderTrack;
 const Range = SliderRange;
 const Thumb = SliderThumb;
 
-export { Root, Track, Range, Thumb };
+const Slider = { Root, Track, Range, Thumb };
+
+export default Slider;

@@ -8,7 +8,7 @@ import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 import { ROUNDED } from "@/ui/globals";
 
-const ScrollArea = React.forwardRef<
+const ScrollAreaRoot = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -19,7 +19,7 @@ const ScrollArea = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName;
+ScrollAreaRoot.displayName = ScrollAreaPrimitive.Root.displayName;
 
 const ScrollAreaViewport = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Viewport>,
@@ -78,10 +78,12 @@ const ScrollAreaCorner = React.forwardRef<
 ));
 ScrollAreaCorner.displayName = ScrollAreaPrimitive.Corner.displayName;
 
-const Root = ScrollArea;
+const Root = ScrollAreaRoot;
 const Viewport = ScrollAreaViewport;
 const Scrollbar = ScrollAreaScrollbar;
 const Thumb = ScrollAreaThumb;
 const Corner = ScrollAreaCorner;
 
-export { Root, Viewport, Scrollbar, Thumb, Corner };
+const ScrollArea = { Root, Viewport, Scrollbar, Thumb, Corner };
+
+export default ScrollArea;

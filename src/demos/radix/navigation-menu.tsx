@@ -1,4 +1,6 @@
-import * as NavigationMenu from "@/ui/radix/navigation-menu";
+"use client";
+
+import NavigationMenu from "@/ui/radix/navigation-menu";
 
 const links: { title: string; href: string; children: React.ReactNode }[] = [
   {

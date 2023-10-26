@@ -1,7 +1,7 @@
 "use client";
 
+import Progress from "@/ui/radix/progress";
 import * as React from "react";
-import * as Progress from "@/ui/radix/progress";
 
 export function ProgressDemo() {
   const [progress, setProgress] = React.useState(13);

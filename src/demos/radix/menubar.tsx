@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import * as Menubar from "@/ui/radix/menubar";
+import Menubar from "@/ui/radix/menubar";
 import {
   CheckIcon,
   ChevronRightIcon,

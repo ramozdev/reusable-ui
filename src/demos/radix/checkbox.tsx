@@ -1,4 +1,6 @@
-import * as Checkbox from "@/ui/radix/checkbox";
+"use client";
+
+import Checkbox from "@/ui/radix/checkbox";
 import { CheckIcon } from "@radix-ui/react-icons";
 
 export function CheckboxDemo() {

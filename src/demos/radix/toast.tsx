@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import * as Button from "@/ui/html/button";
-import * as Toast from "@/ui/radix/toast";
+import Button from "@/ui/html/button";
+import Toast from "@/ui/radix/toast";
 
 export function ToastDemo() {
   const [open, setOpen] = React.useState(false);

@@ -1,5 +1,5 @@
-import * as Button from "@/ui/html/button/index";
-import { Card } from "@/ui/html/card";
+import Button from "@/ui/html/button/index";
+import Card from "@/ui/html/card";
 
 export function ButtonDemo() {
   return (

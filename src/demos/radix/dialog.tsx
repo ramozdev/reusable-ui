@@ -1,7 +1,9 @@
-import * as Dialog from "@/ui/radix/dialog";
+"use client";
+
+import Dialog from "@/ui/radix/dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
-import * as Button from "@/ui/html/button";
-import { Input } from "@/ui/html/input";
+import Button from "@/ui/html/button";
+import Input from "@/ui/html/input";
 
 export function DialogDemo() {
   return (

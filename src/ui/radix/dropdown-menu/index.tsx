@@ -11,7 +11,7 @@ const SUB_CONTENT_SIDE_OFFSET: DropdownMenuPrimitive.DropdownMenuSubContentProps
 const SUB_CONTENT_ALIGN_OFFSET: DropdownMenuPrimitive.DropdownMenuSubContentProps["alignOffset"] =
   -9;
 
-const DropdownMenu = DropdownMenuPrimitive.Root;
+const DropdownMenuRoot = DropdownMenuPrimitive.Root;
 
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
 
@@ -192,7 +192,7 @@ const DropdownMenuRightSlot = React.forwardRef<
 ));
 DropdownMenuRightSlot.displayName = "DropdownMenuRightSlot";
 
-const Root = DropdownMenu;
+const Root = DropdownMenuRoot;
 const Trigger = DropdownMenuTrigger;
 const Content = DropdownMenuContent;
 const Item = DropdownMenuItem;
@@ -210,7 +210,7 @@ const ItemIndicator = DropdownMenuItemIndicator;
 const Arrow = DropdownMenuArrow;
 const RightSlot = DropdownMenuRightSlot;
 
-export {
+const DropdownMenu = {
   Root,
   Trigger,
   Content,
@@ -229,3 +229,5 @@ export {
   Arrow,
   RightSlot,
 };
+
+export default DropdownMenu;

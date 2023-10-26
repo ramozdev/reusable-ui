@@ -8,7 +8,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const AspectRatio = React.forwardRef<
+const AspectRatioRoot = React.forwardRef<
   React.ElementRef<typeof AspectRatioPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof AspectRatioPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -19,8 +19,10 @@ const AspectRatio = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-AspectRatio.displayName = AspectRatioPrimitive.Root.displayName;
+AspectRatioRoot.displayName = AspectRatioPrimitive.Root.displayName;
 
-const Root = AspectRatio;
+const Root = AspectRatioRoot;
 
-export { Root };
+const AspectRatio = { Root };
+
+export default AspectRatio;

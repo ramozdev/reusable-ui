@@ -1,6 +1,8 @@
-import * as Tabs from "@/ui/radix/tabs";
-import { Input } from "@/ui/html/input";
-import * as Button from "@/ui/html/button";
+"use client";
+
+import Tabs from "@/ui/radix/tabs";
+import Button from "@/ui/html/button";
+import Input from "@/ui/html/input";
 
 export function TabsDemo() {
   return (

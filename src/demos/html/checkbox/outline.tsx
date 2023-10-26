@@ -1,4 +1,4 @@
-import { Checkbox } from "@/ui/html/checkbox";
+import Checkbox from "@/ui/html/checkbox";
 
 export function Outline() {
   return (

@@ -1,5 +1,7 @@
-import * as Button from "@/ui/html/button";
-import * as Tooltip from "@/ui/radix/tooltip";
+"use client";
+
+import Button from "@/ui/html/button";
+import Tooltip from "@/ui/radix/tooltip";
 import { PlusIcon } from "@radix-ui/react-icons";
 
 export function TooltipDemo() {

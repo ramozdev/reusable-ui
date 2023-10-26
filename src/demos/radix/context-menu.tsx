@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import * as ContextMenu from "@/ui/radix/context-menu";
+import ContextMenu from "@/ui/radix/context-menu";
 import {
   DotFilledIcon,
   CheckIcon,

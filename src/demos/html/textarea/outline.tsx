@@ -1,4 +1,4 @@
-import { Textarea } from "@/ui/html/textarea";
+import Textarea from "@/ui/html/textarea";
 
 export function Outline() {
   return (

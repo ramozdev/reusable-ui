@@ -29,4 +29,4 @@ const Legend = React.forwardRef<
 });
 Legend.displayName = "Legend";
 
-export { Legend };
+export default Legend;

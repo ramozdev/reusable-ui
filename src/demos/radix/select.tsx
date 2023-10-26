@@ -1,4 +1,6 @@
-import * as Select from "@/ui/radix/select";
+"use client";
+
+import Select from "@/ui/radix/select";
 import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
 
 export function SelectDemo() {

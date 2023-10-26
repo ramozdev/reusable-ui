@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import * as Collapsible from "@/ui/radix/collapsible";
+import Collapsible from "@/ui/radix/collapsible";
 import { RowSpacingIcon, Cross2Icon } from "@radix-ui/react-icons";
-import * as Button from "@/ui/html/button";
-import { Card } from "@/ui/html/card";
+import Button from "@/ui/html/button";
+import Card from "@/ui/html/card";
 
 export function CollapsibleDemo() {
   const [open, setOpen] = React.useState(false);

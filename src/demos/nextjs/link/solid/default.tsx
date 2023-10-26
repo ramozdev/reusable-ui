@@ -1,4 +1,4 @@
-import * as Link from "@/ui/nextjs/link";
+import Link from "@/ui/nextjs/link";
 
 export function Default() {
   return (

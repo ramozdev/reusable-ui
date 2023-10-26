@@ -1,5 +1,5 @@
-import * as Badge from "@/ui/html/badge/index";
-import { Card } from "@/ui/html/card";
+import Badge from "@/ui/html/badge/index";
+import Card from "@/ui/html/card";
 
 export function BadgeDemo() {
   return (

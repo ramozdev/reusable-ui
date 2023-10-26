@@ -1,4 +1,4 @@
-import { Select } from "@/ui/html/select";
+import Select from "@/ui/html/select";
 
 export function SelectDemo() {
   return (

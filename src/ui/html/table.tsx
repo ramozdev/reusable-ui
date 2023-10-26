@@ -25,7 +25,7 @@ const table = cva(
   },
 );
 
-const Table = React.forwardRef<
+const TableRoot = React.forwardRef<
   HTMLTableElement,
   React.TableHTMLAttributes<HTMLTableElement> & VariantProps<typeof table>
 >(({ className, variant, ...props }, ref) => {
@@ -37,7 +37,7 @@ const Table = React.forwardRef<
     />
   );
 });
-Table.displayName = "Table";
+TableRoot.displayName = "Table";
 
 const caption = cva("bg-white", {
   variants: {
@@ -129,7 +129,7 @@ const Thead = React.forwardRef<
 });
 Thead.displayName = "Thead";
 
-const Root = Table;
+const Root = TableRoot;
 const Caption = TCaption;
 const Head = Thead;
 const Body = Tbody;
@@ -138,4 +138,17 @@ const Row = Tr;
 const Cell = Td;
 const Header = Th;
 
-export { Root, Caption, Head, Body, Foot, Row, Cell, Header, table, caption };
+const Table = {
+  Root,
+  Caption,
+  Head,
+  Body,
+  Foot,
+  Row,
+  Cell,
+  Header,
+  table,
+  caption,
+};
+
+export default Table;

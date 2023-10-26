@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Label = React.forwardRef<
+const LabelRoot = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -18,8 +18,10 @@ const Label = React.forwardRef<
     className={twMerge(variants.root({ required, color }), className)}
   />
 ));
-Label.displayName = LabelPrimitive.Root.displayName;
+LabelRoot.displayName = LabelPrimitive.Root.displayName;
 
-const Root = Label;
+const Root = LabelRoot;
 
-export { Root };
+const Label = { Root };
+
+export default Label;

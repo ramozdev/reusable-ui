@@ -1,5 +1,7 @@
-import * as Label from "@/ui/radix/label";
-import * as Switch from "@/ui/radix/switch";
+"use client";
+
+import Label from "@/ui/radix/label";
+import Switch from "@/ui/radix/switch";
 
 export function SwitchDemo() {
   return (

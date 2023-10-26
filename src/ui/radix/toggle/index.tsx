@@ -7,7 +7,7 @@ import { type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as variants from "./variants";
 
-const Toggle = React.forwardRef<
+const ToggleRoot = React.forwardRef<
   React.ElementRef<typeof TogglePrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
     VariantProps<typeof variants.root>
@@ -18,8 +18,10 @@ const Toggle = React.forwardRef<
     className={twMerge(variants.root({ color }), className)}
   />
 ));
-Toggle.displayName = TogglePrimitive.Root.displayName;
+ToggleRoot.displayName = TogglePrimitive.Root.displayName;
 
-const Root = Toggle;
+const Root = ToggleRoot;
 
-export { Root };
+const Toggle = { Root };
+
+export default Toggle;

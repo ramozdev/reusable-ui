@@ -1,4 +1,6 @@
-import * as ToggleGroup from "@/ui/radix/toggle-group";
+"use client";
+
+import ToggleGroup from "@/ui/radix/toggle-group";
 import {
   TextAlignLeftIcon,
   TextAlignCenterIcon,

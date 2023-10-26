@@ -15,7 +15,7 @@ const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const NavigationMenuSub = NavigationMenuPrimitive.Sub;
 
-const NavigationMenu = React.forwardRef<
+const NavigationMenuRoot = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, ...props }, ref) => (
@@ -32,7 +32,7 @@ const NavigationMenu = React.forwardRef<
     )}
   />
 ));
-NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
+NavigationMenuRoot.displayName = NavigationMenuPrimitive.Root.displayName;
 
 const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>,
@@ -196,7 +196,7 @@ const NavigationMenuListItemNextjs = React.forwardRef<
 ));
 NavigationMenuListItemNextjs.displayName = "NavigationMenuListItemNextjs";
 
-const Root = NavigationMenu;
+const Root = NavigationMenuRoot;
 const List = NavigationMenuList;
 const Sub = NavigationMenuSub;
 const Item = NavigationMenuItem;
@@ -210,7 +210,7 @@ const CaretDown = NavigationMenuCaretDown;
 const ListItem = NavigationMenuListItem;
 const ListItemNextjs = NavigationMenuListItemNextjs;
 
-export {
+const NavigationMenu = {
   Root,
   List,
   Sub,
@@ -225,3 +225,5 @@ export {
   ListItem,
   ListItemNextjs,
 };
+
+export default NavigationMenu;

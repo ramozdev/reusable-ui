@@ -9,7 +9,7 @@ const SUB_CONTENT_SIDE_OFFSET: ContextMenuPrimitive.ContextMenuSubContentProps["
 const SUB_CONTENT_ALIGN_OFFSET: ContextMenuPrimitive.ContextMenuSubContentProps["alignOffset"] =
   -9;
 
-const ContextMenu = ContextMenuPrimitive.Root;
+const ContextMenuRoot = ContextMenuPrimitive.Root;
 
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger;
 
@@ -176,7 +176,7 @@ const ContextMenuRightSlot = React.forwardRef<
 ));
 ContextMenuRightSlot.displayName = "ContextMenuRightSlot";
 
-const Root = ContextMenu;
+const Root = ContextMenuRoot;
 const Trigger = ContextMenuTrigger;
 const Content = ContextMenuContent;
 const Arrow = ContextMenuArrow;
@@ -194,7 +194,7 @@ const SubTrigger = ContextMenuSubTrigger;
 const RadioGroup = ContextMenuRadioGroup;
 const ItemIndicator = ContextMenuItemIndicator;
 
-export {
+const ContextMenu = {
   Root,
   Trigger,
   Content,
@@ -213,3 +213,5 @@ export {
   RadioGroup,
   ItemIndicator,
 };
+
+export default ContextMenu;

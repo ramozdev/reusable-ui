@@ -1,12 +1,11 @@
 "use client";
 
-import * as Button from "@/ui/html/button";
-import { Fieldset } from "@/ui/html/fieldset";
-
-import { Input } from "@/ui/html/input";
-import * as Label from "@/ui/radix/label";
-import { Legend } from "@/ui/html/legend";
-import { Textarea } from "@/ui/html/textarea";
+import Button from "@/ui/html/button";
+import Fieldset from "@/ui/html/fieldset";
+import Input from "@/ui/html/input";
+import Legend from "@/ui/html/legend";
+import Textarea from "@/ui/html/textarea";
+import Label from "@/ui/radix/label";
 
 export function LabelDemo() {
   return (
