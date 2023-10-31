@@ -5,7 +5,7 @@ const DEFAULT_COLOR = "white_black";
 const overlay = cva(
   `fixed
   inset-0
-  animate-overlay-show
+  data-[state=open]:animate-overlayShow
   backdrop-blur-[2px]`,
   {
     variants: {

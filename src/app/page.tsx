@@ -52,7 +52,9 @@ export default function Page() {
       <CollapsibleDemo />
       <ContextMenuDemo />
       <DialogDemo />
-      <DropdownMenuDemo />
+      <div>
+        <DropdownMenuDemo />
+      </div>
       <FormDemo />
       <HoverCardDemo />
       <InputDemo />

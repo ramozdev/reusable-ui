@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Momentum Labz",
+  title: "Columpio Labs",
   description: "Design systems.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };

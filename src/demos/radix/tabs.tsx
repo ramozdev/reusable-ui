@@ -22,7 +22,7 @@ export function TabsDemo() {
           >
             Name
           </label>
-          <Input id="name" defaultValue="Momentum Labz" />
+          <Input id="name" defaultValue="Columpio Labs" />
         </fieldset>
         <fieldset className="mb-[15px] flex w-full flex-col justify-start">
           <label
@@ -31,7 +31,7 @@ export function TabsDemo() {
           >
             Username
           </label>
-          <Input id="username" defaultValue="@MomentumLabz" />
+          <Input id="username" defaultValue="@ColumpioLabs" />
         </fieldset>
         <div className="mt-5 flex justify-end">
           <Button.Subtle color="neutral" variant="outline">

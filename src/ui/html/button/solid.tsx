@@ -15,8 +15,11 @@ const solidButton = cva(globalButtonStyles, {
       outline: "text-white",
     },
     size: {
-      medium: `px-5 h-10`,
-      icon: `h-6 w-6`,
+      medium: `px-4 py-1`,
+      icon: `h-8
+      w-8
+      [&_>_svg]:h-4
+      [&_>_svg]:w-4`,
     },
     color: {
       neutral: cx(

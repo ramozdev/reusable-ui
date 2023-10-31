@@ -79,7 +79,7 @@ export function ContextMenuDemo() {
               <ContextMenu.ItemIndicator>
                 <DotFilledIcon />
               </ContextMenu.ItemIndicator>
-              Momentum Labz
+              Columpio Labs
             </ContextMenu.RadioItem>
             <ContextMenu.RadioItem value="colm">
               <ContextMenu.ItemIndicator>

@@ -8,14 +8,14 @@ export function HoverCardDemo() {
     <HoverCard.Root>
       <HoverCard.Trigger asChild>
         <a
-          className="inline-block cursor-pointer rounded-full shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] outline-none focus:shadow-[0_0_0_2px_white]"
-          href="https://twitter.com/MomentumLabz"
+          className="inline-block cursor-pointer outline-none"
+          href="https://twitter.com/ColumpioLabs"
           target="_blank"
           rel="noreferrer noopener"
         >
           <Image
-            className="block h-[45px] w-[45px] rounded-full"
-            src="https://github.com/MomentumLabz.png"
+            className="block h-[45px] w-[45px]"
+            src="https://github.com/ColumpioLabs.png"
             alt="Radix UI"
             width={400}
             height={400}
@@ -26,8 +26,8 @@ export function HoverCardDemo() {
         <HoverCard.Content>
           <div className="flex flex-col gap-[7px]">
             <Image
-              className="block h-[60px] w-[60px] rounded-full"
-              src="https://github.com/MomentumLabz.png"
+              className="block h-[60px] w-[60px]"
+              src="https://github.com/ColumpioLabs.png"
               alt="Radix UI"
               width={400}
               height={400}
@@ -35,10 +35,10 @@ export function HoverCardDemo() {
             <div className="flex flex-col gap-[15px]">
               <div>
                 <div className="m-0 text-[15px] font-medium leading-[1.5]">
-                  Momentum Labz
+                  Columpio Labs
                 </div>
                 <div className="m-0 text-[15px] leading-[1.5]">
-                  @MomentumLabz
+                  @ColumpioLabs
                 </div>
               </div>
               <div className="m-0 text-[15px] leading-[1.5]">

@@ -14,8 +14,8 @@ export function AvatarDemo() {
       </Avatar.Root>
       <Avatar.Root>
         <Avatar.Image
-          src="https://github.com/MomentumLabz.png"
-          alt="Momentum Labz"
+          src="https://github.com/ColumpioLabs.png"
+          alt="Columpio Labs"
         />
         <Avatar.Fallback>DR</Avatar.Fallback>
       </Avatar.Root>

@@ -21,7 +21,6 @@ export function DropdownMenuDemo() {
         <Button.Solid
           color="neutral"
           size="icon"
-          className="rounded-full"
           aria-label="Customise options"
         >
           <HamburgerMenuIcon />
@@ -90,7 +89,7 @@ export function DropdownMenuDemo() {
               <DropdownMenu.ItemIndicator>
                 <DotFilledIcon />
               </DropdownMenu.ItemIndicator>
-              Momentum Labz
+              Columpio Labs
             </DropdownMenu.RadioItem>
             <DropdownMenu.RadioItem value="colm">
               <DropdownMenu.ItemIndicator>

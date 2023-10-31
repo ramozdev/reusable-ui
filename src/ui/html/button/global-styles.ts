@@ -8,9 +8,11 @@ gap-2
 select-none
 items-center
 justify-center
-leading-none
 transition
+font-medium
 m-px
+text-sm
+leading-5
 focus:outline-none
 focus:ring-offset-2
 focus:ring-offset-white

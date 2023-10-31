@@ -21,12 +21,7 @@ export function CollapsibleDemo() {
           @peduarte starred 3 repositories
         </span>
         <Collapsible.Trigger asChild>
-          <Button.Solid
-            size="icon"
-            color="neutral"
-            variant="outline"
-            className="rounded-full"
-          >
+          <Button.Solid size="icon" color="neutral" variant="outline">
             {open ? <Cross2Icon /> : <RowSpacingIcon />}
           </Button.Solid>
         </Collapsible.Trigger>

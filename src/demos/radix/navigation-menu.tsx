@@ -107,7 +107,7 @@ export function NavigationMenuDemo() {
 
         <NavigationMenu.Item>
           <NavigationMenu.Link
-            href="https://twitter.com/MomentumLabz"
+            href="https://twitter.com/ColumpioLabs"
             rel="noopener noreferrer"
             target="_blank"
           >

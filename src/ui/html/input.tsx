@@ -12,7 +12,9 @@ const input = cva(
   block
   w-full
   px-3
-  py-2
+  text-sm
+  py-1
+  leading-5
   m-px
   transition
   focus:outline-none

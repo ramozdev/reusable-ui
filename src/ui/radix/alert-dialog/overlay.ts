@@ -5,8 +5,8 @@ const DEFAULT_COLOR = "neutral";
 const overlay = cva(
   `fixed
   inset-0
-  animate-overlay-show
-  data-[state=open]:animate-overlayShow`,
+  data-[state=open]:animate-overlayShow
+  backdrop-blur-[2px]`,
   {
     variants: {
       color: {

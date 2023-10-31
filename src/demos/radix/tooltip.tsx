@@ -9,7 +9,7 @@ export function TooltipDemo() {
     <Tooltip.Provider>
       <Tooltip.Root>
         <Tooltip.Trigger asChild>
-          <Button.Solid size="icon" variant="outline" className="rounded-full">
+          <Button.Solid size="icon" variant="outline">
             <PlusIcon />
           </Button.Solid>
         </Tooltip.Trigger>

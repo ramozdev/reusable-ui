@@ -20,11 +20,11 @@ export function DialogDemo() {
           </Dialog.Description>
           <fieldset className="mb-[15px] flex items-center gap-5">
             <label htmlFor="name">Name</label>
-            <Input id="name" defaultValue="Momentum Labz" />
+            <Input id="name" defaultValue="Columpio Labs" />
           </fieldset>
           <fieldset className="mb-[15px] flex items-center gap-5">
             <label htmlFor="username">Username</label>
-            <Input id="username" defaultValue="@MomentumLabz" />
+            <Input id="username" defaultValue="@ColumpioLabs" />
           </fieldset>
           <div className="mt-[25px] flex justify-end">
             <Dialog.Close asChild>
@@ -35,7 +35,7 @@ export function DialogDemo() {
             <Button.Subtle
               size="icon"
               color="neutral"
-              className="absolute right-[10px] top-[10px] rounded-full"
+              className="absolute right-[10px] top-[10px]"
               aria-label="Close"
             >
               <Cross2Icon />

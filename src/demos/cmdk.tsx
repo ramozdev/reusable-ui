@@ -28,11 +28,9 @@ export function CommandDemo() {
 
   return (
     <>
-      {!open && (
-        <pre className="text-xl">
-          Press <kbd>⌘ K</kbd>
-        </pre>
-      )}
+      <pre>
+        Press <kbd>⌘ K</kbd>
+      </pre>
       <Command.Dialog
         open={open}
         onOpenChange={setOpen}

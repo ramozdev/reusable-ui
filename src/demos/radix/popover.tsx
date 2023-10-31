@@ -53,7 +53,7 @@ export function PopoverDemo() {
             <Button.Solid
               size="icon"
               color="neutral"
-              className="absolute right-[8px] top-[8px] rounded-full"
+              className="absolute right-[8px] top-[8px]"
               variant="outline"
               aria-label="Close"
             >
