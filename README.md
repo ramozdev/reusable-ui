@@ -1,6 +1,6 @@
-# Papel UI
+# Papel UI (Next.js Example)
 
-Papel UI is a collection of re-usable React components for quick prototyping. Instead of installing a dependency, you copy and paste the components into your project.
+Papel UI is a collection of reusable React components for quick prototyping. Instead of installing a dependency, you copy and paste the components into your project.
 
 ## Installation
 
