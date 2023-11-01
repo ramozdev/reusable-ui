@@ -1,39 +1,17 @@
-# Paper Design System
+# Papel UI
 
-Basic components for quick prototyping.
+Papel UI is a collection of re-usable React components for quick prototyping. Instead of installing a dependency, you copy and paste the components into your project.
 
 ## Installation
 
-Create a React app from scratch and add the Paper Design System.
+Papel UI requires the following dev dependencies.
 
-If you already have a React app and want to add Paper to it, follow the
-**[Add to project](/add-to-project)** guide.
+- [TailwindCSS](https://tailwindcss.com/docs/installation/framework-guides)
+- [TypeScript](https://www.typescriptlang.org/download)
+- [class-variance-authority](https://cva.style/docs/getting-started/installation)
+- [tailwind-merge](https://github.com/dcastil/tailwind-merge#readme)
 
-## Steps
-
-### Create a React.js project
-
-We will be using [Next.js](https://nextjs.org) to create a React app. You can use any other React framework.
-
-Execute the following command to create a new Next.js project:
-
-```bash
-pnpm create next-app --ts --tailwind --eslint --src-dir --import-alias "@/*"
-```
-
-```bash
-npx create-next-app@latest --ts --tailwind --eslint --src-dir --import-alias "@/*"
-```
-
-```bash
-yarn create next-app --ts --tailwind --eslint --src-dir --import-alias "@/*"
-```
-
-If you have any problems, follow the official guide to [create a new Next.js app](https://nextjs.org/docs/getting-started).
-
-### Install dependencies
-
-Add [class-variance-authority](https://cva.style/docs) and [tailwind-merge](https://github.com/dcastil/tailwind-merge#readme) as dev dependencies:
+Use this command to install class-variance-authority and tailwind-merge.
 
 ```bash
 pnpm install -D class-variance-authority tailwind-merge
@@ -47,4 +25,97 @@ npm install -D class-variance-authority tailwind-merge
 yarn add -D class-variance-authority tailwind-merge
 ```
 
-These dependencies are required to use Paper. They allow us to create reusable components and to conditionally add Tailwind CSS classes.
+Follow the official guide for your framkework to install [TailwindCSS](https://tailwindcss.com/docs/installation/framework-guides) and [TypeScript](https://www.typescriptlang.org/download).
+
+### Add a Path Alias
+
+The `@/*` path alias should be added to shorten imports from the `ui` directory. Add the following to your `tsconfig.json`:
+
+```json {3-5} filename="tsconfig.json"
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+```
+
+## Usage
+
+Copy and paste the `/ui` folder from this repository into your project.
+
+## File structure (Recommended)
+
+```
+.
+└── src/
+    ├── components/
+    │   ├── navbar.tsx
+    │   ├── page-header.tsx
+    │   └── ...
+    ├── ui/
+    │   ├── html/
+    │   ├── cmdk/
+    │   ├── nextjs/
+    │   ├── radix/
+    │   │   ├── accordion/
+    │   │   │   ├── content.ts
+    │   │   │   ├── index.tsx
+    │   │   │   ├── item.ts
+    │   │   │   ├── root.ts
+    │   │   │   ├── tailwind.ts
+    │   │   │   ├── trigger.ts
+    │   │   │   └── variants.ts
+    │   │   ├── alert-dialog/
+    │   │   └── ...
+    │   └── globals.ts
+    ├── tailwindcss.config.ts
+    └── tsconfig.json
+```
+
+### ui/globals.ts
+
+We use `globals.ts` to make global changes to the components. You can change the border radius, shadow and border for all targeted components by changing the values in this file.
+
+Each variable must be equal to a TailwindCSS class or classes.
+
+```ts filename="globals.ts"
+const ROUNDED = "rounded-md";
+const SHADOW = "shadow-none";
+const BORDER = "border";
+
+export { ROUNDED, SHADOW, BORDER };
+```
+
+The use of `globals.ts` is optional, but highly recommended. You can exclude or include any component to use `globals.ts`.
+
+### TailwindCSS Configuration
+
+Certain components, such as the `<Dialog>`, require animations. We use `tailwindcss.config.ts` to add animations to the components. You can add animations to all targeted components by changing the values in this file.
+
+```ts copy filename="tailwind.config.ts" showLineNumbers {2,10,14}
+import type { Config } from "tailwindcss";
+import { dialog } from "./src/ui/radix/dialog/tailwind";
+
+const config: Config = {
+  // ...
+  theme: {
+    extend: {
+      // ...
+      keyframes: {
+        ...dialog?.keyframes,
+        // ...
+      },
+      animation: {
+        ...dialog?.animation,
+        // ...
+      },
+    },
+  },
+};
+
+module.exports = config;
+```
+
+Now you're ready to use Papel UI in your project.
