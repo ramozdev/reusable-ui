@@ -2,7 +2,7 @@ import { BORDER, ROUNDED, SHADOW } from "@/ui/globals";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "white_black";
+const DEFAULT_COLOR = "white-black";
 
 const content = cva(
   twMerge(
@@ -20,7 +20,7 @@ const content = cva(
   {
     variants: {
       color: {
-        white_black: `bg-white
+        "white-black": `bg-white
         border-neutral-400`,
       },
     },

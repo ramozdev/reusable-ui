@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "white_black";
+const DEFAULT_COLOR = "white-black";
 
 const item = cva(
   `mt-px
@@ -14,7 +14,7 @@ const item = cva(
   {
     variants: {
       color: {
-        white_black: `focus-within:shadow-black`,
+        "white-black": `focus-within:shadow-black`,
       },
     },
     defaultVariants: {

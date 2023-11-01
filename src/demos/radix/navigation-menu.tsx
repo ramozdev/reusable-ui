@@ -48,7 +48,7 @@ export function NavigationMenuDemo() {
             <ul className="m-0 grid list-none gap-[10px] p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
               <li className="row-span-3 grid">
                 <NavigationMenu.ListItemNextjs
-                  color="white_black"
+                  color="white-black"
                   href="#"
                   variant="spotlight"
                 >

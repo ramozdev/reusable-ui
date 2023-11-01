@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "white_black";
+const DEFAULT_COLOR = "white-black";
 
 const trigger = cva(
   `px-5
@@ -23,7 +23,7 @@ const trigger = cva(
   {
     variants: {
       color: {
-        white_black: `bg-white
+        "white-black": `bg-white
           text-neutral-950
           hover:bg-neutral-100
           data-[state=active]:focus:ring-neutral-950`,

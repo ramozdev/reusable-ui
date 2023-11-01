@@ -2,7 +2,7 @@ import { ROUNDED } from "@/ui/globals";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "white_black";
+const DEFAULT_COLOR = "white-black";
 const DEFAULT_VARIANT = "default";
 
 const listItem = cva("", {
@@ -34,12 +34,12 @@ const listItem = cva("", {
       ),
     },
     color: {
-      white_black: "",
+      "white-black": "",
     },
   },
   compoundVariants: [
     {
-      color: "white_black",
+      color: "white-black",
       variant: "default",
       className: `bg-white
             hover:bg-neutral-100`,
@@ -48,7 +48,7 @@ const listItem = cva("", {
     // Spotlight
     // --------------------
     {
-      color: "white_black",
+      color: "white-black",
       variant: "spotlight",
       className: `from-white
     to-black`,

@@ -4,7 +4,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import { BORDER, ROUNDED, SHADOW } from "@/ui/globals";
 
-const DEFAULT_COLOR = "white_black";
+const DEFAULT_COLOR = "white-black";
 const DEFAULT_VARIANT = "outline";
 
 const card = cva(
@@ -23,12 +23,12 @@ const card = cva(
         plane: "border-transparent",
       },
       color: {
-        white_black: "bg-white",
+        "white-black": "bg-white",
       },
     },
     compoundVariants: [
       {
-        color: "white_black",
+        color: "white-black",
         variant: "outline",
         className: "border-neutral-300",
       },

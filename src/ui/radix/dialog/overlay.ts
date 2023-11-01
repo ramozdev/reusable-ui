@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "white_black";
+const DEFAULT_COLOR = "white-black";
 
 const overlay = cva(
   `fixed
@@ -10,7 +10,7 @@ const overlay = cva(
   {
     variants: {
       color: {
-        white_black: "bg-black/10",
+        "white-black": "bg-black/10",
       },
     },
     defaultVariants: {

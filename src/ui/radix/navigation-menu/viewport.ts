@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "white_black";
+const DEFAULT_COLOR = "white-black";
 
 const viewport = cva(
   `data-[state=open]:animate-navigation-menu-scale-in
@@ -18,7 +18,7 @@ const viewport = cva(
   {
     variants: {
       color: {
-        white_black: "bg-white",
+        "white-black": "bg-white",
       },
     },
     defaultVariants: {

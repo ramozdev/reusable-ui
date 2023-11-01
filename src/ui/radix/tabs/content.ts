@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "white_black";
+const DEFAULT_COLOR = "white-black";
 
 const content = cva(
   `grow
@@ -11,7 +11,7 @@ const content = cva(
   {
     variants: {
       color: {
-        white_black: `bg-white
+        "white-black": `bg-white
           focus:ring-neutral-950`,
       },
     },
