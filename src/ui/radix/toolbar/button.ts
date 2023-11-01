@@ -2,10 +2,6 @@ import { BORDER, ROUNDED } from "@/ui/globals";
 import { cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-const DEFAULT_VARIANT = "default";
-const DEFAULT_SIZE = "medium";
-
 const button = cva(
   twMerge(
     `group
@@ -24,6 +20,11 @@ const button = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      variant: "default",
+      color: "neutral",
+      size: "medium",
+    },
     variants: {
       variant: {
         default: "border-transparent text-white",
@@ -73,11 +74,6 @@ const button = cva(
         className: `text-neutral-700`,
       },
     ],
-    defaultVariants: {
-      variant: DEFAULT_VARIANT,
-      color: DEFAULT_COLOR,
-      size: DEFAULT_SIZE,
-    },
   },
 );
 

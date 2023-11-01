@@ -1,7 +1,5 @@
 import { cva, cx } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const link = cva(
   `group
 inline-flex
@@ -16,6 +14,9 @@ focus:ring-offset-4
 focus:ring-offset-white
 focus:ring-2`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: cx(
@@ -25,9 +26,6 @@ focus:ring-2`,
           `focus:ring-neutral-950`,
         ),
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

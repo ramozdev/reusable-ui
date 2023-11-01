@@ -4,11 +4,12 @@ import { type VariantProps, cva, cx } from "class-variance-authority";
 import { globalAnchorStyles } from "@/ui/html/anchor/global-styles";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_VARIANT = "default";
-const DEFAULT_SIZE = "medium";
-const DEFAULT_COLOR = "neutral";
-
 const solidAnchor = cva(globalAnchorStyles, {
+  defaultVariants: {
+    variant: "default",
+    color: "neutral",
+    size: "medium",
+  },
   variants: {
     variant: {
       default: "border-transparent text-white",
@@ -50,11 +51,6 @@ const solidAnchor = cva(globalAnchorStyles, {
                 border-neutral-800`,
     },
   ],
-  defaultVariants: {
-    variant: DEFAULT_VARIANT,
-    color: DEFAULT_COLOR,
-    size: DEFAULT_SIZE,
-  },
 });
 
 const SolidAnchor = React.forwardRef<

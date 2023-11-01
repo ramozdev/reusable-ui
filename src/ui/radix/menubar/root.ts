@@ -2,8 +2,6 @@ import { BORDER, ROUNDED, SHADOW } from "@/ui/globals";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "white-black";
-
 const root = cva(
   twMerge(
     `flex
@@ -17,15 +15,15 @@ const root = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      color: "white-black",
+    },
     variants: {
       color: {
         "white-black": `border-neutral-300
             bg-white
             text-neutral-900`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

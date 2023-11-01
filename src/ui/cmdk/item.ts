@@ -2,8 +2,6 @@ import { ROUNDED } from "@/ui/globals";
 import { cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-
 const item = cva(
   twMerge(
     `relative
@@ -19,6 +17,9 @@ const item = cva(
     ROUNDED,
   ),
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: cx(
@@ -30,9 +31,6 @@ const item = cva(
           `[&_>_[data-role=command-shortcut]]:aria-selected:text-neutral-950`,
         ),
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

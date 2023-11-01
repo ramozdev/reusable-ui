@@ -2,8 +2,6 @@ import { BORDER, ROUNDED } from "@/ui/globals";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-
 const root = cva(
   twMerge(
     `flex
@@ -29,15 +27,15 @@ const root = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: `bg-neutral-50
         [&_[cmdk-group-heading]]:text-neutral-600
         border-neutral-200`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

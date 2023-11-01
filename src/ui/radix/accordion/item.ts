@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "white-black";
-
 const item = cva(
   `mt-px
     overflow-hidden
@@ -12,13 +10,13 @@ const item = cva(
     focus-within:z-10
     focus-within:shadow-[0_0_0_2px]`,
   {
+    defaultVariants: {
+      color: "white-black",
+    },
     variants: {
       color: {
         "white-black": `focus-within:shadow-black`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

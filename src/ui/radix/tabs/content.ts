@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "white-black";
-
 const content = cva(
   `grow
   p-5
@@ -9,14 +7,14 @@ const content = cva(
   outline-none
   focus:ring-1`,
   {
+    defaultVariants: {
+      color: "white-black",
+    },
     variants: {
       color: {
         "white-black": `bg-white
           focus:ring-neutral-950`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

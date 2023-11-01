@@ -2,8 +2,6 @@ import { BORDER } from "@/ui/globals";
 import { cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-
 const thumb = cva(
   twMerge(
     `block
@@ -20,6 +18,9 @@ const thumb = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: cx(
@@ -30,9 +31,6 @@ const thumb = cva(
           `focus:ring-neutral-950`,
         ),
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

@@ -5,11 +5,12 @@ import { globalLinkStyles } from "@/ui/nextjs/link/global-styles";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_VARIANT = "default";
-const DEFAULT_SIZE = "medium";
-const DEFAULT_COLOR = "neutral";
-
 const subtleLink = cva(globalLinkStyles, {
+  defaultVariants: {
+    variant: "default",
+    color: "neutral",
+    size: "medium",
+  },
   variants: {
     variant: {
       default: "border-transparent text-white",
@@ -50,11 +51,6 @@ const subtleLink = cva(globalLinkStyles, {
                 text-neutral-900`,
     },
   ],
-  defaultVariants: {
-    variant: DEFAULT_VARIANT,
-    color: DEFAULT_COLOR,
-    size: DEFAULT_SIZE,
-  },
 });
 
 const SubtleLink = React.forwardRef<

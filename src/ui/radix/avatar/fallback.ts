@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const fallback = cva(
   `flex
   h-full
@@ -13,14 +11,14 @@ const fallback = cva(
   text-[15px]
   font-medium`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: `bg-neutral-50
         text-neutral-900`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

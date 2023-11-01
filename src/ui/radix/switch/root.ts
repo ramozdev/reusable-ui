@@ -1,7 +1,5 @@
 import { cva, cx } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const root = cva(
   `outline-none
   cursor-default
@@ -16,6 +14,9 @@ const root = cva(
   focus:ring-offset-white
   focus:ring-2`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: cx(
@@ -32,9 +33,6 @@ const root = cva(
           `focus:ring-neutral-950`,
         ),
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

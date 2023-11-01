@@ -1,7 +1,5 @@
 import { cva, cx } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const input = cva(
   `appearance-none
   flex
@@ -16,6 +14,9 @@ const input = cva(
   focus-visible:ring-offset-0
   focus-visible:ring-0`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: cx(
@@ -26,9 +27,6 @@ const input = cva(
           `placeholder:text-neutral-500`,
         ),
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

@@ -2,9 +2,6 @@ import { BORDER, ROUNDED } from "@/ui/globals";
 import { cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-const DEFAULT_VARIANT = "outline";
-
 const trigger = cva(
   twMerge(
     `inline-flex
@@ -22,6 +19,10 @@ const trigger = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      variant: "outline",
+      color: "neutral",
+    },
     variants: {
       variant: {
         outline: "",
@@ -50,10 +51,6 @@ const trigger = cva(
         className: `border-neutral-300`,
       },
     ],
-    defaultVariants: {
-      variant: DEFAULT_VARIANT,
-      color: DEFAULT_COLOR,
-    },
   },
 );
 

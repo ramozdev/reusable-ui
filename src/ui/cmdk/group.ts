@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const group = cva(
   `overflow-hidden
   mx-2
@@ -11,14 +9,14 @@ const group = cva(
   [&_[cmdk-group-heading]]:text-sm
   [&_[cmdk-group-heading]]:font-semibold`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: `text-neutral-700
           [&_[cmdk-group-heading]]:text-neutral-900`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

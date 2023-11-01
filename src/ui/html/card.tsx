@@ -4,9 +4,6 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import { BORDER, ROUNDED, SHADOW } from "@/ui/globals";
 
-const DEFAULT_COLOR = "white-black";
-const DEFAULT_VARIANT = "outline";
-
 const card = cva(
   twMerge(
     `w-full
@@ -17,6 +14,10 @@ const card = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      variant: "outline",
+      color: "white-black",
+    },
     variants: {
       variant: {
         outline: "",
@@ -33,10 +34,6 @@ const card = cva(
         className: "border-neutral-300",
       },
     ],
-    defaultVariants: {
-      variant: DEFAULT_VARIANT,
-      color: DEFAULT_COLOR,
-    },
   },
 );
 

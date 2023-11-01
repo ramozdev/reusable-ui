@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const caret = cva(
   `relative
   top-px
@@ -16,7 +14,7 @@ const caret = cva(
       },
     },
     defaultVariants: {
-      color: DEFAULT_COLOR,
+      color: "neutral",
     },
   },
 );

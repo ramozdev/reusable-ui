@@ -2,8 +2,6 @@ import * as React from "react";
 import { type VariantProps, cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-
 const underlineAnchor = cva(
   `group
 inline-flex
@@ -20,6 +18,9 @@ focus-visible:ring-offset-4
 focus-visible:ring-offset-white
 focus-visible:ring-2`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: cx(
@@ -29,9 +30,6 @@ focus-visible:ring-2`,
           `focus-visible:ring-neutral-950`,
         ),
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

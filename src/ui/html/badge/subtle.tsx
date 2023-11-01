@@ -3,10 +3,11 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { globalBadgeStyles } from "@/ui/html/badge/global-styles";
 import { twMerge } from "tailwind-merge";
 
-const DEFUALT_VARIANT = "default";
-const DEFAULT_COLOR = "neutral";
-
 const subtleBadge = cva(globalBadgeStyles, {
+  defaultVariants: {
+    variant: "default",
+    color: "neutral",
+  },
   variants: {
     variant: {
       default: "border-transparent",
@@ -32,10 +33,6 @@ const subtleBadge = cva(globalBadgeStyles, {
                 text-neutral-900`,
     },
   ],
-  defaultVariants: {
-    variant: DEFUALT_VARIANT,
-    color: DEFAULT_COLOR,
-  },
 });
 
 const SubtleBadge = React.forwardRef<

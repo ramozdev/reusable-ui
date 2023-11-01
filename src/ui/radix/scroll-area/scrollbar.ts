@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "white-black";
-
 const scrollbar = cva(
   `flex
 select-none
@@ -15,14 +13,14 @@ data-[orientation=vertical]:w-2.5
 data-[orientation=horizontal]:flex-col
 data-[orientation=horizontal]:h-2.5`,
   {
+    defaultVariants: {
+      color: "white-black",
+    },
     variants: {
       color: {
         "white-black": `bg-white
         hover:bg-neutral-200`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

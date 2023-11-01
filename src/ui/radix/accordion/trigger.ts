@@ -1,7 +1,5 @@
 import { cva, cx } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const trigger = cva(
   `group
   flex
@@ -16,6 +14,9 @@ const trigger = cva(
   leading-none
   outline-none`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: cx(
@@ -25,9 +26,6 @@ const trigger = cva(
           `hover:bg-neutral-200`,
         ),
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

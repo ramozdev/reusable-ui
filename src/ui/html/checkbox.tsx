@@ -3,9 +3,6 @@ import { type VariantProps, cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import { BORDER, ROUNDED, SHADOW } from "@/ui/globals";
 
-const DEFAULT_COLOR = "neutral";
-const DEFAULT_VARIANT = "outline";
-
 const checkbox = cva(
   twMerge(
     `focus:ring-offset-2
@@ -21,6 +18,10 @@ const checkbox = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      variant: "outline",
+      color: "neutral",
+    },
     variants: {
       variant: {
         outline: "",
@@ -48,10 +49,6 @@ const checkbox = cva(
         className: `border-neutral-300`,
       },
     ],
-    defaultVariants: {
-      variant: DEFAULT_VARIANT,
-      color: DEFAULT_COLOR,
-    },
   },
 );
 

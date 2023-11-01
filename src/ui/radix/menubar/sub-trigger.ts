@@ -2,8 +2,6 @@ import { ROUNDED } from "@/ui/globals";
 import { cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-
 const subTrigger = cva(
   twMerge(
     `relative
@@ -17,6 +15,9 @@ const subTrigger = cva(
     ROUNDED,
   ),
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: cx(
@@ -38,9 +39,6 @@ const subTrigger = cva(
         [&_>_[data-role=right-slot]]:data-[highlighted]:data-[state=open]:text-neutral-50`,
         ),
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

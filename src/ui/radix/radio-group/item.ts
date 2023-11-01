@@ -2,8 +2,6 @@ import { BORDER, SHADOW } from "@/ui/globals";
 import { cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-
 const item = cva(
   twMerge(
     `flex
@@ -24,6 +22,9 @@ const item = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: cx(
@@ -39,9 +40,6 @@ const item = cva(
           `focus:ring-neutral-950`,
         ),
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

@@ -13,14 +13,14 @@ const table = cva(
     ROUNDED,
   ),
   {
+    defaultVariants: {
+      variant: `default`,
+    },
     variants: {
       variant: {
         default: ``,
         outline: `bg-transparent`,
       },
-    },
-    defaultVariants: {
-      variant: `default`,
     },
   },
 );

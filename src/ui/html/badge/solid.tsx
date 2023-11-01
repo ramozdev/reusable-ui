@@ -3,10 +3,11 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { globalBadgeStyles } from "@/ui/html/badge/global-styles";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_VARIANT = "default";
-const DEFAULT_COLOR = "neutral";
-
 const solidBadge = cva(globalBadgeStyles, {
+  defaultVariants: {
+    variant: "default",
+    color: "neutral",
+  },
   variants: {
     variant: {
       default: "border-transparent text-white",
@@ -30,10 +31,6 @@ const solidBadge = cva(globalBadgeStyles, {
                 border-neutral-800`,
     },
   ],
-  defaultVariants: {
-    variant: DEFAULT_VARIANT,
-    color: DEFAULT_COLOR,
-  },
 });
 
 const SolidBadge = React.forwardRef<

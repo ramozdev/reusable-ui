@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const root = cva(
   `relative
   inline-flex
@@ -15,13 +13,13 @@ const root = cva(
   rounded-full
   align-middle`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: "bg-neutral-100",
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

@@ -3,9 +3,6 @@ import { type VariantProps, cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import { BORDER, ROUNDED } from "@/ui/globals";
 
-const DEFAULT_COLOR = "neutral";
-const DEFAULT_VARIANT = "outline";
-
 const select = cva(
   twMerge(
     `appearance-none
@@ -20,6 +17,10 @@ const select = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      variant: "outline",
+      color: "neutral",
+    },
     variants: {
       variant: {
         outline: "",
@@ -45,10 +46,6 @@ const select = cva(
         className: `border-neutral-300`,
       },
     ],
-    defaultVariants: {
-      variant: DEFAULT_VARIANT,
-      color: DEFAULT_COLOR,
-    },
   },
 );
 

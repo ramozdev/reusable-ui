@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const track = cva(
   `relative
   flex-1
@@ -11,14 +9,14 @@ const track = cva(
   data-[orientation=vertical]:w-[3px]
   grow`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: `bg-neutral-50
         ring-neutral-300`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

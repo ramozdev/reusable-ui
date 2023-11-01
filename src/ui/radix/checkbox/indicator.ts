@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const indicator = cva(
   `flex
   items-center
@@ -9,14 +7,14 @@ const indicator = cva(
   [&_>_svg]:h-5
   [&_>_svg]:w-5`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: `text-neutral-950
           data-[disabled]:text-neutral-700 `,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

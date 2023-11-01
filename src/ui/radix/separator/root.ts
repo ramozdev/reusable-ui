@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const root = cva(
   `data-[orientation=horizontal]:h-px
   data-[orientation=horizontal]:w-full
@@ -10,13 +8,13 @@ const root = cva(
   data-[orientation=vertical]:w-px
   data-[orientation=vertical]:mx-[15px]`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: "bg-neutral-300",
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

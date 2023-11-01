@@ -2,8 +2,6 @@ import { ROUNDED } from "@/ui/globals";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-
 const scrollButton = cva(
   twMerge(
     `flex
@@ -14,13 +12,13 @@ const scrollButton = cva(
     ROUNDED,
   ),
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: "bg-neutral-50",
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

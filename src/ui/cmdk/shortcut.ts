@@ -1,15 +1,13 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const shortcut = cva(`ml-auto`, {
+  defaultVariants: {
+    color: "neutral",
+  },
   variants: {
     color: {
       neutral: "text-neutral-600",
     },
-  },
-  defaultVariants: {
-    color: DEFAULT_COLOR,
   },
 });
 

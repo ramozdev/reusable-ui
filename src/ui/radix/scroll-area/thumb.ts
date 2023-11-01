@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const thumb = cva(
   `relative
   flex-1 
@@ -17,13 +15,13 @@ const thumb = cva(
   before:-translate-y-1/2
   before:content-['']`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: "bg-neutral-500",
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

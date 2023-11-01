@@ -2,8 +2,6 @@ import { BORDER, ROUNDED } from "@/ui/globals";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "neutral";
-
 const trigger = cva(
   twMerge(
     `flex
@@ -22,6 +20,9 @@ const trigger = cva(
     BORDER,
   ),
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: `text-neutral-900
@@ -38,9 +39,6 @@ const trigger = cva(
             hover:data-[state=open]:bg-neutral-200
             focus:data-[state=open]:bg-neutral-200`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

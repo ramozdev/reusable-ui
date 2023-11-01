@@ -3,14 +3,14 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
 const details = cva(``, {
+  defaultVariants: {
+    variant: `default`,
+  },
   variants: {
     variant: {
       default: "",
       outline: `bg-transparent`,
     },
-  },
-  defaultVariants: {
-    variant: `default`,
   },
 });
 

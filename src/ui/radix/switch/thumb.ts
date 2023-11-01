@@ -1,7 +1,5 @@
 import { cva } from "class-variance-authority";
 
-const DEFAULT_COLOR = "neutral";
-
 const thumb = cva(
   `block
     h-[21px]
@@ -13,14 +11,14 @@ const thumb = cva(
     will-change-transform
     data-[state=checked]:translate-x-[19px]`,
   {
+    defaultVariants: {
+      color: "neutral",
+    },
     variants: {
       color: {
         neutral: `bg-neutral-50
           data-[state=checked]:bg-neutral-100`,
       },
-    },
-    defaultVariants: {
-      color: DEFAULT_COLOR,
     },
   },
 );

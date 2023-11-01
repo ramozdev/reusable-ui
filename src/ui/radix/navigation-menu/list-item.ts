@@ -2,10 +2,11 @@ import { ROUNDED } from "@/ui/globals";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const DEFAULT_COLOR = "white-black";
-const DEFAULT_VARIANT = "default";
-
 const listItem = cva("", {
+  defaultVariants: {
+    variant: "default",
+    color: "white-black",
+  },
   variants: {
     variant: {
       default: twMerge(
@@ -54,10 +55,6 @@ const listItem = cva("", {
     to-black`,
     },
   ],
-  defaultVariants: {
-    variant: DEFAULT_VARIANT,
-    color: DEFAULT_COLOR,
-  },
 });
 
 export { listItem };
