@@ -4,8 +4,8 @@ const DEFAULT_COLOR = "neutral";
 
 const content = cva(
   `text-[15px]
-  data-[state=closed]:animate-slideUp
-  data-[state=open]:animate-slideDown`,
+  data-[state=closed]:animate-accordion-slide-up
+  data-[state=open]:animate-accordion-slide-down`,
   {
     variants: {
       color: {

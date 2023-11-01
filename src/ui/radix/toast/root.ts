@@ -12,12 +12,12 @@ const root = cva(
   grid-cols-[auto_max-content]
   gap-x-[15px]
   items-center
-  data-[state=open]:animate-slideIn
-  data-[state=closed]:animate-hide
+  data-[state=open]:animate-toast-slide-in
+  data-[state=closed]:animate-toast-hide
   data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)]
   data-[swipe=cancel]:translate-x-0
   data-[swipe=cancel]:transition-[transform_200ms_ease-out]
-  data-[swipe=end]:animate-swipeOut`,
+  data-[swipe=end]:animate-toast-swipe-out`,
     ROUNDED,
     BORDER,
   ),

@@ -11,7 +11,7 @@ const dialog = cva(
   top-1/2
   -translate-x-1/2
   -translate-y-1/2
-  data-[state=open]:animate-content-show
+  data-[state=open]:animate-cmdk-content-show
   focus:outline-none`,
     ROUNDED,
     SHADOW,

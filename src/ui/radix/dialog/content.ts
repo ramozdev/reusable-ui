@@ -14,7 +14,7 @@ const content = cva(
   max-w-[500px]
   -translate-x-1/2
   -translate-y-1/2
-  data-[state=open]:animate-contentShow
+  data-[state=open]:animate-dialog-content-show
   p-4
   focus:outline-none
   md:p-6`,

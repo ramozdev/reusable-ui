@@ -17,7 +17,7 @@ const content = cva(
   p-4
   focus:outline-none
   md:p-6
-  data-[state=open]:animate-contentShow`,
+  data-[state=open]:animate-alert-dialog-content-show`,
     ROUNDED,
     SHADOW,
     BORDER,

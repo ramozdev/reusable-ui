@@ -3,48 +3,50 @@ import plugin from "tailwindcss/plugin";
 
 const navigationMenu: NonNullable<Config["theme"]>["extend"] = {
   keyframes: {
-    enterFromRight: {
+    "navigation-menu-enter-from-right": {
       from: { opacity: "0", transform: "translateX(200px)" },
       to: { opacity: "1", transform: "translateX(0)" },
     },
-    enterFromLeft: {
+    "navigation-menu-enter-from-left": {
       from: { opacity: "0", transform: "translateX(-200px)" },
       to: { opacity: "1", transform: "translateX(0)" },
     },
-    exitToRight: {
+    "navigation-menu-exit-to-right": {
       from: { opacity: "1", transform: "translateX(0)" },
       to: { opacity: "0", transform: "translateX(200px)" },
     },
-    exitToLeft: {
+    "navigation-menu-exit-to-left": {
       from: { opacity: "1", transform: "translateX(0)" },
       to: { opacity: "0", transform: "translateX(-200px)" },
     },
-    scaleIn: {
+    "navigation-menu-scale-in": {
       from: { opacity: "0", transform: "rotateX(-10deg) scale(0.9)" },
       to: { opacity: "1", transform: "rotateX(0deg) scale(1)" },
     },
-    scaleOut: {
+    "navigation-menu-scale-out": {
       from: { opacity: "1", transform: "rotateX(0deg) scale(1)" },
       to: { opacity: "0", transform: "rotateX(-10deg) scale(0.95)" },
     },
-    fadeIn: {
+    "navigation-menu-fade-in": {
       from: { opacity: "0" },
       to: { opacity: "1" },
     },
-    fadeOut: {
+    "navigation-menu-fade-out": {
       from: { opacity: "1" },
       to: { opacity: "0" },
     },
   },
   animation: {
-    scaleIn: "scaleIn 200ms ease",
-    scaleOut: "scaleOut 200ms ease",
-    fadeIn: "fadeIn 200ms ease",
-    fadeOut: "fadeOut 200ms ease",
-    enterFromLeft: "enterFromLeft 250ms ease",
-    enterFromRight: "enterFromRight 250ms ease",
-    exitToLeft: "exitToLeft 250ms ease",
-    exitToRight: "exitToRight 250ms ease",
+    "navigation-menu-scale-in": "navigation-menu-scale-in 200ms ease",
+    "navigation-menu-scale-out": "navigation-menu-scale-out 200ms ease",
+    "navigation-menu-fade-in": "navigation-menu-fade-in 200ms ease",
+    "navigation-menu-fade-out": "navigation-menu-fade-out 200ms ease",
+    "navigation-menu-enter-from-left":
+      "navigation-menu-enter-from-left 250ms ease",
+    "navigation-menu-enter-from-right":
+      "navigation-menu-enter-from-right 250ms ease",
+    "navigation-menu-exit-to-left": "navigation-menu-exit-to-left 250ms ease",
+    "navigation-menu-exit-to-right": "navigation-menu-exit-to-right 250ms ease",
   },
 };
 
@@ -56,6 +58,6 @@ const navigationMenuPlugin: NonNullable<Config["plugins"]> = [
       }),
     });
   }),
-]
+];
 
 export { navigationMenu, navigationMenuPlugin };

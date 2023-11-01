@@ -9,10 +9,10 @@ const content = cva(
     `z-50
   p-2
   min-w-[220px]
-  data-[side=top]:animate-slideDownAndFade
-  data-[side=right]:animate-slideLeftAndFade
-  data-[side=bottom]:animate-slideUpAndFade
-  data-[side=left]:animate-slideRightAndFade`,
+  data-[side=top]:animate-dropdown-menu-slide-down-and-fade
+  data-[side=right]:animate-dropdown-menu-slide-left-and-fade
+  data-[side=bottom]:animate-dropdown-menu-slide-up-and-fade
+  data-[side=left]:animate-dropdown-menu-slide-right-and-fade`,
     ROUNDED,
     SHADOW,
     BORDER,

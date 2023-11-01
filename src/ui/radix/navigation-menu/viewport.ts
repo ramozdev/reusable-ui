@@ -3,8 +3,8 @@ import { cva } from "class-variance-authority";
 const DEFAULT_COLOR = "white_black";
 
 const viewport = cva(
-  `data-[state=open]:animate-scaleIn
-  data-[state=closed]:animate-scaleOut
+  `data-[state=open]:animate-navigation-menu-scale-in
+  data-[state=closed]:animate-navigation-menu-scale-out
   relative
   mt-[10px]
   h-[var(--radix-navigation-menu-viewport-height)]
