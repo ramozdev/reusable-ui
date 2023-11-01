@@ -55,7 +55,9 @@ Copy and paste the `/ui` folder from this repository into your project.
     │   │   │   └── variants.ts
     │   │   ├── alert-dialog/
     │   │   └── ...
+    │   └── animations.ts
     │   └── globals.ts
+    │   └── plugins.ts
     ├── tailwindcss.config.ts
     └── tsconfig.json
 ```
@@ -88,34 +90,62 @@ const BORDER = "border";
 export { ROUNDED, SHADOW, BORDER };
 ```
 
+### ui/animations.ts
+
+Contains all the animations created for any of the components.
+
+```ts filename="globals.ts"
+import { type Config } from "tailwindcss";
+import { dropdownMenu } from "./radix/dropdown-menu/tailwind";
+// ...
+
+const animations: NonNullable<Config["theme"]>["extend"] = {
+  keyframes: {
+    ...dropdownMenu?.keyframes,
+    // ...
+  },
+  animation: {
+    ...dropdownMenu?.animation,
+    // ....
+  },
+};
+
+export { animations };
+```
+
+### ui/plugins.ts
+
+Contains all the plugins created for any of the components.
+
+```ts filename="plugins.ts"
+import { navigationMenuPlugin } from "./radix/navigation-menu/tailwind";
+
+const plugins = [...navigationMenuPlugin];
+
+export { plugins };
+```
+
 The use of `globals.ts` is optional, but highly recommended. You can exclude or include any component to use `globals.ts`.
 
 ### TailwindCSS Configuration
 
-Certain components, such as the `<Dialog>`, require animations. We use `tailwindcss.config.ts` to add animations to the components. You can add animations to all targeted components by changing the values in this file.
+Certain components, such as the `<Dialog>`, require animations. We use `tailwindcss.config.ts` to add animations to the components. Import the animations and plugins from `ui/animations.ts` and `ui/plugins.ts` respectively.
 
-```ts copy filename="tailwind.config.ts" showLineNumbers {2,10,14}
-import type { Config } from "tailwindcss";
-import { dialog } from "./src/ui/radix/dialog/tailwind";
+```ts filename="tailwind.config.ts"
+import { type Config } from "tailwindcss";
+import { animations } from "./src/ui/animations";
+import { plugins } from "./src/ui/plugins";
 
-const config: Config = {
+export default {
   // ...
   theme: {
     extend: {
       // ...
-      keyframes: {
-        ...dialog?.keyframes,
-        // ...
-      },
-      animation: {
-        ...dialog?.animation,
-        // ...
-      },
+      ...animations,
     },
   },
-};
-
-module.exports = config;
+  plugins: [require("@tailwindcss/forms"), ...plugins],
+} satisfies Config;
 ```
 
 Now you're ready to use Papel UI in your project.
