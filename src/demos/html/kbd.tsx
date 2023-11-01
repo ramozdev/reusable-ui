@@ -2,22 +2,19 @@ import Kbd from "@/ui/html/kbd";
 
 export function KbdDemo() {
   return (
-    <div className="grid gap-5">
-      <p>
-        <Kbd>⌘</Kbd>
-        <Kbd>Shift</Kbd>
-        <Kbd>R</Kbd>
-      </p>
-      <p>
-        <Kbd variant="skeuomorphic">⌘</Kbd>
-        <Kbd variant="skeuomorphic">Shift</Kbd>
-        <Kbd variant="skeuomorphic">R</Kbd>
-      </p>
-      <p>
-        <Kbd variant="plane">⌘</Kbd>
-        <Kbd variant="plane">Shift</Kbd>
-        <Kbd variant="plane">R</Kbd>
-      </p>
-    </div>
+    <>
+      Please press <Kbd>⌘</Kbd>
+      <Kbd>⇧</Kbd>
+      <Kbd>R</Kbd> (MacOS) / <Kbd>Ctrl</Kbd> + <Kbd>Shift</Kbd> + <Kbd>R</Kbd>{" "}
+      (Windows) to reload this page. Lorem ipsum
+      <Kbd>⌘</Kbd>
+      <Kbd>Ctrl</Kbd> + <Kbd>Shift</Kbd>
+      dolor sit amet,
+      <Kbd>⌘</Kbd>
+      <Kbd>⇧</Kbd>
+      <Kbd>R</Kbd>
+      consectetur adipisicing elit. Dicta eos minus pariatur praesentium nobis
+      voluptate atque dolorum fugit veniam quae!
+    </>
   );
 }

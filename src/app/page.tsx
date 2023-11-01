@@ -1,20 +1,20 @@
-import { AnchorDemo } from "@/demos/radix/anchor";
-import { ButtonDemo } from "@/demos/radix/button";
+import { AnchorDemo } from "@/demos/html/anchor";
+import { ButtonDemo } from "@/demos/html/button";
 import { AccordionDemo } from "@/demos/radix/accordion";
 import { AlertDialogDemo } from "@/demos/radix/alert-dialog";
 import { AspectRatioDemo } from "@/demos/radix/aspect-ratio";
 import { AvatarDemo } from "@/demos/radix/avatar";
-import { BadgeDemo } from "@/demos/radix/badge";
+import { BadgeDemo } from "@/demos/html/badge";
 import { CheckboxDemo } from "@/demos/radix/checkbox";
-import { CodeDemo } from "@/demos/radix/code";
+import { CodeDemo } from "@/demos/html/code";
 import { CollapsibleDemo } from "@/demos/radix/collapsible";
 import { ContextMenuDemo } from "@/demos/radix/context-menu";
 import { DialogDemo } from "@/demos/radix/dialog";
 import { DropdownMenuDemo } from "@/demos/radix/dropdown-menu";
 import { FormDemo } from "@/demos/radix/form";
 import { HoverCardDemo } from "@/demos/radix/hover-card";
-import { InputDemo } from "@/demos/radix/input";
-import { KbdDemo } from "@/demos/radix/kbd";
+import { InputDemo } from "@/demos/html/input";
+import { KbdDemo } from "@/demos/html/kbd";
 import { LabelDemo } from "@/demos/radix/label";
 import { MenubarDemo } from "@/demos/radix/menubar";
 import { NavigationMenuDemo } from "@/demos/radix/navigation-menu";
@@ -28,7 +28,7 @@ import { SliderDemo } from "@/demos/radix/slider";
 import { SwitchDemo } from "@/demos/radix/switch";
 import { TableDemo } from "@/demos/radix/table";
 import { TabsDemo } from "@/demos/radix/tabs";
-import { TextareaDemo } from "@/demos/radix/textarea";
+import { TextareaDemo } from "@/demos/html/textarea";
 import { CommandDemo } from "@/demos/cmdk";
 import { ToastDemo } from "@/demos/radix/toast";
 import { ToggleDemo } from "@/demos/radix/toggle";
@@ -39,7 +39,7 @@ import { TooltipDemo } from "@/demos/radix/tooltip";
 export default function Page() {
   return (
     <div className="mx-auto my-12 max-w-screen-lg space-y-8">
-      <h1 className="text-3xl font-bold">Paper Design System</h1>
+      <h1 className="text-3xl font-bold">Papel UI</h1>
       <AnchorDemo />
       <ButtonDemo />
       <AccordionDemo />

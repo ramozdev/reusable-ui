@@ -1,7 +1,7 @@
 import * as React from "react";
 import { type VariantProps, cva, cx } from "class-variance-authority";
 
-import { globalLinkStyles } from "@/ui/nextjs/link/global-styles";
+import { globalLinkStyles } from "./global-styles";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 

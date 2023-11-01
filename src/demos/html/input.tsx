@@ -1,12 +1,12 @@
+import Fieldset from "@/ui/html/fieldset";
 import Input from "@/ui/html/input";
 
 export function InputDemo() {
   return (
-    <>
-      <label className="sr-only" htmlFor="name">
-        Lorem Ipsum
-      </label>
-      <Input placeholder="Enter your name" name="name" id="name" />
-    </>
+    <Fieldset>
+      <Input type="text" />
+      <Input type="text" placeholder="Placeholder" />
+      <Input type="text" placeholder="Placeholder" disabled />
+    </Fieldset>
   );
 }
