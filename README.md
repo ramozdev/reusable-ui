@@ -27,25 +27,11 @@ yarn add -D class-variance-authority tailwind-merge
 
 Follow the official guide for your framkework to install [TailwindCSS](https://tailwindcss.com/docs/installation/framework-guides) and [TypeScript](https://www.typescriptlang.org/download).
 
-### Add a Path Alias
-
-The `@/*` path alias should be added to shorten imports from the `ui` directory. Add the following to your `tsconfig.json`:
-
-```json {3-5} filename="tsconfig.json"
-{
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
-}
-```
-
 ## Usage
 
 Copy and paste the `/ui` folder from this repository into your project.
 
-## File structure (Recommended)
+### File structure (Recommended)
 
 ```
 .
@@ -72,6 +58,20 @@ Copy and paste the `/ui` folder from this repository into your project.
     │   └── globals.ts
     ├── tailwindcss.config.ts
     └── tsconfig.json
+```
+
+### Add a Path Alias
+
+The `@/*` path alias should be added to shorten imports from the `ui` directory. Add the following to your `tsconfig.json`:
+
+```json {3-5} filename="tsconfig.json"
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
 ```
 
 ### ui/globals.ts
