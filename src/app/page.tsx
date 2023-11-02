@@ -14,7 +14,7 @@ import Label from "@/ui/html/label";
 export default function Page() {
   return (
     <div className="mx-auto my-12 max-w-screen-lg space-y-8">
-      <h1 className="text-3xl font-bold">Pavita UI</h1>
+      <h1 className="text-3xl font-bold">Papel UI</h1>
       <div className="flex justify-between gap-4">
         <div className="grid flex-grow justify-center gap-y-8">
           <div className="flex justify-between gap-2">
