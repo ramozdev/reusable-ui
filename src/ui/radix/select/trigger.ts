@@ -7,10 +7,13 @@ const trigger = cva(
     `inline-flex
   items-center
   justify-center
-  gap-[5px]
+  gap-2
+  outline-none
   outline-none
   px-3
-  py-2
+  text-sm
+  py-1
+  leading-5
   m-px
   transition
   focus:outline-none

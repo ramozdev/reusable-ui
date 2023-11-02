@@ -14,7 +14,7 @@ export function HoverCardDemo() {
           rel="noreferrer noopener"
         >
           <Image
-            className="block h-[45px] w-[45px]"
+            className="block h-8 w-8"
             src="https://github.com/ColumpioLabs.png"
             alt="Radix UI"
             width={400}

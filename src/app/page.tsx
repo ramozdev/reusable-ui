@@ -1,84 +1,48 @@
-import { AnchorDemo } from "@/demos/html/anchor";
-import { ButtonDemo } from "@/demos/html/button";
-import { AccordionDemo } from "@/demos/radix/accordion";
-import { AlertDialogDemo } from "@/demos/radix/alert-dialog";
-import { AspectRatioDemo } from "@/demos/radix/aspect-ratio";
-import { AvatarDemo } from "@/demos/radix/avatar";
-import { BadgeDemo } from "@/demos/html/badge";
 import { CheckboxDemo } from "@/demos/radix/checkbox";
-import { CodeDemo } from "@/demos/html/code";
-import { CollapsibleDemo } from "@/demos/radix/collapsible";
-import { ContextMenuDemo } from "@/demos/radix/context-menu";
-import { DialogDemo } from "@/demos/radix/dialog";
 import { DropdownMenuDemo } from "@/demos/radix/dropdown-menu";
-import { FormDemo } from "@/demos/radix/form";
 import { HoverCardDemo } from "@/demos/radix/hover-card";
-import { InputDemo } from "@/demos/html/input";
-import { KbdDemo } from "@/demos/html/kbd";
-import { LabelDemo } from "@/demos/radix/label";
-import { MenubarDemo } from "@/demos/radix/menubar";
-import { NavigationMenuDemo } from "@/demos/radix/navigation-menu";
-import { PopoverDemo } from "@/demos/radix/popover";
-import { ProgressDemo } from "@/demos/radix/progress";
-import { RadioGroupDemo } from "@/demos/radix/radio-group";
-import { ScrollAreaDemo } from "@/demos/radix/scroll-area";
-import { SelectDemo } from "@/demos/radix/select";
-import { SeparatorDemo } from "@/demos/radix/separator";
 import { SliderDemo } from "@/demos/radix/slider";
-import { SwitchDemo } from "@/demos/radix/switch";
-import { TableDemo } from "@/demos/radix/table";
-import { TabsDemo } from "@/demos/radix/tabs";
-import { TextareaDemo } from "@/demos/html/textarea";
-import { CommandDemo } from "@/demos/cmdk";
-import { ToastDemo } from "@/demos/radix/toast";
-import { ToggleDemo } from "@/demos/radix/toggle";
-import { ToggleGroupDemo } from "@/demos/radix/toggle-group";
-import { ToolbarDemo } from "@/demos/radix/toolbar";
-import { TooltipDemo } from "@/demos/radix/tooltip";
+import Buttons from "@/components/hero/buttons";
+import Badges from "@/components/hero/badges";
+import { ToggleHero } from "@/components/hero/toggle";
+import { RadioGroupHero } from "@/components/hero/radio-group";
+import { SwitchHero } from "@/components/hero/switch";
+import { SelectHero } from "@/components/hero/select";
+import Input from "@/ui/html/input";
+import Label from "@/ui/html/label";
 
 export default function Page() {
   return (
     <div className="mx-auto my-12 max-w-screen-lg space-y-8">
-      <h1 className="text-3xl font-bold">Papel UI</h1>
-      <AnchorDemo />
-      <ButtonDemo />
-      <AccordionDemo />
-      <AlertDialogDemo />
-      <AspectRatioDemo />
-      <AvatarDemo />
-      <BadgeDemo />
-      <CheckboxDemo />
-      <CodeDemo />
-      <CollapsibleDemo />
-      <ContextMenuDemo />
-      <DialogDemo />
-      <div>
-        <DropdownMenuDemo />
+      <h1 className="text-3xl font-bold">Pavita UI</h1>
+      <div className="flex justify-between gap-4">
+        <div className="grid flex-grow justify-center gap-y-8">
+          <div className="flex justify-between gap-2">
+            <HoverCardDemo />
+            <SelectHero />
+            <DropdownMenuDemo />
+          </div>
+          <div>
+            <Label className="sr-only" htmlFor="name">
+              Name
+            </Label>
+            <Input id="name" placeholder="Enter name" />
+          </div>
+          <div className="flex items-center justify-between gap-2">
+            <RadioGroupHero />
+            <div className="grid gap-y-8">
+              <SliderDemo />
+              <div className="flex items-center justify-between">
+                <SwitchHero />
+                <ToggleHero />
+              </div>
+            </div>
+          </div>
+          <Badges />
+          <CheckboxDemo />
+          <Buttons />
+        </div>
       </div>
-      <FormDemo />
-      <HoverCardDemo />
-      <InputDemo />
-      <KbdDemo />
-      <LabelDemo />
-      <MenubarDemo />
-      <NavigationMenuDemo />
-      <PopoverDemo />
-      <ProgressDemo />
-      <RadioGroupDemo />
-      <ScrollAreaDemo />
-      <SelectDemo />
-      <SeparatorDemo />
-      <SliderDemo />
-      <SwitchDemo />
-      <TableDemo />
-      <TabsDemo />
-      <TextareaDemo />
-      <CommandDemo />
-      <ToastDemo />
-      <ToggleDemo />
-      <ToggleGroupDemo />
-      <ToolbarDemo />
-      <TooltipDemo />
     </div>
   );
 }

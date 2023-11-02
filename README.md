@@ -55,8 +55,8 @@ Copy and paste the `/ui` folder from this repository into your project.
     │   │   │   └── variants.ts
     │   │   ├── alert-dialog/
     │   │   └── ...
-    │   └── animations.ts
-    │   └── globals.ts
+    │   ├── animations.ts
+    │   ├── globals.ts
     │   └── plugins.ts
     ├── tailwindcss.config.ts
     └── tsconfig.json
