@@ -2,9 +2,11 @@
 
 import Accordion from "@/ui/radix/accordion";
 
-export function AccordionDemo() {
+type Props = React.ComponentProps<typeof Accordion.Root>;
+
+export function AccordionDemo({ ...props }: Props) {
   return (
-    <Accordion.Root type="single" defaultValue="item-1" collapsible>
+    <Accordion.Root {...props}>
       <Accordion.Item value="item-1">
         <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
         <Accordion.Content>
