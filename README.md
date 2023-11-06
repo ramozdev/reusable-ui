@@ -76,6 +76,18 @@ The `@/*` path alias should be added to shorten imports from the `ui` directory.
 }
 ```
 
+### Use a component
+
+Import the component you want to use from the `ui/` directory.
+
+```tsx filename="src/app/page.tsx"
+import Button from "@/ui/html/button";
+
+export default function Page() {
+  return <Button.Solid>Click me</Button.Solid>;
+}
+```
+
 ### ui/globals.ts
 
 We use `globals.ts` to make global changes to the components. You can change the border radius, shadow and border for all targeted components by changing the values in this file.
@@ -89,6 +101,8 @@ const BORDER = "border";
 
 export { ROUNDED, SHADOW, BORDER };
 ```
+
+The use of `globals.ts` is optional, but highly recommended. You can exclude or include any component to use `globals.ts`.
 
 ### ui/animations.ts
 
@@ -124,8 +138,6 @@ const plugins = [...navigationMenuPlugin];
 
 export { plugins };
 ```
-
-The use of `globals.ts` is optional, but highly recommended. You can exclude or include any component to use `globals.ts`.
 
 ### TailwindCSS Configuration
 
