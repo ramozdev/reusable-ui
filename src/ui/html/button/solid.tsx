@@ -14,6 +14,8 @@ const solidButton = cva(globalButtonStyles, {
     variant: {
       default: "border-transparent text-white",
       outline: "text-white",
+      brutalism:
+        "border border-black text-black dark:border-white dark:text-white rounded-sm",
     },
     size: {
       medium: `px-4 py-1`,
@@ -57,6 +59,18 @@ const solidButton = cva(globalButtonStyles, {
                   border-neutral-800
                   dark:bg-neutral-500
                   dark:border-neutral-600`,
+    },
+    // -------------BRUTALISM-------------
+    {
+      color: "neutral",
+      variant: "brutalism",
+      className: `
+      bg-neutral-50 
+      dark:bg-neutral-950
+      hover:bg-neutral-950
+      dark:hover:bg-neutral-50
+      dark:hover:text-neutral-950
+      `,
     },
   ],
 });

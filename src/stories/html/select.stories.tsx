@@ -20,5 +20,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const SelectStory: Story = {
-  args: {},
+  args: {
+    children: (
+      <>
+        <option value="">Elige un pais</option>
+        <option value="">Dominican Republic</option>
+        <option value="">La creta de tu mai{"'"}</option>
+        <option value="">Si me busca me encuentra</option>
+      </>
+    ),
+  },
 };

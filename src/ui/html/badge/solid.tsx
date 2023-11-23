@@ -12,6 +12,7 @@ const solidBadge = cva(globalBadgeStyles, {
     variant: {
       default: "border-transparent text-white",
       outline: "text-white",
+      brutalism: ``,
     },
     color: {
       neutral: "",
@@ -32,6 +33,11 @@ const solidBadge = cva(globalBadgeStyles, {
                 border-neutral-800
                 dark:bg-neutral-500
                 dark:border-neutral-600`,
+    },
+    {
+      color: "neutral",
+      variant: "brutalism",
+      className: ``,
     },
   ],
 });

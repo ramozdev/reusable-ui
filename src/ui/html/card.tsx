@@ -7,6 +7,7 @@ import { BORDER, ROUNDED, SHADOW } from "@/ui/globals";
 const card = cva(
   twMerge(
     `w-full
+    font-mono
   p-4
   m-px`,
     ROUNDED,
@@ -22,6 +23,7 @@ const card = cva(
       variant: {
         outline: "",
         plane: "border-transparent",
+        brutalism: `rounded max-w-sm`,
       },
       color: {
         "white-black": "bg-white",
@@ -32,6 +34,14 @@ const card = cva(
         color: "white-black",
         variant: "outline",
         className: "border-neutral-300 dark:border-neutral-700",
+      },
+      {
+        color: "white-black",
+        variant: "brutalism",
+        className: `
+        border-2 border-neutral-950 dark:border-neutral-50
+        bg-neutral-50 dark:bg-neutral-950
+        text-neutral-950 dark:text-neutral-50`,
       },
     ],
   },

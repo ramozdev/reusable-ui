@@ -20,5 +20,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const CardStory: Story = {
-  args: {},
+  args: {
+    children: (
+      <p>
+        Indicates that a value is required. Must be shown for any required
+        field, even if all fields in the form are required.
+      </p>
+    ),
+  },
 };

@@ -24,6 +24,7 @@ const select = cva(
     variants: {
       variant: {
         outline: "",
+        brutalism: "rounded",
         plane: "border-transparent",
       },
       color: {
@@ -48,6 +49,18 @@ const select = cva(
         color: "neutral",
         variant: "outline",
         className: `border-neutral-300 dark:border-neutral-700`,
+      },
+      {
+        color: "neutral",
+        variant: "brutalism",
+        className: `
+        border-neutral-950
+        dark:border-neutral-50
+        bg-neutral-50
+        dark:bg-neutral-950
+        text-neutral-950
+        dark:text-neutral-50
+        `,
       },
     ],
   },

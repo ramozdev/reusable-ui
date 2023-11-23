@@ -10,9 +10,9 @@ select-none
 items-center
 justify-center
 leading-none
-rounded-sm
-underline
-hover:no-underline
+underline-offset-2	
+underline-none
+hover:underline
 focus:outline-none
 focus-visible:ring-offset-4
 focus-visible:ring-offset-white
