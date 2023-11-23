@@ -22,7 +22,9 @@ const subtleBadge = cva(globalBadgeStyles, {
       color: "neutral",
       variant: "default",
       className: `bg-neutral-100
-                text-neutral-900`,
+                text-neutral-900
+                dark:bg-neutral-800
+                dark:text-neutral-100`,
     },
     // -------------OUTLINE-------------
     {
@@ -30,7 +32,10 @@ const subtleBadge = cva(globalBadgeStyles, {
       variant: "outline",
       className: `bg-neutral-100
                 border-neutral-300
-                text-neutral-900`,
+                text-neutral-900
+                dark:bg-neutral-800
+                dark:border-neutral-700
+                dark:text-neutral-100`,
     },
   ],
 });

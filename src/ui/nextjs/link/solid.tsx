@@ -24,14 +24,19 @@ const solidLinkVariants = cva(globalLinkStyles, {
       neutral: cx(
         // HOVER
         `hover:bg-neutral-700
-          hover:text-white`,
+          hover:text-white
+          dark:hover:bg-neutral-500
+          dark:hover:text-white`,
 
         // FOCUS-VISIBLE
-        `focus-visible:ring-neutral-950`,
+        `focus-visible:ring-neutral-950
+          dark:focus-visible:ring-neutral-500`,
 
         // ACTIVE
         `active:bg-neutral-800
-          active:text-white`,
+          active:text-white
+          dark:active:bg-neutral-600
+            dark:active:text-white`,
       ),
     },
   },
@@ -39,14 +44,16 @@ const solidLinkVariants = cva(globalLinkStyles, {
     {
       color: "neutral",
       variant: "default",
-      className: `bg-neutral-600`,
+      className: `bg-neutral-600 dark:bg-neutral-500`,
     },
     // -------------OUTLINE-------------
     {
       color: "neutral",
       variant: "outline",
       className: `bg-neutral-600
-                border-neutral-800`,
+                border-neutral-800
+                dark:bg-neutral-500
+                dark:border-neutral-700`,
     },
   ],
 });

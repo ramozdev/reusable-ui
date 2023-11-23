@@ -29,16 +29,21 @@ const textarea = cva(
       color: {
         neutral: cx(
           `bg-neutral-50
-          text-neutral-900`,
+          text-neutral-900
+          dark:bg-neutral-800
+          dark:text-neutral-100`,
 
           // PLACEHOLDER
-          `placeholder:text-neutral-500`,
+          `placeholder:text-neutral-500
+          dark:placeholder:text-neutral-400`,
 
           // FOCUS VISIBLE
-          `focus-visible:border-neutral-950`,
+          `focus-visible:border-neutral-950
+          dark:focus-visible:border-neutral-50`,
 
           // FOCUS
-          `focus:ring-neutral-950`,
+          `focus:ring-neutral-950
+          dark:focus:ring-neutral-50`,
         ),
       },
     },
@@ -46,7 +51,7 @@ const textarea = cva(
       {
         color: "neutral",
         variant: "outline",
-        className: `border-neutral-300`,
+        className: `border-neutral-300 dark:border-neutral-700`,
       },
     ],
   },

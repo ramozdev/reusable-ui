@@ -29,13 +29,17 @@ const select = cva(
       color: {
         neutral: cx(
           `bg-neutral-50
-      text-neutral-900`,
+      text-neutral-900
+      dark:bg-neutral-800
+      dark:text-neutral-100`,
 
           // FOCUS VISIBLE
-          `focus-visible:border-neutral-950`,
+          `focus-visible:border-neutral-950
+          dark:focus-visible:border-neutral-50`,
 
           // FOCUS
-          `focus:ring-neutral-950`,
+          `focus:ring-neutral-950
+          dark:focus:ring-neutral-50`,
         ),
       },
     },
@@ -43,7 +47,7 @@ const select = cva(
       {
         color: "neutral",
         variant: "outline",
-        className: `border-neutral-300`,
+        className: `border-neutral-300 dark:border-neutral-700`,
       },
     ],
   },

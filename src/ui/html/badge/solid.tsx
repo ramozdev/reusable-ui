@@ -21,14 +21,17 @@ const solidBadge = cva(globalBadgeStyles, {
     {
       color: "neutral",
       variant: "default",
-      className: `bg-neutral-600`,
+      className: `bg-neutral-600 
+                  dark:bg-neutral-500`,
     },
     // -------------OUTLINE-------------
     {
       color: "neutral",
       variant: "outline",
       className: `bg-neutral-600
-                border-neutral-800`,
+                border-neutral-800
+                dark:bg-neutral-500
+                dark:border-neutral-600`,
     },
   ],
 });

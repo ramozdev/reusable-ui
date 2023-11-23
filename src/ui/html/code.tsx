@@ -10,7 +10,10 @@ const code = cva(
   py-0.5
   bg-neutral-100
   text-neutral-900
-  border-neutral-300`,
+  border-neutral-300
+  dark:bg-neutral-800
+  dark:text-neutral-100
+  dark:border-neutral-700`,
     ROUNDED,
     BORDER,
   ),

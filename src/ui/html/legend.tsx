@@ -13,12 +13,16 @@ const Legend = React.forwardRef<
       className={twMerge(
         twMerge(
           `border-neutral-300
-        bg-neutral-100
+          bg-neutral-100
         px-1.5
         py-0.5
         font-semibold
         tracking-wide
-        text-neutral-900`,
+        text-neutral-900
+        dark:border-neutral-700
+        dark:bg-neutral-800
+        dark:text-neutral-100
+        `,
           ROUNDED,
           BORDER,
         ),

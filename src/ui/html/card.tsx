@@ -31,7 +31,7 @@ const card = cva(
       {
         color: "white-black",
         variant: "outline",
-        className: "border-neutral-300",
+        className: "border-neutral-300 dark:border-neutral-700",
       },
     ],
   },

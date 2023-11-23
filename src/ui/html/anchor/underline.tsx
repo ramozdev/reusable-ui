@@ -24,10 +24,12 @@ focus-visible:ring-2`,
     variants: {
       color: {
         neutral: cx(
-          `text-neutral-600`,
+          `text-neutral-600
+          dark:text-neutral-400`,
 
           // FOCUS
-          `focus-visible:ring-neutral-950`,
+          `focus-visible:ring-neutral-950
+          dark:focus-visible:ring-neutral-50`,
         ),
       },
     },
