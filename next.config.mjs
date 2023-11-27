@@ -6,7 +6,10 @@ await import("./src/env.mjs");
 
 /** @type {import("next").NextConfig} */
 const config = {
+  
   images: {
+    domains: ['encrypted-tbn0.gstatic.com', 'img.reservoir.tools'],
+
     remotePatterns: [
       {
         protocol: "https",
