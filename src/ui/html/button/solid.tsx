@@ -14,8 +14,6 @@ const solidButton = cva(globalButtonStyles, {
     variant: {
       default: "border-transparent text-white",
       outline: "text-white",
-      brutalism:
-        "border border-black text-black dark:border-white dark:text-white rounded-sm",
     },
     size: {
       medium: `px-4 py-1`,
@@ -42,6 +40,30 @@ const solidButton = cva(globalButtonStyles, {
          dark:active:bg-neutral-600
          dark:active:text-white`,
       ),
+      blue: cx(
+        // HOVER
+        `hover:bg-blue-700
+         hover:text-white
+         dark:hover:bg-blue-500
+         dark:hover:text-white`,
+
+        // FOCUS
+        `focus:ring-blue-950
+        dark:focus:ring-blue-500`,
+
+        // ACTIVE
+        `active:bg-blue-800
+         active:text-white
+         dark:active:bg-blue-600
+         dark:active:text-white`,
+      ),
+      white_black: cx(
+        // HOVER
+        `bg-black
+        dark:text-black
+         dark:bg-white
+         `,
+      ),
     },
   },
   compoundVariants: [
@@ -60,17 +82,11 @@ const solidButton = cva(globalButtonStyles, {
                   dark:bg-neutral-500
                   dark:border-neutral-600`,
     },
-    // -------------BRUTALISM-------------
     {
-      color: "neutral",
-      variant: "brutalism",
-      className: `
-      bg-neutral-50 
-      dark:bg-neutral-950
-      hover:bg-neutral-950
-      dark:hover:bg-neutral-50
-      dark:hover:text-neutral-950
-      `,
+      color: "blue",
+      variant: "default",
+      className: `bg-blue-600
+                  dark:bg-blue-500`,
     },
   ],
 });

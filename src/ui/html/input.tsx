@@ -30,7 +30,7 @@ const input = cva(
         plane: "border-transparent",
         brutalism: `rounded-sm 
           border border-neutral-950 
-          dark:border-neutral-50 dark:bg-neutral-950
+          dark:bg-neutral-950
           bg-neutral-50 
           ring-neutral-950
           dark:ring-neutral-50
@@ -74,7 +74,7 @@ const input = cva(
       {
         color: "neutral",
         variant: "outline",
-        className: `border-neutral-300`,
+        className: `border-neutral-300 dark:border-neutral-700`,
       },
       {
         color: "neutral",

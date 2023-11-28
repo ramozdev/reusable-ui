@@ -1,4 +1,4 @@
-const ROUNDED = "rounded-none";
+const ROUNDED = "rounded";
 const SHADOW = "shadow-none";
 const BORDER = "border";
 

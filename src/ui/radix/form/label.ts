@@ -9,7 +9,7 @@ const label = cva("font-medium leading-loose", {
       true: `after:ml-0.5 after:text-red-500 after:content-['*']`,
     },
     color: {
-      neutral: "text-neutral-900",
+      neutral: "text-neutral-900 dark:text-neutral-50",
     },
   },
 });

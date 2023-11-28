@@ -20,10 +20,14 @@ const trigger = cva(
     variants: {
       color: {
         neutral: cx(
-          `bg-neutral-100`,
+          `bg-neutral-100
+           dark:bg-neutral-900
+          `,
 
           // HOVER
-          `hover:bg-neutral-200`,
+          `hover:bg-neutral-200
+          hover:dark:bg-neutral-950
+          `,
         ),
       },
     },

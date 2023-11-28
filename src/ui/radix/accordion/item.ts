@@ -15,7 +15,7 @@ const item = cva(
     },
     variants: {
       color: {
-        "white-black": `focus-within:shadow-black`,
+        "white-black": `focus-within:shadow-black dark:focus-within:shadow-white`,
       },
     },
   },

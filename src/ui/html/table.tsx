@@ -6,10 +6,11 @@ import { ROUNDED } from "@/ui/globals";
 const table = cva(
   twMerge(
     `w-full
-  text-sm
-  text-left
-  overflow-hidden 
-  bg-neutral-50`,
+     text-sm
+     text-left
+     overflow-hidden 
+     bg-neutral-50
+    `,
     ROUNDED,
   ),
   {
@@ -69,7 +70,7 @@ const Tbody = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => {
-  return <tbody {...props} ref={ref} className={twMerge(``, className)} />;
+  return <tbody {...props} ref={ref} className={twMerge(`h-14`, className)} />;
 });
 Tbody.displayName = "Tbody";
 
@@ -77,7 +78,9 @@ const Tfoot = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => {
-  return <tfoot {...props} ref={ref} className={twMerge(`mt-2`, className)} />;
+  return (
+    <tfoot {...props} ref={ref} className={twMerge(`mt-2 h-14`, className)} />
+  );
 });
 Tfoot.displayName = "Tfoot";
 
@@ -89,7 +92,10 @@ const Tr = React.forwardRef<
     <tr
       {...props}
       ref={ref}
-      className={twMerge(`bg-white even:bg-neutral-100`, className)}
+      className={twMerge(
+        `bg-neutral-100 text-neutral-900 dark:bg-neutral-800 dark:text-neutral-50`,
+        className,
+      )}
     />
   );
 });
@@ -100,7 +106,14 @@ const Th = React.forwardRef<
   React.ThHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => {
   return (
-    <th {...props} ref={ref} className={twMerge(`px-6 py-3`, className)} />
+    <th
+      {...props}
+      ref={ref}
+      className={twMerge(
+        `bg-neutral-200 px-6 py-3 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50`,
+        className,
+      )}
+    />
   );
 });
 Th.displayName = "Th";

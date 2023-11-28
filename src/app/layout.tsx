@@ -20,7 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-white font-sans ${inter.variable}`}>{children}</body>
+      <body
+        className={`bg-neutral-50 font-sans dark:bg-neutral-950 ${inter.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

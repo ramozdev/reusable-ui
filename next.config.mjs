@@ -8,7 +8,7 @@ await import("./src/env.mjs");
 const config = {
   
   images: {
-    domains: ['encrypted-tbn0.gstatic.com', 'img.reservoir.tools'],
+    domains: ['encrypted-tbn0.gstatic.com', 'img.reservoir.tools', 'i.pinimg.com'],
 
     remotePatterns: [
       {
