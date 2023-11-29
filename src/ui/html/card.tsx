@@ -16,20 +16,16 @@ const card = cva(
   ),
   {
     defaultVariants: {
-      variant: "default",
+      variant: "outline",
       color: "white-black",
     },
     variants: {
       variant: {
-        default: `
-        border-2 border-neutral-950 dark:border-neutral-50
-        bg-neutral-50 dark:bg-neutral-950
-        text-neutral-950 dark:text-neutral-50 
-        rounded`,
         outline: "",
         plane: "border-transparent",
       },
       color: {
+        neutral: "bg-neutral-50 dark:bg-neutral-950",
         "white-black": "bg-white",
       },
     },
