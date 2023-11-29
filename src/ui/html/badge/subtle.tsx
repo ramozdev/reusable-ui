@@ -23,7 +23,7 @@ const subtleBadge = cva(globalBadgeStyles, {
       variant: "default",
       className: `bg-neutral-100
                 text-neutral-900
-                dark:bg-neutral-800
+                dark:bg-neutral-900
                 dark:text-neutral-100`,
     },
     // -------------OUTLINE-------------
@@ -33,8 +33,8 @@ const subtleBadge = cva(globalBadgeStyles, {
       className: `bg-neutral-100
                 border-neutral-300
                 text-neutral-900
-                dark:bg-neutral-800
-                dark:border-neutral-700
+                dark:bg-neutral-900
+                dark:border-neutral-800
                 dark:text-neutral-100`,
     },
   ],

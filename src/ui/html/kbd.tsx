@@ -25,15 +25,16 @@ const kbd = cva(
       color: {
         neutral: `bg-neutral-100
           text-neutral-900
-          dark:bg-neutral-800
-          dark:text-neutral-100`,
+          dark:bg-neutral-950
+          dark:text-neutral-200`,
       },
     },
     compoundVariants: [
       {
         color: "neutral",
         variant: ["skeuomorphic", "outline"],
-        className: `border-neutral-300 dark:border-neutral-500`,
+        className: `border-neutral-300
+                  dark:border-neutral-800`,
       },
     ],
   },

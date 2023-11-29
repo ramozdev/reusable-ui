@@ -26,14 +26,19 @@ const card = cva(
       },
       color: {
         neutral: "bg-neutral-50 dark:bg-neutral-950",
-        "white-black": "bg-white",
+        "white-black": "bg-white dark:bg-black",
       },
     },
     compoundVariants: [
       {
+        color: "neutral",
+        variant: "outline",
+        className: "border-neutral-300 dark:border-neutral-800",
+      },
+      {
         color: "white-black",
         variant: "outline",
-        className: "border-neutral-300 dark:border-neutral-700",
+        className: "border-neutral-300 dark:border-neutral-800",
       },
     ],
   },

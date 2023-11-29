@@ -28,8 +28,7 @@ const solidBadge = cva(globalBadgeStyles, {
     {
       color: "neutral",
       variant: "default",
-      className: `bg-neutral-600 
-                  dark:bg-neutral-500`,
+      className: `bg-neutral-600`,
     },
     // -------------OUTLINE-------------
     {
@@ -37,8 +36,7 @@ const solidBadge = cva(globalBadgeStyles, {
       variant: "outline",
       className: `bg-neutral-600
                 border-neutral-800
-                dark:bg-neutral-500
-                dark:border-neutral-600`,
+                dark:border-neutral-400`,
     },
     {
       color: "neutral",

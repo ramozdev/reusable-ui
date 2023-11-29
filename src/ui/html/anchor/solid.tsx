@@ -24,27 +24,19 @@ const solidAnchor = cva(globalAnchorStyles, {
     },
     color: {
       neutral: cx(
-        `bg-neutral-600
-        dark:bg-neutral-500
-        text-white
-        dark:text-white`,
-
         // HOVER
         `hover:bg-neutral-700
-         hover:text-white
-          dark:hover:bg-neutral-500
-          dark:hover:text-white
-         `,
+          hover:text-white
+          dark:hover:text-white`,
 
         // FOCUS-VISIBLE
         `focus-visible:ring-neutral-950
-        dark:focus-visible:ring-neutral-500`,
+          dark:focus-visible:ring-neutral-300`,
 
         // ACTIVE
         `active:bg-neutral-800
           active:text-white
-          dark:active:bg-neutral-600
-            dark:active:text-white`,
+          dark:active:text-white`,
       ),
     },
   },
@@ -52,8 +44,7 @@ const solidAnchor = cva(globalAnchorStyles, {
     {
       color: "neutral",
       variant: "default",
-      className: `bg-neutral-600
-                  dark:bg-neutral-500`,
+      className: `bg-neutral-600`,
     },
     // -------------OUTLINE-------------
     {
@@ -61,8 +52,7 @@ const solidAnchor = cva(globalAnchorStyles, {
       variant: "outline",
       className: `bg-neutral-600
                 border-neutral-800
-                dark:bg-neutral-500
-                dark:border-neutral-600`,
+                dark:border-neutral-400`,
     },
   ],
 });

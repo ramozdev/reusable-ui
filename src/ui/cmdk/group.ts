@@ -15,7 +15,9 @@ const group = cva(
     variants: {
       color: {
         neutral: `text-neutral-700
-          [&_[cmdk-group-heading]]:text-neutral-900`,
+        dark:text-neutral-400
+        [&_[cmdk-group-heading]]:text-neutral-900
+        [&_[cmdk-group-heading]]:dark:text-neutral-300`,
       },
     },
   },

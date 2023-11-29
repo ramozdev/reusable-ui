@@ -25,10 +25,13 @@ const item = cva(
         neutral: cx(
           // SELECTED
           `aria-selected:bg-neutral-200
-            aria-selected:text-neutral-950`,
+  aria-selected:text-neutral-950
+  dark:aria-selected:bg-neutral-800
+  dark:aria-selected:text-neutral-50`,
 
           // RIGHT SLOT
-          `[&_>_[data-role=command-shortcut]]:aria-selected:text-neutral-950`,
+          `[&_>_[data-role=command-shortcut]]:aria-selected:text-neutral-950
+  dark:[&_>_[data-role=command-shortcut]]:aria-selected:text-neutral-50`,
         ),
       },
     },

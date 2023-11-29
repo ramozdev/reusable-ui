@@ -25,13 +25,12 @@ const textarea = cva(
       variant: {
         outline: "",
         plane: "border-transparent",
-        brutalism: `rounded`,
       },
       color: {
         neutral: cx(
           `bg-neutral-50
           text-neutral-900
-          dark:bg-neutral-800
+          dark:bg-neutral-950
           dark:text-neutral-100`,
 
           // PLACEHOLDER
@@ -40,11 +39,11 @@ const textarea = cva(
 
           // FOCUS VISIBLE
           `focus-visible:border-neutral-950
-          dark:focus-visible:border-neutral-50`,
+          dark:focus-visible:border-neutral-300`,
 
           // FOCUS
           `focus:ring-neutral-950
-          dark:focus:ring-neutral-50`,
+        dark:focus:ring-neutral-300`,
         ),
       },
     },
@@ -52,21 +51,8 @@ const textarea = cva(
       {
         color: "neutral",
         variant: "outline",
-        className: `border-neutral-300 dark:border-neutral-700`,
-      },
-      {
-        color: "neutral",
-        variant: "brutalism",
-        className: `
-        border-[1.5px]
-        border-neutral-950
-        dark:border-neutral-50
-        bg-neutral-50
-        dark:bg-neutral-950
-        text-neutral-950
-        dark:text-neutral-50
-        
-        `,
+        className: `border-neutral-300
+          dark:border-neutral-800`,
       },
     ],
   },

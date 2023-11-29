@@ -27,11 +27,11 @@ focus-visible:ring-2`,
       color: {
         neutral: cx(
           `text-neutral-600
-          dark:text-neutral-400`,
+        dark:text-neutral-200`,
 
           // FOCUS
           `focus-visible:ring-neutral-950
-          dark:focus-visible:ring-neutral-50`,
+          dark:focus-visible:ring-neutral-300`,
         ),
       },
     },

@@ -6,7 +6,7 @@ const separator = cva(`h-px`, {
   },
   variants: {
     color: {
-      neutral: "bg-neutral-200",
+      neutral: "bg-neutral-200 dark:bg-neutral-800",
     },
   },
 });

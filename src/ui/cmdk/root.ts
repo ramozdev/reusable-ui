@@ -34,7 +34,10 @@ const root = cva(
       color: {
         neutral: `bg-neutral-50
         [&_[cmdk-group-heading]]:text-neutral-600
-        border-neutral-200`,
+        border-neutral-200
+        dark:[&_[cmdk-group-heading]]:text-neutral-400
+        dark:bg-neutral-950
+        dark:border-neutral-800`,
       },
     },
   },

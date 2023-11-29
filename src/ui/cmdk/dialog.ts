@@ -23,7 +23,10 @@ const dialog = cva(
       color: {
         neutral: `bg-neutral-50
         [&_[dialog-overlay]]:bg-neutral-100
-        border-neutral-400`,
+        border-neutral-400
+        dark:bg-neutral-950
+        dark:[&_[dialog-overlay]]:bg-neutral-950
+        dark:border-neutral-700`,
       },
     },
   },

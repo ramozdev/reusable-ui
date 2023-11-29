@@ -26,19 +26,19 @@ const subtleButton = cva(globalButtonStyles, {
       neutral: cx(
         // HOVER
         `hover:bg-neutral-200
-         hover:text-neutral-950
-         dark:hover:bg-neutral-800
-         dark:hover:text-neutral-100`,
+          hover:text-neutral-950
+          dark:hover:text-neutral-100
+          dark:hover:bg-neutral-900`,
 
         // FOCUS
         `focus:ring-neutral-950
-         dark:focus:ring-neutral-100`,
+          dark:focus:ring-neutral-200`,
 
         // ACTIVE
         `active:bg-neutral-300
-         active:text-neutral-950
-         dark:active:bg-neutral-700
-         dark:active:text-neutral-100`,
+          active:text-neutral-950
+          dark:active:text-neutral-100
+          dark:active:bg-neutral-800`,
       ),
     },
   },
@@ -48,7 +48,7 @@ const subtleButton = cva(globalButtonStyles, {
       variant: "default",
       className: `bg-neutral-100
                 text-neutral-900
-                dark:bg-neutral-800
+                dark:bg-neutral-950
                 dark:text-neutral-100`,
     },
     // -------------OUTLINE-------------
@@ -58,8 +58,8 @@ const subtleButton = cva(globalButtonStyles, {
       className: `bg-neutral-100
                 border-neutral-300
                 text-neutral-900
-                dark:bg-neutral-800
-                dark:border-neutral-700
+                dark:bg-neutral-950
+                dark:border-neutral-800
                 dark:text-neutral-100`,
     },
   ],

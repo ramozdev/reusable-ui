@@ -28,14 +28,6 @@ const input = cva(
       variant: {
         outline: "",
         plane: "border-transparent",
-        brutalism: `rounded-sm 
-          border border-neutral-950 
-          dark:bg-neutral-950
-          bg-neutral-50 
-          ring-neutral-950
-          dark:ring-neutral-50
-          ring-[0.5px]
-          `,
       },
       file: {
         true: `
@@ -53,7 +45,7 @@ const input = cva(
         neutral: cx(
           `bg-neutral-50
           text-neutral-900
-          dark:bg-neutral-800
+          dark:bg-neutral-950
           dark:text-neutral-100`,
 
           // PLACEHOLDER
@@ -62,11 +54,11 @@ const input = cva(
 
           // FOCUS VISIBLE
           `focus-visible:border-neutral-950
-          dark:focus-visible:border-neutral-50`,
+          dark:focus-visible:border-neutral-300`,
 
           // FOCUS
           `focus:ring-neutral-950
-          dark:focus:ring-neutral-50`,
+        dark:focus:ring-neutral-300`,
         ),
       },
     },
@@ -74,12 +66,8 @@ const input = cva(
       {
         color: "neutral",
         variant: "outline",
-        className: `border-neutral-300 dark:border-neutral-700`,
-      },
-      {
-        color: "neutral",
-        variant: "brutalism",
-        className: `text-neutral-950 dark:text-neutral-50`,
+        className: `border-neutral-300
+          dark:border-neutral-800`,
       },
     ],
   },

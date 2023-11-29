@@ -6,7 +6,7 @@ const shortcut = cva(`ml-auto`, {
   },
   variants: {
     color: {
-      neutral: "text-neutral-600",
+      neutral: "text-neutral-600 dark:text-neutral-400",
     },
   },
 });

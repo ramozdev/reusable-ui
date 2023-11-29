@@ -29,19 +29,20 @@ const checkbox = cva(
       },
       color: {
         neutral: cx(
-          `bg-neutral-50`,
+          `bg-neutral-50
+      dark:bg-neutral-950`,
 
           // CHECKED
           `checked:text-neutral-500
-          dark:checked:text-neutral-400`,
+        dark:checked:text-neutral-900`,
 
           // HOVER CHECKED
           `hover:checked:text-neutral-700
-          dark:hover:checked:text-neutral-300`,
+      dark:hover:checked:text-neutral-900`,
 
           // FOCUS
           `focus:ring-neutral-950
-          dark:focus:ring-neutral-50`,
+        dark:focus:ring-neutral-300`,
         ),
       },
     },
@@ -50,7 +51,7 @@ const checkbox = cva(
         color: "neutral",
         variant: "outline",
         className: `border-neutral-300
-        dark:border-neutral-700`,
+                  dark:border-neutral-800`,
       },
     ],
   },
