@@ -20,10 +20,12 @@ focus:ring-2`,
     variants: {
       color: {
         neutral: cx(
-          `text-neutral-600`,
+          `text-neutral-600
+        dark:text-neutral-200`,
 
           // FOCUS
-          `focus:ring-neutral-950`,
+          `focus:ring-neutral-950
+          dark:focus:ring-neutral-300`,
         ),
       },
     },

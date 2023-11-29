@@ -11,7 +11,7 @@ const label = cva(
     },
     variants: {
       color: {
-        neutral: "text-neutral-900",
+        neutral: "text-neutral-900 dark:text-neutral-300",
       },
     },
   },

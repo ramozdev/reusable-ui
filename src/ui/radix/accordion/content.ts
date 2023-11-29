@@ -10,12 +10,10 @@ const content = cva(
     },
     variants: {
       color: {
-        neutral: `
-          text-neutral-950
-          dark:text-neutral-50
-          bg-neutral-50
-          dark:bg-neutral-800 
-          `,
+        neutral: `text-neutral-950
+        bg-neutral-50
+        dark:text-neutral-100
+        dark:bg-neutral-950`,
       },
     },
   },

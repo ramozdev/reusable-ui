@@ -13,7 +13,9 @@ const content = cva(
     variants: {
       color: {
         "white-black": `bg-white
-          focus:ring-neutral-950`,
+        focus:ring-neutral-950
+        dark:bg-black
+        dark:focus:ring-neutral-300`,
       },
     },
   },

@@ -27,10 +27,20 @@ const root = cva(
           data-[state=checked]:bg-neutral-500
           data-[state=checked]:hover:bg-neutral-600
           data-[state=checked]:focus-visible:bg-neutral-600
-          data-[state=checked]:active:bg-neutral-700`,
+          data-[state=checked]:active:bg-neutral-700
+          dark:bg-neutral-800
+          dark:hover:bg-neutral-700
+          dark:focus-visible:bg-neutral-600
+          dark:active:bg-neutral-700 
+          dark:disabled:text-neutral-500
+          dark:data-[state=checked]:bg-neutral-500
+          dark:data-[state=checked]:hover:bg-neutral-600
+          dark:data-[state=checked]:focus-visible:bg-neutral-600
+          dark:data-[state=checked]:active:bg-neutral-700`,
 
           // FOCUS
-          `focus:ring-neutral-950`,
+          `focus:ring-neutral-950
+        dark:focus:ring-neutral-300`,
         ),
       },
     },

@@ -22,7 +22,10 @@ const list = cva(
       color: {
         "white-black": `bg-white
         text-neutral-900
-        border-neutral-300`,
+        border-neutral-300
+        dark:bg-black
+        dark:text-neutral-200
+        dark:border-neutral-800`,
       },
     },
   },

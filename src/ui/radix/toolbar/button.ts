@@ -43,14 +43,17 @@ const button = cva(
         neutral: cx(
           // HOVER
           `hover:bg-neutral-700
-          hover:text-white`,
+          hover:text-white
+          dark:hover:text-white`,
 
           // FOCUS
-          `focus:ring-neutral-950`,
+          `focus:ring-neutral-950
+          dark:focus:ring-neutral-300`,
 
           // ACTIVE
           `active:bg-neutral-800
-          active:text-white`,
+          active:text-white
+          dark:active:text-white`,
         ),
       },
     },
@@ -65,13 +68,15 @@ const button = cva(
         color: "neutral",
         variant: "outline",
         className: `bg-neutral-600
-                border-neutral-800`,
+                border-neutral-800
+                dark:border-neutral-400`,
       },
       // ------------GHOST-------------
       {
         color: "neutral",
         variant: "ghost",
-        className: `text-neutral-700`,
+        className: `text-neutral-700
+            dark:text-neutral-400`,
       },
     ],
   },

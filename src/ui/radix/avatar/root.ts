@@ -18,7 +18,7 @@ const root = cva(
     },
     variants: {
       color: {
-        neutral: "bg-neutral-100",
+        neutral: "bg-neutral-100 dark:bg-neutral-900",
       },
     },
   },

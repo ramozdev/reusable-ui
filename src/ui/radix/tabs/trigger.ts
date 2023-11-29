@@ -25,9 +25,13 @@ const trigger = cva(
     variants: {
       color: {
         "white-black": `bg-white
-          text-neutral-950
-          hover:bg-neutral-100
-          data-[state=active]:focus:ring-neutral-950`,
+        text-neutral-950
+        hover:bg-neutral-100
+        data-[state=active]:focus:ring-neutral-950
+        dark:bg-black
+        dark:text-neutral-50
+        dark:hover:bg-neutral-900
+        dark:data-[state=active]:focus:ring-neutral-300`,
       },
     },
   },

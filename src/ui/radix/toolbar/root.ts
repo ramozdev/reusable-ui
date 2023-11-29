@@ -20,7 +20,10 @@ const root = cva(
       color: {
         "white-black": `bg-white
     text-neutral-900
-    border-neutral-300`,
+    ring-neutral-300
+    dark:bg-black
+    dark:text-neutral-200
+    dark:ring-neutral-800`,
       },
     },
   },

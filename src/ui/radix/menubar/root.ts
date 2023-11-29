@@ -21,8 +21,11 @@ const root = cva(
     variants: {
       color: {
         "white-black": `border-neutral-300
-            bg-white
-            text-neutral-900`,
+         bg-white
+         text-neutral-900
+         dark:border-neutral-700
+         dark:bg-black
+         dark:text-neutral-200`,
       },
     },
   },

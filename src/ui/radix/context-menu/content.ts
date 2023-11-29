@@ -22,7 +22,9 @@ const content = cva(
     variants: {
       color: {
         neutral: `bg-neutral-50
-        border-neutral-400`,
+        border-neutral-400
+        dark:bg-neutral-950
+        dark:border-neutral-700`,
       },
     },
   },

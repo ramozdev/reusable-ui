@@ -18,7 +18,7 @@ const indicator = cva(
     },
     variants: {
       color: {
-        neutral: "after:bg-neutral-900",
+        neutral: "after:bg-neutral-900 dark:after:bg-neutral-200",
       },
     },
   },

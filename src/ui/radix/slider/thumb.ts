@@ -25,10 +25,13 @@ const thumb = cva(
       color: {
         neutral: cx(
           `bg-neutral-800
-    hover:border-neutral-600`,
+    hover:border-neutral-600
+    dark:bg-neutral-200
+    dark:hover:border-neutral-400`,
 
           // FOCUS
-          `focus:ring-neutral-950`,
+          `focus:ring-neutral-950
+        dark:focus:ring-neutral-300`,
         ),
       },
     },

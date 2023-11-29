@@ -17,7 +17,9 @@ const fallback = cva(
     variants: {
       color: {
         neutral: `bg-neutral-50
-        text-neutral-900`,
+        text-neutral-900
+        dark:bg-neutral-950
+        dark:text-neutral-200`,
       },
     },
   },

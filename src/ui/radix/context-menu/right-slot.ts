@@ -6,7 +6,7 @@ const rightSlot = cva("ml-auto pl-5", {
   },
   variants: {
     color: {
-      neutral: "text-neutral-900",
+      neutral: "text-neutral-900 dark:text-neutral-100",
     },
   },
 });

@@ -6,7 +6,7 @@ const title = cva("mb-2 text-lg font-semibold", {
   },
   variants: {
     color: {
-      neutral: "text-neutral-900",
+      neutral: "text-neutral-900 dark:text-neutral-200",
     },
   },
 });

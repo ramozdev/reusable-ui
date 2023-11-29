@@ -13,7 +13,9 @@ const indicator = cva(
     variants: {
       color: {
         neutral: `text-neutral-950
-          data-[disabled]:text-neutral-700 `,
+          data-[disabled]:text-neutral-700 
+          dark:text-neutral-200
+          dark:data-[disabled]:text-neutral-300`,
       },
     },
   },

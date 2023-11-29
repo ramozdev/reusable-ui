@@ -20,7 +20,7 @@ const thumb = cva(
     },
     variants: {
       color: {
-        neutral: "bg-neutral-500",
+        neutral: "bg-neutral-500 dark:bg-neutral-600",
       },
     },
   },

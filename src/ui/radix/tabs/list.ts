@@ -6,7 +6,7 @@ const list = cva("flex shrink-0 border-b", {
   },
   variants: {
     color: {
-      neutral: "border-neutral-300",
+      neutral: "border-neutral-300 dark:border-neutral-800",
     },
   },
 });

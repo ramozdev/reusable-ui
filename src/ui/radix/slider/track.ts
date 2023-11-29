@@ -15,7 +15,9 @@ const track = cva(
     variants: {
       color: {
         neutral: `bg-neutral-50
-        ring-neutral-300`,
+        ring-neutral-300
+        dark:bg-neutral-950
+        dark:ring-neutral-800`,
       },
     },
   },

@@ -6,7 +6,7 @@ const arrow = cva("", {
   },
   variants: {
     color: {
-      neutral: "fill-neutral-300",
+      neutral: "fill-neutral-300 dark:fill-neutral-800",
     },
   },
 });

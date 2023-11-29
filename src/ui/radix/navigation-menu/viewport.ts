@@ -19,7 +19,7 @@ const viewport = cva(
     },
     variants: {
       color: {
-        "white-black": "bg-white",
+        "white-black": "bg-white dark:bg-black",
       },
     },
   },

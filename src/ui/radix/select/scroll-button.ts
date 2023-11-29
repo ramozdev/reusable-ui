@@ -17,7 +17,7 @@ const scrollButton = cva(
     },
     variants: {
       color: {
-        neutral: "bg-neutral-50",
+        neutral: "bg-neutral-50 dark:bg-neutral-950",
       },
     },
   },

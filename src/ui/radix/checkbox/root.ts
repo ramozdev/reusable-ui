@@ -35,10 +35,19 @@ const root = cva(
           data-[disabled]:border-neutral-200 
           focus:border-neutral-500
           focus-visible:border-neutral-500
-          active:border-neutral-900`,
+          active:border-neutral-900
+          dark:bg-neutral-950
+          dark:border-neutral-800
+          dark:hover:bg-neutral-950
+          dark:hover:border-neutral-600 
+          dark:focus:border-neutral-600
+          dark:focus-visible:border-neutral-600 
+          dark:active:border-neutral-500
+          dark:data-[disabled]:border-neutral-800`,
 
           // FOCUS
-          `focus:ring-neutral-950`,
+          `focus:ring-neutral-950
+        dark:focus:ring-neutral-300`,
         ),
       },
     },

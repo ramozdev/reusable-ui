@@ -36,10 +36,22 @@ const root = cva(
         data-[disabled]:text-neutral-700
         data-[state=on]:border-neutral-400
         hover:data-[state=on]:border-neutral-900
-        focus:data-[state=on]:border-neutral-900`,
+        focus:data-[state=on]:border-neutral-900
+        dark:bg-neutral-950
+        dark:text-neutral-100
+        dark:border-neutral-800
+        dark:hover:border-neutral-600 
+        dark:focus:border-neutral-600
+        dark:data-[state=on]:bg-neutral-800
+        dark:data-[state=on]:text-neutral-50
+        dark:data-[disabled]:text-neutral-400
+        dark:data-[state=on]:border-neutral-600
+        dark:hover:data-[state=on]:border-neutral-400
+        dark:focus:data-[state=on]:border-neutral-400`,
 
           // FOCUS
-          `focus:ring-neutral-950`,
+          `focus:ring-neutral-950
+        dark:focus:ring-neutral-300`,
         ),
       },
     },

@@ -17,7 +17,8 @@ const thumb = cva(
     variants: {
       color: {
         neutral: `bg-neutral-50
-          data-[state=checked]:bg-neutral-100`,
+          data-[state=checked]:bg-neutral-100
+          dark:bg-neutral-100`,
       },
     },
   },

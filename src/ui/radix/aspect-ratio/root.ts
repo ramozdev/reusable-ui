@@ -6,7 +6,7 @@ const root = cva("[&_>_img]:h-full [&_>_img]:w-full [&_>_img]:object-cover", {
   },
   variants: {
     color: {
-      neutral: "bg-neutral-50",
+      neutral: "bg-neutral-50 dark:bg-neutral-950",
     },
   },
 });

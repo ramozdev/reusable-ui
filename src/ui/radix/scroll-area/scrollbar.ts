@@ -19,7 +19,9 @@ data-[orientation=horizontal]:h-2.5`,
     variants: {
       color: {
         "white-black": `bg-white
-        hover:bg-neutral-200`,
+        hover:bg-neutral-200 
+        dark:bg-black
+        dark:hover:bg-neutral-900`,
       },
     },
   },

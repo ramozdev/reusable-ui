@@ -8,7 +8,7 @@ const root = cva(twMerge("w-[300px]", ROUNDED, SHADOW), {
   },
   variants: {
     color: {
-      "white-black": "bg-white",
+      "white-black": "bg-white dark:bg-black",
     },
   },
 });
