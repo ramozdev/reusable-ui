@@ -1,19 +1,17 @@
 "use client";
 
 import Button from "@/ui/html/button";
+import Label from "@/ui/html/label";
 import Select from "@/ui/html/select";
-import Form from "@/ui/radix/form";
 
 export default function AppearanceForm() {
   return (
-    <Form.Root
+    <form
       onSubmit={(e: React.FormEvent) => e.preventDefault()}
       className="w-full space-y-8"
     >
       <div>
-        <Form.Field name="urls">
-          <Form.Label required>Font</Form.Label>
-        </Form.Field>
+        <Label required>Font</Label>
         <Select required name="marital-status" id="marital-status">
           <option value="inter">Inter</option>
           <option value="manrope">Manrope</option>
@@ -23,6 +21,6 @@ export default function AppearanceForm() {
       <Button.Solid type="submit" color="white_black">
         Update preferences
       </Button.Solid>
-    </Form.Root>
+    </form>
   );
 }

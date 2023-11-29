@@ -2,31 +2,35 @@
 
 import Button from "@/ui/html/button";
 import Checkbox from "@/ui/html/checkbox";
-import Form from "@/ui/radix/form";
+import Label from "@/ui/html/label";
+import TextInput from "@/ui/html/textinput";
 
 export default function DisplayForm() {
   return (
-    <Form.Root
-      onSubmit={(e: React.FormEvent) => e.preventDefault()}
+    <form
+      onSubmit={(event) => event.preventDefault()}
       className="w-full space-y-8"
     >
       <div>
-        <Form.Field name="urls">
-          <Form.Label required>Sidebar</Form.Label>
+        <div>
+          <Label required>Sidebar</Label>
           <br />
           <span className="text-sm text-neutral-950 dark:text-neutral-50">
             {" "}
             Select the items you want to display in the sidebar
           </span>
+
           <div className="my-5">
             {Array.from({ length: 6 }).map((_, i) => (
               <div key={i}>
                 <div className="my-2 space-x-1">
-                  <Form.Control asChild>
-                    <Checkbox name="accept" id="accept" className="h-4 w-4" />
-                  </Form.Control>
+                  <Checkbox
+                    name="accept"
+                    id={`accept${i}`}
+                    className="h-4 w-4"
+                  />
                   <label
-                    htmlFor="accept"
+                    htmlFor={`accept${i}`}
                     className="text-neutral-950 dark:text-neutral-50"
                   >
                     Lorem Ipsum
@@ -35,11 +39,21 @@ export default function DisplayForm() {
               </div>
             ))}
           </div>
-        </Form.Field>
+        </div>
+        <div>
+          <TextInput
+            id="email"
+            type="email"
+            caption="This email will be visible to others"
+            validation="This email is already taken"
+          >
+            Email
+          </TextInput>
+        </div>
       </div>
       <Button.Solid type="submit" color="white_black">
         Update display
       </Button.Solid>
-    </Form.Root>
+    </form>
   );
 }
