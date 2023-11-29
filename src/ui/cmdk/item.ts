@@ -12,8 +12,7 @@ const item = cva(
   outline-none
   md:py-1
   data-[disabled]:pointer-events-none
-  data-[disabled]:opacity-50
-  text-neutral-900`,
+  data-[disabled]:opacity-50`,
     ROUNDED,
   ),
   {

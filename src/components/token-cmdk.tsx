@@ -40,26 +40,36 @@ export function TokenCommand() {
     <>
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2"
+        className="inline-flex items-center rounded-full px-2 py-1 ring-1 ring-neutral-300 dark:ring-neutral-800"
       >
-        <ChevronDownIcon /> ETH
+        <div className="h-6 w-6">
+          <Image
+            src={tokens.ETH.icon}
+            alt={`${tokens.ETH.name}'s logo`}
+            width="24"
+            height="24"
+            className="rounded-full"
+          />
+        </div>
+        <span>ETH</span>
+        <ChevronDownIcon className="ml-2" />
       </button>
       <Command.Dialog
         open={open}
         onOpenChange={setOpen}
         label="Global Command Menu"
       >
-        <Command.Root>
-          <Command.Input placeholder="Type a command. or search..." />
+        <Command.Root className="md:h-[60vh] md:w-[55vh]">
+          <Command.Input placeholder="Search name or paste address" />
           <Command.Separator />
           <Command.List>
             <Command.Empty>No results found.</Command.Empty>
-            <div className="flex gap-2 px-4 py-2">
+            <div className="flex flex-wrap gap-2 px-4 py-2">
               {Object.entries(tokens).map(([symbol, token]) => (
                 <Command.Item key={symbol} className="flex items-center">
                   <Image
                     src={token.icon}
-                    alt=""
+                    alt={`${token.name}'s logo`}
                     width="24"
                     height="24"
                     className="mr-2 h-6 w-6 rounded-full"
@@ -74,10 +84,10 @@ export function TokenCommand() {
                 <Command.Item key={symbol}>
                   <Image
                     src={token.icon}
-                    alt=""
-                    width="24"
-                    height="24"
-                    className="mr-2 h-6 w-6 rounded-full"
+                    alt={`${token.name}'s logo`}
+                    width="36"
+                    height="36"
+                    className="mr-4 h-9 w-9 rounded-full"
                   />
                   <div className="flex flex-col">
                     <span className="text-sm">{token.symbol}</span>

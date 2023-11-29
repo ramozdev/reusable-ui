@@ -5,27 +5,33 @@ import Label from "@/ui/html/label";
 
 export default function Swap() {
   return (
-    <Card className="w-80 bg-black">
+    <Card className="w-96 bg-black">
       <div className="mb-4">
-        <Label htmlFor="you-pay">Swap</Label>
+        <Label htmlFor="you-pay" className="mb-1 block text-sm">
+          You pay
+        </Label>
         <div className="flex items-center gap-2">
           <TokenCommand />
           <input
             placeholder="0.0"
             id="you-pay"
-            className="appearance-none border-none bg-transparent focus:outline-none"
+            type="number"
+            className="w-full appearance-none border-none bg-transparent text-xl focus:outline-none"
           />
         </div>
       </div>
 
       <div className="mb-4">
-        <Label htmlFor="you-receive">Swap</Label>
+        <Label htmlFor="you-receive" className="mb-1 block text-sm">
+          You receive
+        </Label>
         <div className="flex items-center gap-2">
           <TokenCommand />
           <input
             placeholder="0.0"
             id="you-receive"
-            className="appearance-none border-none bg-transparent focus:outline-none"
+            type="number"
+            className="w-full appearance-none border-none bg-transparent text-xl focus:outline-none"
           />
         </div>
       </div>
