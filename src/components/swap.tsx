@@ -49,8 +49,11 @@ export default function Swap() {
           value="swap"
           className="divide-y divide-neutral-100  dark:divide-neutral-900"
         >
-          <div className="relative p-4">
-            <Label htmlFor="you-pay" className="mb-1 block text-sm">
+          <div className="relative p-4 pt-0">
+            <Label
+              htmlFor="you-pay"
+              className="-mx-4 block cursor-pointer px-4 pt-4 text-sm"
+            >
               You pay
             </Label>
             <div className="-mr-4 mb-0.5 flex items-center gap-2">
@@ -71,15 +74,19 @@ export default function Swap() {
                 $2,290.33
               </div>
             </div>
-            <div className="absolute inset-x-0 flex justify-center">
-              <Button.Subtle size="icon" className="rounded-full text-xs">
-                <SymbolIcon />
-              </Button.Subtle>
-            </div>
+            <Button.Subtle
+              size="icon"
+              className="absolute left-1/2 -translate-x-1/2 rounded-full text-xs"
+            >
+              <SymbolIcon />
+            </Button.Subtle>
           </div>
 
-          <div className="p-4">
-            <Label htmlFor="you-receive" className="mb-1 block text-sm">
+          <div className="p-4 pt-0">
+            <Label
+              htmlFor="you-receive"
+              className="-mx-4 block cursor-pointer px-4 pt-4 text-sm"
+            >
               You receive
             </Label>
             <div className="-mr-4 mb-0.5 flex items-center gap-2">
@@ -158,8 +165,11 @@ export default function Swap() {
           value="limit"
           className="divide-y divide-neutral-100  dark:divide-neutral-900"
         >
-          <div className="relative p-4">
-            <Label htmlFor="you-pay" className="mb-1 block text-sm">
+          <div className="relative p-4 pt-0">
+            <Label
+              htmlFor="you-pay"
+              className="-mx-4 block cursor-pointer px-4 pt-4 text-sm"
+            >
               You pay
             </Label>
             <div className="-mr-4 mb-0.5 flex items-center gap-2">
@@ -180,15 +190,19 @@ export default function Swap() {
                 $2,290.33
               </div>
             </div>
-            <div className="absolute inset-x-0 flex justify-center">
-              <Button.Subtle size="icon" className="rounded-full text-xs">
-                <SymbolIcon />
-              </Button.Subtle>
-            </div>
+            <Button.Subtle
+              size="icon"
+              className="absolute left-1/2 -translate-x-1/2 rounded-full text-xs"
+            >
+              <SymbolIcon />
+            </Button.Subtle>
           </div>
 
-          <div className="p-4">
-            <Label htmlFor="you-receive" className="mb-1 block text-sm">
+          <div className="p-4 pt-0">
+            <Label
+              htmlFor="you-receive"
+              className="-mx-4 block cursor-pointer px-4 pt-4 text-sm"
+            >
               You receive
             </Label>
             <div className="-mr-4 mb-0.5 flex items-center gap-2">
