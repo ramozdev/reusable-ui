@@ -7,7 +7,6 @@ import { BORDER, ROUNDED, SHADOW } from "@/ui/globals";
 const card = cva(
   twMerge(
     `w-full
-    font-mono
     p-4
     m-px`,
     ROUNDED,

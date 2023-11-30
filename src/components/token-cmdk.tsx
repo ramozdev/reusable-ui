@@ -33,6 +33,12 @@ const tokens = {
   },
 };
 
+export const SelectToken = () => (
+  <button className="inline-flex items-center whitespace-nowrap rounded-full bg-yellow-400 px-2 py-0.5 text-sm font-medium text-black ring-1 ring-neutral-300 dark:ring-neutral-800">
+    Select Token
+  </button>
+);
+
 export function TokenCommand() {
   const [open, setOpen] = React.useState(false);
 
@@ -40,14 +46,14 @@ export function TokenCommand() {
     <>
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center rounded-full px-2 py-1 ring-1 ring-neutral-300 dark:ring-neutral-800"
+        className="inline-flex items-center rounded-full px-2 py-0.5 ring-1 ring-neutral-300 dark:ring-neutral-800"
       >
-        <div className="h-6 w-6">
+        <div className="h-5 w-5">
           <Image
             src={tokens.ETH.icon}
             alt={`${tokens.ETH.name}'s logo`}
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             className="rounded-full"
           />
         </div>
@@ -59,7 +65,7 @@ export function TokenCommand() {
         onOpenChange={setOpen}
         label="Global Command Menu"
       >
-        <Command.Root className="md:h-[60vh] md:w-[55vh]">
+        <Command.Root className="h-[80vh] w-[95vw] md:h-[80vh] md:w-[55vh]">
           <Command.Input placeholder="Search name or paste address" />
           <Command.Separator />
           <Command.List>
