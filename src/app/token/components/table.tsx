@@ -4,26 +4,26 @@ export function TableDemo() {
   return (
     <div className="max-h-80 overflow-y-auto">
       <Table.Root>
-        <Table.Head>
-          <Table.Row>
-            <Table.Header>Unit Price</Table.Header>
-            <Table.Header>USD Unit Price</Table.Header>
-            <Table.Header>Quantity</Table.Header>
-            <Table.Header>Date</Table.Header>
-            <Table.Header>From</Table.Header>
-          </Table.Row>
-        </Table.Head>
-        <Table.Body>
+        <Table.Thead>
+          <Table.Tr>
+            <Table.Th>Unit Price</Table.Th>
+            <Table.Th>USD Unit Price</Table.Th>
+            <Table.Th>Quantity</Table.Th>
+            <Table.Th>Date</Table.Th>
+            <Table.Th>From</Table.Th>
+          </Table.Tr>
+        </Table.Thead>
+        <Table.Tbody>
           {Array.from({ length: 6 }).map((_, i) => (
-            <Table.Row key={i}>
-              <Table.Cell>0.002 ETH</Table.Cell>
-              <Table.Cell>$4.02</Table.Cell>
-              <Table.Cell>1</Table.Cell>
-              <Table.Cell>20h ago</Table.Cell>
-              <Table.Cell>Columpio Labs</Table.Cell>
-            </Table.Row>
+            <Table.Tr key={i}>
+              <Table.Td>0.002 ETH</Table.Td>
+              <Table.Td>$4.02</Table.Td>
+              <Table.Td>1</Table.Td>
+              <Table.Td>20h ago</Table.Td>
+              <Table.Td>Columpio Labs</Table.Td>
+            </Table.Tr>
           ))}
-        </Table.Body>
+        </Table.Tbody>
       </Table.Root>
     </div>
   );

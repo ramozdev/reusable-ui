@@ -54,7 +54,7 @@ const caption = cva(
   },
 );
 
-const TCaption = React.forwardRef<
+const Caption = React.forwardRef<
   HTMLElement,
   React.HTMLAttributes<HTMLElement> & VariantProps<typeof caption>
 >(({ className, variant, ...props }, ref) => {
@@ -66,9 +66,9 @@ const TCaption = React.forwardRef<
     />
   );
 });
-TCaption.displayName = "Caption";
+Caption.displayName = "Caption";
 
-const Tbody = React.forwardRef<
+const Body = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => {
@@ -80,9 +80,9 @@ const Tbody = React.forwardRef<
     />
   );
 });
-Tbody.displayName = "Tbody";
+Body.displayName = "Body";
 
-const Tfoot = React.forwardRef<
+const Foot = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => {
@@ -97,9 +97,9 @@ const Tfoot = React.forwardRef<
     />
   );
 });
-Tfoot.displayName = "Tfoot";
+Foot.displayName = "Foot";
 
-const Tr = React.forwardRef<
+const Row = React.forwardRef<
   HTMLTableRowElement,
   React.HTMLAttributes<HTMLTableRowElement>
 >(({ className, ...props }, ref) => {
@@ -115,9 +115,9 @@ const Tr = React.forwardRef<
     />
   );
 });
-Tr.displayName = "Tr";
+Row.displayName = "Row";
 
-const Th = React.forwardRef<
+const Header = React.forwardRef<
   HTMLTableCellElement,
   React.ThHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => {
@@ -132,9 +132,9 @@ const Th = React.forwardRef<
     />
   );
 });
-Th.displayName = "Th";
+Header.displayName = "Header";
 
-const Td = React.forwardRef<
+const Cell = React.forwardRef<
   HTMLTableCellElement,
   React.TdHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => {
@@ -146,7 +146,7 @@ const Td = React.forwardRef<
     />
   );
 });
-Td.displayName = "Td";
+Cell.displayName = "Cell";
 
 const thead = cva(
   twMerge(
@@ -166,7 +166,7 @@ const thead = cva(
   },
 );
 
-const Thead = React.forwardRef<
+const Head = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement> & VariantProps<typeof thead>
 >(({ className, color, ...props }, ref) => {
@@ -178,26 +178,26 @@ const Thead = React.forwardRef<
     />
   );
 });
-Thead.displayName = "Thead";
+Head.displayName = "Head";
 
 const Root = TableRoot;
-const Caption = TCaption;
-const Head = Thead;
-const Body = Tbody;
-const Foot = Tfoot;
-const Row = Tr;
-const Cell = Td;
-const Header = Th;
+const TCaption = Caption;
+const Thead = Head;
+const Tbody = Body;
+const Tfoot = Foot;
+const Tr = Row;
+const Td = Cell;
+const Th = Header;
 
 const Table = {
   Root,
-  Caption,
-  Head,
-  Body,
-  Foot,
-  Row,
-  Cell,
-  Header,
+  TCaption,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Td,
+  Th,
   table,
   caption,
 };
