@@ -8,9 +8,7 @@ const table = cva(
     `w-full
      text-sm
      text-left
-     overflow-hidden 
-     bg-neutral-50
-    `,
+     overflow-hidden`,
     ROUNDED,
   ),
   {
@@ -40,17 +38,21 @@ const TableRoot = React.forwardRef<
 });
 TableRoot.displayName = "Table";
 
-const caption = cva("bg-white", {
-  variants: {
-    variant: {
-      top: `bg-white p-5 text-left text-lg font-semibold`,
-      bottom: `caption-bottom p-2`,
+const caption = cva(
+  `mt-4 
+  text-sm`,
+  {
+    variants: {
+      variant: {
+        top: `bg-white p-5 text-left text-lg font-semibold`,
+        bottom: `caption-bottom p-2`,
+      },
+    },
+    defaultVariants: {
+      variant: "bottom",
     },
   },
-  defaultVariants: {
-    variant: "bottom",
-  },
-});
+);
 
 const TCaption = React.forwardRef<
   HTMLElement,
@@ -70,7 +72,13 @@ const Tbody = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => {
-  return <tbody {...props} ref={ref} className={twMerge(`h-14`, className)} />;
+  return (
+    <tbody
+      {...props}
+      ref={ref}
+      className={twMerge(`[&_tr:last-child]:border-0`, className)}
+    />
+  );
 });
 Tbody.displayName = "Tbody";
 
@@ -79,7 +87,14 @@ const Tfoot = React.forwardRef<
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => {
   return (
-    <tfoot {...props} ref={ref} className={twMerge(`mt-2 h-14`, className)} />
+    <tfoot
+      {...props}
+      ref={ref}
+      className={twMerge(
+        `border-t font-medium [&>tr]:last:border-b-0`,
+        className,
+      )}
+    />
   );
 });
 Tfoot.displayName = "Tfoot";
@@ -93,7 +108,8 @@ const Tr = React.forwardRef<
       {...props}
       ref={ref}
       className={twMerge(
-        `bg-neutral-100 text-neutral-900 dark:bg-neutral-800 dark:text-neutral-50`,
+        `border-b border-neutral-200 bg-neutral-100 text-neutral-900 transition-colors hover:bg-neutral-200 data-[state=selected]:bg-neutral-200 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-50
+       dark:hover:bg-neutral-900 dark:data-[state=selected]:bg-neutral-900`,
         className,
       )}
     />
@@ -123,20 +139,42 @@ const Td = React.forwardRef<
   React.TdHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => {
   return (
-    <td {...props} ref={ref} className={twMerge(`px-6 py-4`, className)} />
+    <td
+      {...props}
+      ref={ref}
+      className={twMerge(`px-6 py-4 [&:has([role=checkbox])]:pr-0`, className)}
+    />
   );
 });
 Td.displayName = "Td";
 
+const thead = cva(
+  twMerge(
+    `[&_tr]:border-b 
+    text-xs`,
+    ROUNDED,
+  ),
+  {
+    defaultVariants: {
+      color: `neutral`,
+    },
+    variants: {
+      color: {
+        neutral: `bg-neutral-50 [&_tr]:border-neutral-200 dark:[&_tr]:border-neutral-600`,
+      },
+    },
+  },
+);
+
 const Thead = React.forwardRef<
   HTMLTableSectionElement,
-  React.HTMLAttributes<HTMLTableSectionElement>
->(({ className, ...props }, ref) => {
+  React.HTMLAttributes<HTMLTableSectionElement> & VariantProps<typeof thead>
+>(({ className, color, ...props }, ref) => {
   return (
     <thead
       {...props}
       ref={ref}
-      className={twMerge("bg-neutral-50 text-xs uppercase", className)}
+      className={twMerge(thead({ color }), className)}
     />
   );
 });
