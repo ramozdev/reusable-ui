@@ -5,7 +5,7 @@ const links = [
   { href: "/swap", name: "Swap" },
   { href: "/tokens", name: "Tokens" },
   { href: "/nfts/collection", name: "NTF Collection" },
-  { href: "/nfts/token", name: "NTF Token" },
+  { href: "/nfts/token", name: "NTF" },
   { href: "/forms", name: "Forms" },
   { href: "/cards", name: "Cards" },
 ];
