@@ -6,9 +6,9 @@ import Separator from "@/ui/radix/separator";
 import Accordion from "@/ui/radix/accordion";
 import Price from "./components/price";
 import Footer from "./components/footer";
-import { HoverCardDemo } from "./components/hoverCard";
+import { HoverCardDemo } from "./components/hover-card";
 // import { TableDemo } from "./components/table";
-import DataTableDemo from "./components/datatabledemo";
+import DataTableDemo from "./components/data-table-demo";
 
 export default function Page() {
   return (

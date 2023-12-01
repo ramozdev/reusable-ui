@@ -1,10 +1,19 @@
-import Nav from "@/components/nav";
+"use client";
 
-export default function Page() {
+import Separator from "@/ui/radix/separator";
+import { ProfileForm } from "./profile-form";
+
+export default function SettingsProfilePage() {
   return (
-    <>
-      <Nav />
-      <div className="mx-auto mb-10 mt-14 grid w-full justify-center"></div>
-    </>
+    <div className="space-y-6">
+      <div className="text-neutral-900 dark:text-neutral-50">
+        <h3 className="text-lg font-medium">Profile</h3>
+        <p className="text-muted-foreground text-sm">
+          This is how others will see you on the site.
+        </p>
+      </div>
+      <Separator.Root />
+      <ProfileForm />
+    </div>
   );
 }

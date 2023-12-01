@@ -1,3 +1,4 @@
+import Nav from "@/components/nav";
 import Navbar from "@/components/navbar";
 import "@/styles/globals.css";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         className={`bg-white font-sans dark:bg-black dark:text-neutral-50 ${inter.variable}`}
       >
         <Navbar />
+        <Nav />
         {children}
       </body>
     </html>

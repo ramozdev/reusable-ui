@@ -1,6 +1,6 @@
 import Profile from "@/components/profile";
 import { Suspense } from "react";
-import Tokens from "@/components/tokens";
+import Tokens from "@/app/examples/nfts/collection/tokens";
 import { CardsSkeleton } from "@/components/card-skeleton";
 
 export default function Page() {

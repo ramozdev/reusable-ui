@@ -1,7 +1,7 @@
 import Button from "@/ui/html/button";
 import Card from "@/ui/html/card";
 import React from "react";
-import { HoverCardDemo } from "./hoverCard";
+import { HoverCardDemo } from "./hover-card";
 import { TableDemo } from "./table";
 
 export default function Price() {

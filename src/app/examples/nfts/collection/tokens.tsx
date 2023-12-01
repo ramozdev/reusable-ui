@@ -3,7 +3,7 @@ import Card from "@/ui/html/card";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { fetchToken as fetchTokens } from "../app/lib/data";
+import { fetchToken as fetchTokens } from "./query";
 import Label from "@/ui/html/label";
 
 export default async function Tokens() {

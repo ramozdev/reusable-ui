@@ -4,7 +4,8 @@ import Link from "next/link";
 const links = [
   { href: "/swap", name: "Swap" },
   { href: "/tokens", name: "Tokens" },
-  { href: "/nfts", name: "NTFs" },
+  { href: "/nfts/collection", name: "NTF Collection" },
+  { href: "/nfts/token", name: "NTF Token" },
   { href: "/forms", name: "Forms" },
   { href: "/cards", name: "Cards" },
 ];
@@ -14,7 +15,7 @@ const Nav = () => (
     <div className="mx-auto flex h-full max-w-screen-xl items-center justify-between gap-2 px-4">
       <div className="hidden flex-wrap items-center space-x-4 md:flex">
         {links.map(({ name, href }, index) => (
-          <Link key={index} href={`/examples/${href}`}>
+          <Link key={index} href={`/examples${href}`}>
             {name}
           </Link>
         ))}
