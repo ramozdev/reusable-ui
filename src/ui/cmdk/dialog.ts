@@ -11,9 +11,9 @@ const dialog = cva(
   -translate-y-1/2
   data-[state=open]:animate-cmdk-content-show
   focus:outline-none`,
-    ROUNDED,
     SHADOW,
     BORDER,
+    ROUNDED,
   ),
   {
     defaultVariants: {
@@ -21,11 +21,149 @@ const dialog = cva(
     },
     variants: {
       color: {
+        brand: `bg-brand-50
+        [&_[dialog-overlay]]:bg-brand-100
+        border-brand-400
+        dark:bg-brand-950
+        dark:[&_[dialog-overlay]]:bg-brand-950
+        dark:border-brand-700`,
+        slate: `bg-slate-50
+        [&_[dialog-overlay]]:bg-slate-100
+        border-slate-400
+        dark:bg-slate-950
+        dark:[&_[dialog-overlay]]:bg-slate-950
+        dark:border-slate-700`,
+        gray: `bg-gray-50
+        [&_[dialog-overlay]]:bg-gray-100
+        border-gray-400
+        dark:bg-gray-950
+        dark:[&_[dialog-overlay]]:bg-gray-950
+        dark:border-gray-700`,
+        zinc: `bg-zinc-50
+        [&_[dialog-overlay]]:bg-zinc-100
+        border-zinc-400
+        dark:bg-zinc-950
+        dark:[&_[dialog-overlay]]:bg-zinc-950
+        dark:border-zinc-700`,
         neutral: `bg-neutral-50
         [&_[dialog-overlay]]:bg-neutral-100
         border-neutral-400
         dark:bg-neutral-950
         dark:[&_[dialog-overlay]]:bg-neutral-950
+        dark:border-neutral-700`,
+        stone: `bg-stone-50
+        [&_[dialog-overlay]]:bg-stone-100
+        border-stone-400
+        dark:bg-stone-950
+        dark:[&_[dialog-overlay]]:bg-stone-950
+        dark:border-stone-700`,
+        red: `bg-red-50
+        [&_[dialog-overlay]]:bg-red-100
+        border-red-400
+        dark:bg-red-950
+        dark:[&_[dialog-overlay]]:bg-red-950
+        dark:border-red-700`,
+        orange: `bg-orange-50
+        [&_[dialog-overlay]]:bg-orange-100
+        border-orange-400
+        dark:bg-orange-950
+        dark:[&_[dialog-overlay]]:bg-orange-950
+        dark:border-orange-700`,
+        amber: `bg-amber-50
+        [&_[dialog-overlay]]:bg-amber-100
+        border-amber-400
+        dark:bg-amber-950
+        dark:[&_[dialog-overlay]]:bg-amber-950
+        dark:border-amber-700`,
+        yellow: `bg-yellow-50
+        [&_[dialog-overlay]]:bg-yellow-100
+        border-yellow-400
+        dark:bg-yellow-950
+        dark:[&_[dialog-overlay]]:bg-yellow-950
+        dark:border-yellow-700`,
+        lime: `bg-lime-50
+        [&_[dialog-overlay]]:bg-lime-100
+        border-lime-400
+        dark:bg-lime-950
+        dark:[&_[dialog-overlay]]:bg-lime-950
+        dark:border-lime-700`,
+        green: `bg-green-50
+        [&_[dialog-overlay]]:bg-green-100
+        border-green-400
+        dark:bg-green-950
+        dark:[&_[dialog-overlay]]:bg-green-950
+        dark:border-green-700`,
+        emerald: `bg-emerald-50
+        [&_[dialog-overlay]]:bg-emerald-100
+        border-emerald-400
+        dark:bg-emerald-950
+        dark:[&_[dialog-overlay]]:bg-emerald-950
+        dark:border-emerald-700`,
+        teal: `bg-teal-50
+        [&_[dialog-overlay]]:bg-teal-100
+        border-teal-400
+        dark:bg-teal-950
+        dark:[&_[dialog-overlay]]:bg-teal-950
+        dark:border-teal-700`,
+        cyan: `bg-cyan-50
+        [&_[dialog-overlay]]:bg-cyan-100
+        border-cyan-400
+        dark:bg-cyan-950
+        dark:[&_[dialog-overlay]]:bg-cyan-950
+        dark:border-cyan-700`,
+        sky: `bg-sky-50
+        [&_[dialog-overlay]]:bg-sky-100
+        border-sky-400
+        dark:bg-sky-950
+        dark:[&_[dialog-overlay]]:bg-sky-950
+        dark:border-sky-700`,
+        blue: `bg-blue-50
+        [&_[dialog-overlay]]:bg-blue-100
+        border-blue-400
+        dark:bg-blue-950
+        dark:[&_[dialog-overlay]]:bg-blue-950
+        dark:border-blue-700`,
+        indigo: `bg-indigo-50
+        [&_[dialog-overlay]]:bg-indigo-100
+        border-indigo-400
+        dark:bg-indigo-950
+        dark:[&_[dialog-overlay]]:bg-indigo-950
+        dark:border-indigo-700`,
+        violet: `bg-violet-50
+        [&_[dialog-overlay]]:bg-violet-100
+        border-violet-400
+        dark:bg-violet-950
+        dark:[&_[dialog-overlay]]:bg-violet-950
+        dark:border-violet-700`,
+        purple: `bg-purple-50
+        [&_[dialog-overlay]]:bg-purple-100
+        border-purple-400
+        dark:bg-purple-950
+        dark:[&_[dialog-overlay]]:bg-purple-950
+        dark:border-purple-700`,
+        fuchsia: `bg-fuchsia-50
+        [&_[dialog-overlay]]:bg-fuchsia-100
+        border-fuchsia-400
+        dark:bg-fuchsia-950
+        dark:[&_[dialog-overlay]]:bg-fuchsia-950
+        dark:border-fuchsia-700`,
+        pink: `bg-pink-50
+        [&_[dialog-overlay]]:bg-pink-100
+        border-pink-400
+        dark:bg-pink-950
+        dark:[&_[dialog-overlay]]:bg-pink-950
+        dark:border-pink-700`,
+        rose: `bg-rose-50
+        [&_[dialog-overlay]]:bg-rose-100
+        border-rose-400
+        dark:bg-rose-950
+        dark:[&_[dialog-overlay]]:bg-rose-950
+        dark:border-rose-700`,
+        "white-black": `bg-white
+        [&_[dialog-overlay]]:bg-white
+        border-neutral-300
+        dark:bg-black
+        dark:[&_[dialog-overlay]]:bg-black
         dark:border-neutral-700`,
       },
     },
