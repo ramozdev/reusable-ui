@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`bg-white font-sans dark:bg-black dark:text-neutral-50 ${inter.variable}`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

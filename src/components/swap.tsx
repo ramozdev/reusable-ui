@@ -234,7 +234,7 @@ export default function Swap() {
               WETH Limit price<Badge.Subtle>+1.9%</Badge.Subtle>
             </Label>
             <div className="-mr-4 mb-2 flex items-center gap-2">
-              <Button.Subtle>
+              <Button.Subtle color="neutral" variant="outline">
                 <SymbolIcon />
                 ETH
               </Button.Subtle>
@@ -249,6 +249,7 @@ export default function Swap() {
               {[0, 1, 2, 5, 10].map((x) => (
                 <Button.Subtle
                   variant="outline"
+                  color="neutral"
                   key={`limit-price-${x}`}
                   className="text-sm"
                 >
@@ -286,6 +287,7 @@ export default function Swap() {
               {[0.1, 0.5, 1].map((x) => (
                 <Button.Subtle
                   variant="outline"
+                  color="neutral"
                   key={`max-slippage-${x}`}
                   className="w-full text-sm"
                 >
@@ -299,7 +301,7 @@ export default function Swap() {
                 placeholder="0.0"
                 id="max-slippage"
                 type="text"
-                className="w-20 appearance-none border-none bg-transparent pr-4 text-end text-xl focus:outline-none"
+                className="w-20 appearance-none border-none bg-transparent pr-4 text-end focus:outline-none"
               />
             </div>
           </div>
