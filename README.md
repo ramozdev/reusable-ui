@@ -1,6 +1,6 @@
 # Papel UI (Next.js Example)
 
-Papel UI is a collection of reusable React components for quick prototyping. Instead of installing a dependency, you copy and paste the components into your project.
+Papel UI is a collection of reusable React components tailored for web3 development. Instead of installing a dependency, you copy and paste the components into your project.
 
 ## Installation
 
@@ -11,7 +11,7 @@ Papel UI requires the following dev dependencies.
 - [class-variance-authority](https://cva.style/docs/getting-started/installation)
 - [tailwind-merge](https://github.com/dcastil/tailwind-merge#readme)
 
-Use this command to install class-variance-authority and tailwind-merge.
+Use this command to install `class-variance-authority` and `tailwind-merge`.
 
 ```bash
 pnpm install -D class-variance-authority tailwind-merge
@@ -29,7 +29,7 @@ Follow the official guide for your framkework to install [TailwindCSS](https://t
 
 ## Usage
 
-Copy and paste the `/ui` folder from this repository into your project.
+Copy and paste the [`/ui`](https://github.com/ramozdev/papel-next/tree/main/src/ui) folder from this repository into your project.
 
 ### File structure (Recommended)
 
@@ -88,7 +88,7 @@ export default function Page() {
 }
 ```
 
-### ui/globals.ts
+### /ui/globals.ts
 
 We use `globals.ts` to make global changes to the components. You can change the border radius, shadow and border for all targeted components by changing the values in this file.
 
@@ -104,7 +104,7 @@ export { ROUNDED, SHADOW, BORDER };
 
 The use of `globals.ts` is optional, but highly recommended. You can exclude or include any component to use `globals.ts`.
 
-### ui/animations.ts
+### /ui/animations.ts
 
 Contains all the animations created for any of the components.
 
@@ -127,7 +127,7 @@ const animations: NonNullable<Config["theme"]>["extend"] = {
 export { animations };
 ```
 
-### ui/plugins.ts
+### /ui/plugins.ts
 
 Contains all the plugins created for any of the components.
 
