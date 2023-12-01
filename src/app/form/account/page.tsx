@@ -39,7 +39,7 @@ export default function AccountForm() {
           <option value="portuguese">Portuguese</option>
         </Select>
       </div>
-      <Button.Solid type="submit" color="white_black">
+      <Button.Solid type="submit" color="white-black">
         Update account
       </Button.Solid>
     </form>

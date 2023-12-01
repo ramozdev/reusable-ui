@@ -7,7 +7,7 @@ import Accordion from "@/ui/radix/accordion";
 import Price from "./components/price";
 import Footer from "./components/footer";
 import { HoverCardDemo } from "./components/hoverCard";
-import { TableDemo } from "./components/table";
+// import { TableDemo } from "./components/table";
 import DataTableDemo from "./components/datatabledemo";
 
 export default function Page() {

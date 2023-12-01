@@ -36,13 +36,13 @@ export function ProfileForm() {
         <Button.Solid
           type="button"
           variant="outline"
-          color="white_black"
+          color="white-black"
           className="mt-2"
         >
           Add URL
         </Button.Solid>
       </div>
-      <Button.Solid type="submit" color="white_black">
+      <Button.Solid type="submit" color="white-black">
         Update profile
       </Button.Solid>
     </form>

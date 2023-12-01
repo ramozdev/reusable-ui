@@ -9,6 +9,7 @@ import Select from "@/ui/html/select";
 import { ChevronDownIcon, GearIcon, SymbolIcon } from "@radix-ui/react-icons";
 import * as Tabs from "@radix-ui/react-tabs";
 import * as Accordion from "@radix-ui/react-accordion";
+import { Fragment } from "react";
 
 export default function Swap() {
   return (
@@ -62,7 +63,7 @@ export default function Swap() {
                 placeholder="0.0"
                 id="you-pay"
                 type="text"
-                className="w-full appearance-none border-none bg-transparent pr-4 text-end text-xl focus:outline-none"
+                className="w-full appearance-none border-none bg-transparent pr-4 text-end font-mono text-xl focus:outline-none"
               />
             </div>
             <div className="flex items-baseline justify-between gap-2">
@@ -95,7 +96,7 @@ export default function Swap() {
                 placeholder="0.0"
                 id="you-receive"
                 type="text"
-                className="w-full appearance-none border-none bg-transparent pr-4 text-end text-xl focus:outline-none"
+                className="w-full appearance-none border-none bg-transparent pr-4 text-end font-mono text-xl focus:outline-none"
               />
             </div>
 
@@ -141,24 +142,26 @@ export default function Swap() {
                       value: "Uniswap API",
                     },
                   ].map(({ metric, value }, index, arr) => (
-                    <>
+                    <Fragment key={metric}>
                       {(index === arr.length - 1 || index === 0) && (
                         <div className="border-b border-neutral-100 dark:border-neutral-900" />
                       )}
-                      <div className="flex justify-between" key={metric}>
+                      <div className="flex justify-between">
                         <div className="text-xs text-neutral-200 dark:text-neutral-300">
                           {metric}
                         </div>
                         <div className="text-right text-xs">{value}</div>
                       </div>
-                    </>
+                    </Fragment>
                   ))}
                 </Accordion.Content>
               </Accordion.Item>
             </Accordion.Root>
           </div>
           <div className="p-4">
-            <Button.Solid className="w-full py-2">Swap</Button.Solid>
+            <Button.Solid color="blue" size="lg" className="w-full py-2">
+              Swap
+            </Button.Solid>
           </div>
         </Tabs.Content>
         <Tabs.Content
@@ -178,7 +181,7 @@ export default function Swap() {
                 placeholder="0.0"
                 id="you-pay"
                 type="text"
-                className="w-full appearance-none border-none bg-transparent pr-4 text-end text-xl focus:outline-none"
+                className="w-full appearance-none border-none bg-transparent pr-4 text-end font-mono text-xl focus:outline-none"
               />
             </div>
             <div className="flex items-baseline justify-between gap-2">
@@ -211,7 +214,7 @@ export default function Swap() {
                 placeholder="0.0"
                 id="you-receive"
                 type="text"
-                className="w-full appearance-none border-none bg-transparent pr-4 text-end text-xl focus:outline-none"
+                className="w-full appearance-none border-none bg-transparent pr-4 text-end font-mono text-xl focus:outline-none"
               />
             </div>
 
@@ -244,7 +247,11 @@ export default function Swap() {
             </div>
             <div className="flex justify-between">
               {[0, 1, 2, 5, 10].map((x) => (
-                <Button.Subtle variant="outline" key={x} className="text-sm">
+                <Button.Subtle
+                  variant="outline"
+                  key={`limit-price-${x}`}
+                  className="text-sm"
+                >
                   {x === 0 ? "Market" : `${x}%`}
                 </Button.Subtle>
               ))}
@@ -254,7 +261,9 @@ export default function Swap() {
             <div>Expiry</div>
             <Select>
               {["1 hour", "1 day", "3 days", "7 days", "28 days"].map((x) => (
-                <option key={x}>{x}</option>
+                <option key={`expiry-${x}`} value={x}>
+                  {x}
+                </option>
               ))}
             </Select>
           </div>
@@ -277,7 +286,7 @@ export default function Swap() {
               {[0.1, 0.5, 1].map((x) => (
                 <Button.Subtle
                   variant="outline"
-                  key={x}
+                  key={`max-slippage-${x}`}
                   className="w-full text-sm"
                 >
                   {x}%
@@ -314,11 +323,11 @@ export default function Swap() {
                   price: 78.4,
                   usd: 32.11,
                 },
-              ].map((x) => (
-                <Card key={x.name}>
-                  <div>{x.name}</div>
+              ].map(({ name, price, usd }) => (
+                <Card key={`fee-${name}`}>
+                  <div>{name}</div>
                   <div className="text-xs">
-                    {x.price} Gwei (${x.usd})
+                    {price} Gwei (${usd})
                   </div>
                 </Card>
               ))}
@@ -345,8 +354,8 @@ export default function Swap() {
                 Liquidity Sources
               </label>
               <Select id="liquidity-sources" className="w-full">
-                {["0x", "aave", "uniswap", "curve", "balancer"].map((x) => (
-                  <option key={x}>{x}</option>
+                {["0x", "aave", "uniswap", "curve", "balancer"].map((name) => (
+                  <option key={`liquidity-source-${name}`}>{name}</option>
                 ))}
               </Select>
             </div>

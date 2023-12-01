@@ -51,7 +51,7 @@ export default function DisplayForm() {
           </TextInput>
         </div>
       </div>
-      <Button.Solid type="submit" color="white_black">
+      <Button.Solid type="submit" color="white-black">
         Update display
       </Button.Solid>
     </form>

@@ -27,7 +27,7 @@ const Nav = () => (
     </div>
 
     <div>
-      <Button.Solid color="white_black">Connect wallet</Button.Solid>
+      <Button.Solid color="white-black">Connect wallet</Button.Solid>
     </div>
   </div>
 );

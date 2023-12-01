@@ -18,7 +18,7 @@ export default function AppearanceForm() {
           <option value="system">System</option>
         </Select>
       </div>
-      <Button.Solid type="submit" color="white_black">
+      <Button.Solid type="submit" color="white-black">
         Update preferences
       </Button.Solid>
     </form>

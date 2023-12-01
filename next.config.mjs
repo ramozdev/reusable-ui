@@ -7,14 +7,23 @@ await import("./src/env.mjs");
 /** @type {import("next").NextConfig} */
 const config = {
   images: {
-    domains: [
-      "encrypted-tbn0.gstatic.com",
-      "img.reservoir.tools",
-      "i.pinimg.com",
-      "assets.coingecko.com",
-    ],
-
     remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "encrypted-tbn0.gstatic.com",
+      },
+      {
+        protocol: "https",
+        hostname: "img.reservoir.tools",
+      },
+      {
+        protocol: "https",
+        hostname: "i.pinimg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "assets.coingecko.com",
+      },
       {
         protocol: "https",
         hostname: "images.unsplash.com",
