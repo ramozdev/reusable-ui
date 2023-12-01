@@ -8,6 +8,7 @@ import Price from "./components/price";
 import Footer from "./components/footer";
 import { HoverCardDemo } from "./components/hoverCard";
 import { TableDemo } from "./components/table";
+import DataTableDemo from "./components/datatabledemo";
 
 export default function Page() {
   return (
@@ -73,9 +74,7 @@ export default function Page() {
           <Price />
         </div>
       </div>
-      <div className="mx-10">
-        <TableDemo />
-      </div>
+      <DataTableDemo />
       <Footer />
     </div>
   );

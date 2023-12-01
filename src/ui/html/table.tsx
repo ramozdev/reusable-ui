@@ -8,9 +8,7 @@ const table = cva(
     `w-full
      text-sm
      text-left
-     overflow-hidden 
-     bg-neutral-50
-    `,
+     overflow-hidden`,
     ROUNDED,
   ),
   {
@@ -40,19 +38,23 @@ const TableRoot = React.forwardRef<
 });
 TableRoot.displayName = "Table";
 
-const caption = cva("bg-white", {
-  variants: {
-    variant: {
-      top: `bg-white p-5 text-left text-lg font-semibold`,
-      bottom: `caption-bottom p-2`,
+const caption = cva(
+  `mt-4 
+  text-sm`,
+  {
+    variants: {
+      variant: {
+        top: `bg-white p-5 text-left text-lg font-semibold`,
+        bottom: `caption-bottom p-2`,
+      },
+    },
+    defaultVariants: {
+      variant: "bottom",
     },
   },
-  defaultVariants: {
-    variant: "bottom",
-  },
-});
+);
 
-const TCaption = React.forwardRef<
+const Caption = React.forwardRef<
   HTMLElement,
   React.HTMLAttributes<HTMLElement> & VariantProps<typeof caption>
 >(({ className, variant, ...props }, ref) => {
@@ -64,27 +66,40 @@ const TCaption = React.forwardRef<
     />
   );
 });
-TCaption.displayName = "Caption";
+Caption.displayName = "Caption";
 
-const Tbody = React.forwardRef<
-  HTMLTableSectionElement,
-  React.HTMLAttributes<HTMLTableSectionElement>
->(({ className, ...props }, ref) => {
-  return <tbody {...props} ref={ref} className={twMerge(`h-14`, className)} />;
-});
-Tbody.displayName = "Tbody";
-
-const Tfoot = React.forwardRef<
+const Body = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => {
   return (
-    <tfoot {...props} ref={ref} className={twMerge(`mt-2 h-14`, className)} />
+    <tbody
+      {...props}
+      ref={ref}
+      className={twMerge(`[&_tr:last-child]:border-0`, className)}
+    />
   );
 });
-Tfoot.displayName = "Tfoot";
+Body.displayName = "Body";
 
-const Tr = React.forwardRef<
+const Foot = React.forwardRef<
+  HTMLTableSectionElement,
+  React.HTMLAttributes<HTMLTableSectionElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <tfoot
+      {...props}
+      ref={ref}
+      className={twMerge(
+        `border-t font-medium [&>tr]:last:border-b-0`,
+        className,
+      )}
+    />
+  );
+});
+Foot.displayName = "Foot";
+
+const Row = React.forwardRef<
   HTMLTableRowElement,
   React.HTMLAttributes<HTMLTableRowElement>
 >(({ className, ...props }, ref) => {
@@ -93,15 +108,16 @@ const Tr = React.forwardRef<
       {...props}
       ref={ref}
       className={twMerge(
-        `bg-neutral-100 text-neutral-900 dark:bg-neutral-800 dark:text-neutral-50`,
+        `border-b border-neutral-200 bg-neutral-100 text-neutral-900 transition-colors hover:bg-neutral-200 data-[state=selected]:bg-neutral-200 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-50
+       dark:hover:bg-neutral-900 dark:data-[state=selected]:bg-neutral-900`,
         className,
       )}
     />
   );
 });
-Tr.displayName = "Tr";
+Row.displayName = "Row";
 
-const Th = React.forwardRef<
+const Header = React.forwardRef<
   HTMLTableCellElement,
   React.ThHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => {
@@ -116,50 +132,72 @@ const Th = React.forwardRef<
     />
   );
 });
-Th.displayName = "Th";
+Header.displayName = "Header";
 
-const Td = React.forwardRef<
+const Cell = React.forwardRef<
   HTMLTableCellElement,
   React.TdHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => {
   return (
-    <td {...props} ref={ref} className={twMerge(`px-6 py-4`, className)} />
+    <td
+      {...props}
+      ref={ref}
+      className={twMerge(`px-6 py-4 [&:has([role=checkbox])]:pr-0`, className)}
+    />
   );
 });
-Td.displayName = "Td";
+Cell.displayName = "Cell";
 
-const Thead = React.forwardRef<
+const thead = cva(
+  twMerge(
+    `[&_tr]:border-b 
+    text-xs`,
+    ROUNDED,
+  ),
+  {
+    defaultVariants: {
+      color: `neutral`,
+    },
+    variants: {
+      color: {
+        neutral: `bg-neutral-50 [&_tr]:border-neutral-200 dark:[&_tr]:border-neutral-600`,
+      },
+    },
+  },
+);
+
+const Head = React.forwardRef<
   HTMLTableSectionElement,
-  React.HTMLAttributes<HTMLTableSectionElement>
->(({ className, ...props }, ref) => {
+  React.HTMLAttributes<HTMLTableSectionElement> & VariantProps<typeof thead>
+>(({ className, color, ...props }, ref) => {
   return (
     <thead
       {...props}
       ref={ref}
-      className={twMerge("bg-neutral-50 text-xs uppercase", className)}
+      className={twMerge(thead({ color }), className)}
     />
   );
 });
-Thead.displayName = "Thead";
+Head.displayName = "Head";
 
 const Root = TableRoot;
-const Caption = TCaption;
-const Head = Thead;
-const Body = Tbody;
-const Foot = Tfoot;
-const Row = Tr;
-const Cell = Td;
-const Header = Th;
+const TCaption = Caption;
+const Thead = Head;
+const Tbody = Body;
+const Tfoot = Foot;
+const Tr = Row;
+const Td = Cell;
+const Th = Header;
 
 const Table = {
   Root,
-  Caption,
-  Head,
-  Body,
-  Foot,
-  Row,
-  Cell,
-  Header,
+  TCaption,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Td,
+  Th,
   table,
   caption,
 };
