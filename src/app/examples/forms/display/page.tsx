@@ -3,7 +3,7 @@
 import Button from "@/ui/html/button";
 import Checkbox from "@/ui/html/checkbox";
 import Label from "@/ui/html/label";
-import TextInput from "@/ui/html/textinput";
+import TextInput from "@/ui/html/text-input";
 
 export default function DisplayForm() {
   return (
