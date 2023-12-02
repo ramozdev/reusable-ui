@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Columpio Labs",
-  description: "Design systems.",
+  title: "Reusable UI",
+  description: "Reusable React components.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
