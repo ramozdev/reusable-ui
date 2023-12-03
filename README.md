@@ -29,7 +29,7 @@ Follow the official guide for your framkework to install [TailwindCSS](https://t
 
 ## Usage
 
-Copy and paste the [`/ui`](https://github.com/ramozdev/Reusable-next/tree/main/src/ui) folder from this repository into your project.
+Copy and paste the [`/ui`](https://github.com/ramozdev/reusable-next/tree/main/src/ui) folder from this repository into your project.
 
 ### File structure (Recommended)
 
