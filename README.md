@@ -1,10 +1,10 @@
-# Papel UI (Next.js Example)
+# Reusable UI (Next.js Example)
 
-Papel UI is a collection of reusable React components tailored for web3 development. Instead of installing a dependency, you copy and paste the components into your project.
+Reusable UI is a collection of reusable React components tailored for web3 development. Instead of installing a dependency, you copy and paste the components into your project.
 
 ## Installation
 
-Papel UI requires the following dev dependencies.
+Reusable UI requires the following dev dependencies.
 
 - [TailwindCSS](https://tailwindcss.com/docs/installation/framework-guides)
 - [TypeScript](https://www.typescriptlang.org/download)
@@ -29,7 +29,7 @@ Follow the official guide for your framkework to install [TailwindCSS](https://t
 
 ## Usage
 
-Copy and paste the [`/ui`](https://github.com/ramozdev/papel-next/tree/main/src/ui) folder from this repository into your project.
+Copy and paste the [`/ui`](https://github.com/ramozdev/Reusable-next/tree/main/src/ui) folder from this repository into your project.
 
 ### File structure (Recommended)
 
@@ -162,4 +162,4 @@ export default {
 } satisfies Config;
 ```
 
-Now you're ready to use Papel UI in your project.
+Now you're ready to use Reusable UI in your project.
