@@ -50,14 +50,12 @@ Copy and paste the [`/ui`](https://github.com/ramozdev/papel-next/tree/main/src/
     │   │   │   ├── index.tsx
     │   │   │   ├── item.ts
     │   │   │   ├── root.ts
-    │   │   │   ├── tailwind.ts
     │   │   │   ├── trigger.ts
     │   │   │   └── variants.ts
     │   │   ├── alert-dialog/
     │   │   └── ...
-    │   ├── animations.ts
-    │   ├── globals.ts
-    │   └── plugins.ts
+    │   ├── animations-plugins.ts
+    │   └── globals.ts
     ├── tailwindcss.config.ts
     └── tsconfig.json
 ```
@@ -104,49 +102,53 @@ export { ROUNDED, SHADOW, BORDER };
 
 The use of `globals.ts` is optional, but highly recommended. You can exclude or include any component to use `globals.ts`.
 
-### /ui/animations.ts
+### /ui/animations-plugins.ts
 
-Contains all the animations created for any of the components.
+Contains all the animations and plugins created for the components.
 
-```ts filename="globals.ts"
+```ts filename="animations-plugins.ts"
 import { type Config } from "tailwindcss";
-import { dropdownMenu } from "./radix/dropdown-menu/tailwind";
-// ...
+import plugin from "tailwindcss/plugin";
 
 const animations: NonNullable<Config["theme"]>["extend"] = {
   keyframes: {
-    ...dropdownMenu?.keyframes,
+    // ACCORDION
+    "accordion-slide-down": {
+      from: { height: "0" },
+      to: { height: "var(--radix-accordion-content-height)" },
+    },
     // ...
   },
   animation: {
-    ...dropdownMenu?.animation,
+    // ACCORDION
+    "accordion-slide-down":
+      "accordion-slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1)",
     // ....
   },
 };
 
-export { animations };
-```
-
-### /ui/plugins.ts
-
-Contains all the plugins created for any of the components.
-
-```ts filename="plugins.ts"
-import { navigationMenuPlugin } from "./radix/navigation-menu/tailwind";
+const navigationMenuPlugin: NonNullable<Config["plugins"]> = [
+  plugin(({ matchUtilities }) => {
+    matchUtilities({
+      perspective: (value) => ({
+        perspective: value,
+      }),
+    });
+  }),
+];
 
 const plugins = [...navigationMenuPlugin];
 
-export { plugins };
+export { animations, plugins };
 ```
 
 ### TailwindCSS Configuration
 
-Certain components, such as the `<Dialog>`, require animations. We use `tailwindcss.config.ts` to add animations to the components. Import the animations and plugins from `ui/animations.ts` and `ui/plugins.ts` respectively.
+Certain components, such as the `<Dialog>`, require animations. We use `tailwindcss.config.ts` to add animations to the components. Import the animations and plugins from `ui/animations-plugins.ts`.
 
 ```ts filename="tailwind.config.ts"
 import { type Config } from "tailwindcss";
-import { animations } from "./src/ui/animations";
-import { plugins } from "./src/ui/plugins";
+import { animations, plugins } from "./src/ui/animations-plugins";
 
 export default {
   // ...
