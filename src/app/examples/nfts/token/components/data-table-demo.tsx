@@ -120,7 +120,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
+    header: () => <div className="text-left">Amount</div>,
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("amount"));
 
@@ -130,7 +130,7 @@ export const columns: ColumnDef<Payment>[] = [
         currency: "USD",
       }).format(amount);
 
-      return <div className="text-right font-medium">{formatted}</div>;
+      return <div className="text-left font-medium">{formatted}</div>;
     },
   },
   {
@@ -230,7 +230,7 @@ export default function DataTableDemo() {
           </DropdownMenu.Content>
         </DropdownMenu.Root>
       </div>
-      <div className="rounded-md border">
+      <div className="rounded-md border border-neutral-200 dark:border-neutral-800">
         <Table.Root>
           <Table.Thead>
             {table.getHeaderGroups().map((headerGroup) => (

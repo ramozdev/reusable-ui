@@ -1,37 +1,40 @@
 "use client";
 
 import Button from "@/ui/html/button";
-import Input from "@/ui/html/input";
-import Label from "@/ui/html/label";
+import TextInput from "@/ui/html/text-input";
 import Select from "@/ui/html/select";
 
 export default function AccountForm() {
+  const handleSubmit = (e: React.FormEvent) => e.preventDefault();
+
   return (
-    <form
-      onSubmit={(e: React.FormEvent) => e.preventDefault()}
-      className="w-full space-y-8"
-    >
+    <form onSubmit={handleSubmit} className="w-full space-y-8">
       <div>
-        <div className="flex items-baseline justify-between">
-          <Label required>Name</Label>
-        </div>
-        <Input type="text" required className="w-full" />
+        <TextInput
+          id="email"
+          type="email"
+          caption="This email will be visible to others"
+          validation="This email is already taken"
+        >
+          Email
+        </TextInput>
       </div>
 
-      {/* email */}
-      <div>
-        <div className="flex items-baseline justify-between">
-          <Label required>Date of birth</Label>
-          Please enter your date
-        </div>
-
-        <Input type="date" required className="w-full" />
-      </div>
-
-      <div className="space-y-4 py-4">
+      <div className="my-4 space-y-4">
         <div>
-          <Label required>Language</Label>
-          <Input type="url" required className="w-full" />
+          <TextInput
+            id="text"
+            type="text"
+            caption="This Language will be visible to others"
+            validation="This Language is already taken"
+          >
+            Language
+          </TextInput>
+        </div>
+        <div className="flex items-baseline justify-between">
+          <TextInput type="date" className="w-full">
+            Birthday date
+          </TextInput>
         </div>
         <Select required name="marital-status" id="marital-status">
           <option value="spanish">Spanish</option>
@@ -39,8 +42,9 @@ export default function AccountForm() {
           <option value="portuguese">Portuguese</option>
         </Select>
       </div>
+
       <Button.Solid type="submit" color="white-black">
-        Update account
+        Update Account
       </Button.Solid>
     </form>
   );

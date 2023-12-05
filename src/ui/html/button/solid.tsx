@@ -18,7 +18,7 @@ const solidButton = cva(globalButtonStyles, {
     },
     size: {
       sm: "px-3 h-7",
-      default: "px-4 py-1",
+      default: "px-4 py-0.5",
       lg: "px-7 py-4",
       "icon-sm": `h-4 w-4`,
       icon: `h-8

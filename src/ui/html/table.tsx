@@ -8,6 +8,7 @@ const table = cva(
     `w-full
      text-sm
      text-left
+     bg-transparent
      overflow-hidden`,
     ROUNDED,
   ),
@@ -18,13 +19,13 @@ const table = cva(
     variants: {
       variant: {
         default: ``,
-        outline: `bg-transparent`,
+        // outline: `bg-transparent`,
       },
     },
   },
 );
 
-const TableRoot = React.forwardRef<
+const Root = React.forwardRef<
   HTMLTableElement,
   React.TableHTMLAttributes<HTMLTableElement> & VariantProps<typeof table>
 >(({ className, variant, ...props }, ref) => {
@@ -36,7 +37,7 @@ const TableRoot = React.forwardRef<
     />
   );
 });
-TableRoot.displayName = "Table";
+Root.displayName = "Root";
 
 const caption = cva(
   `mt-4 
@@ -44,7 +45,7 @@ const caption = cva(
   {
     variants: {
       variant: {
-        top: `bg-white p-5 text-left text-lg font-semibold`,
+        top: `bg-transparent p-5 text-left text-lg font-semibold`,
         bottom: `caption-bottom p-2`,
       },
     },
@@ -68,7 +69,7 @@ const Caption = React.forwardRef<
 });
 Caption.displayName = "Caption";
 
-const Body = React.forwardRef<
+const Tbody = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => {
@@ -80,9 +81,9 @@ const Body = React.forwardRef<
     />
   );
 });
-Body.displayName = "Body";
+Tbody.displayName = "Tbody";
 
-const Foot = React.forwardRef<
+const Tfoot = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => {
@@ -97,9 +98,9 @@ const Foot = React.forwardRef<
     />
   );
 });
-Foot.displayName = "Foot";
+Tfoot.displayName = "Tfoot";
 
-const Row = React.forwardRef<
+const Tr = React.forwardRef<
   HTMLTableRowElement,
   React.HTMLAttributes<HTMLTableRowElement>
 >(({ className, ...props }, ref) => {
@@ -108,16 +109,16 @@ const Row = React.forwardRef<
       {...props}
       ref={ref}
       className={twMerge(
-        `border-b border-neutral-200 bg-neutral-100 text-neutral-900 transition-colors hover:bg-neutral-200 data-[state=selected]:bg-neutral-200 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-50
-       dark:hover:bg-neutral-900 dark:data-[state=selected]:bg-neutral-900`,
+        `border-b border-neutral-200 bg-transparent text-neutral-900 transition-colors hover:bg-neutral-50 data-[state=selected]:bg-neutral-200 dark:border-neutral-800 dark:bg-transparent dark:text-neutral-50
+       dark:hover:bg-neutral-950 dark:data-[state=selected]:bg-neutral-900`,
         className,
       )}
     />
   );
 });
-Row.displayName = "Row";
+Tr.displayName = "Tr";
 
-const Header = React.forwardRef<
+const Th = React.forwardRef<
   HTMLTableCellElement,
   React.ThHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => {
@@ -126,15 +127,15 @@ const Header = React.forwardRef<
       {...props}
       ref={ref}
       className={twMerge(
-        `bg-neutral-200 px-6 py-3 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50`,
+        `bg-transparent px-6 py-3 text-neutral-900 dark:bg-transparent dark:text-neutral-50`,
         className,
       )}
     />
   );
 });
-Header.displayName = "Header";
+Th.displayName = "Th";
 
-const Cell = React.forwardRef<
+const Td = React.forwardRef<
   HTMLTableCellElement,
   React.TdHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => {
@@ -146,7 +147,7 @@ const Cell = React.forwardRef<
     />
   );
 });
-Cell.displayName = "Cell";
+Td.displayName = "Td";
 
 const thead = cva(
   twMerge(
@@ -160,13 +161,13 @@ const thead = cva(
     },
     variants: {
       color: {
-        neutral: `bg-neutral-50 [&_tr]:border-neutral-200 dark:[&_tr]:border-neutral-600`,
+        neutral: `bg-transparent [&_tr]:border-neutral-200 dark:[&_tr]:border-neutral-800`,
       },
     },
   },
 );
 
-const Head = React.forwardRef<
+const Thead = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement> & VariantProps<typeof thead>
 >(({ className, color, ...props }, ref) => {
@@ -178,20 +179,11 @@ const Head = React.forwardRef<
     />
   );
 });
-Head.displayName = "Head";
-
-const Root = TableRoot;
-const TCaption = Caption;
-const Thead = Head;
-const Tbody = Body;
-const Tfoot = Foot;
-const Tr = Row;
-const Td = Cell;
-const Th = Header;
+Thead.displayName = "Thead";
 
 const Table = {
   Root,
-  TCaption,
+  Caption,
   Thead,
   Tbody,
   Tfoot,

@@ -3,9 +3,9 @@ import Table from "@/ui/html/table";
 export function TableDemo() {
   return (
     <Table.Root>
-      <Table.TCaption>
+      <Table.Caption>
         This table has a caption, a header, a body, and a footer.
-      </Table.TCaption>
+      </Table.Caption>
       <Table.Thead>
         <Table.Tr>
           <Table.Th>Header cell 1</Table.Th>

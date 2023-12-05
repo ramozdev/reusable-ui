@@ -1,9 +1,7 @@
 "use client";
 
 import Button from "@/ui/html/button";
-import Input from "@/ui/html/input";
-import Label from "@/ui/html/label";
-import Textarea from "@/ui/html/textarea";
+import TextInput from "@/ui/html/text-input";
 
 export function ProfileForm() {
   return (
@@ -12,26 +10,51 @@ export function ProfileForm() {
       className="w-full space-y-8"
     >
       <div>
-        <Label required>Username</Label>
-        <Input type="text" required className="w-full" />
+        <TextInput
+          id="username"
+          type="text"
+          caption="This username will be visible to others"
+          validation="This username is already taken"
+        >
+          Username
+        </TextInput>
       </div>
 
       {/* email */}
       <div>
-        <Label required>Email</Label>
-        <Input type="email" required className="w-full" />
+        <TextInput
+          id="email"
+          type="email"
+          caption="This email will be visible to others"
+          validation="This email is already taken"
+        >
+          Email
+        </TextInput>
       </div>
 
       {/* text */}
       <div>
-        <Label required>Bio</Label>
-
-        <Textarea required className="w-full" />
+        <TextInput
+          id="bio"
+          type="text"
+          caption="This note will be visible to others"
+          validation="This note is already taken"
+        >
+          Note
+        </TextInput>
       </div>
       <div>
         <div>
-          <Label required>URLs</Label>
-          <Input type="url" required className="w-full" />
+          <div>
+            <TextInput
+              id="bio"
+              type="url"
+              caption="This bio will be visible to others"
+              validation="This bio is already taken"
+            >
+              Url
+            </TextInput>
+          </div>
         </div>
         <Button.Solid
           type="button"

@@ -7,12 +7,11 @@ import Accordion from "@/ui/radix/accordion";
 import Price from "./components/price";
 import Footer from "./components/footer";
 import { HoverCardDemo } from "./components/hover-card";
-// import { TableDemo } from "./components/table";
 import DataTableDemo from "./components/data-table-demo";
 
 export default function Page() {
   return (
-    <div className="space-y-5">
+    <div className="mx-auto max-w-screen-xl space-y-5 py-10">
       <div className="mx-3 grid grid-cols-5 gap-4">
         <div className="col-span-2 space-y-5">
           <div>

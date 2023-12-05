@@ -2,7 +2,7 @@ import Table from "@/ui/html/table";
 
 export function TableDemo() {
   return (
-    <div className="max-h-80 overflow-y-auto">
+    <div className="max-h-80 overflow-y-auto rounded-md border border-neutral-200 dark:border-neutral-800">
       <Table.Root>
         <Table.Thead>
           <Table.Tr>

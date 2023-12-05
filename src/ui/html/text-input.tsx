@@ -32,15 +32,6 @@ const input = cva(
       dark:focus-visible:invalid:placeholder:text-red-300
       dark:focus-visible:invalid:border-red-300`,
 
-    // focus-visible:valid:bg-green-50
-    // focus-visible:valid:text-green-900
-    // focus-visible:valid:placeholder:text-green-500
-    // focus-visible:valid:border-green-900
-
-    // dark:focus-visible:valid:dark:bg-green-950
-    // dark:focus-visible:valid:dark:text-green-100
-    // dark:focus-visible:valid:placeholder:text-green-300
-    // dark:focus-visible:valid:border-green-300
     ROUNDED,
     BORDER,
   ),

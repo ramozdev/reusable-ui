@@ -7,19 +7,19 @@ import { SidebarNav } from "./components/sidebar-nav";
 const sidebarNavItems = [
   {
     title: "Profile",
-    href: "/form",
+    href: "/examples/forms",
   },
   {
     title: "Account",
-    href: "/form/account",
+    href: "/examples/forms/account",
   },
   {
     title: "Appearance",
-    href: "/form/appearance",
+    href: "/examples/forms/appearance",
   },
   {
     title: "Display",
-    href: "/form/display",
+    href: "/examples/forms/display",
   },
 ];
 
@@ -29,7 +29,7 @@ interface SettingsLayoutProps {
 
 export default function SettingsLayout({ children }: SettingsLayoutProps) {
   return (
-    <div>
+    <div className="mx-auto max-w-screen-xl">
       <div className="md:hidden">
         <Image
           src="/examples/forms-light.png"

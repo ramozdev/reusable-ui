@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-neutral-100 dark:bg-neutral-900">
+    <footer className="bg-neutral-100 p-5 dark:bg-neutral-900">
       <div className="mx-auto w-full max-w-screen-xl py-5">
         <div className="flex justify-between">
           <div className="max-w-lg">

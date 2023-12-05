@@ -1,5 +1,5 @@
 import React from "react";
-import TokenDemo, { type Payment } from "./components/token-demo";
+import TokenDemo, { type Payment } from "../components/token-demo";
 
 export default function page() {
   const data: Payment[] = [
