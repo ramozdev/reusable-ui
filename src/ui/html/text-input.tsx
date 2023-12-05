@@ -5,8 +5,7 @@ import { BORDER, ROUNDED } from "@/ui/globals";
 
 const input = cva(
   twMerge(
-    `
-      appearance-none
+    `appearance-none
       block
       w-[260px]
       px-3
@@ -31,8 +30,7 @@ const input = cva(
       dark:focus-visible:invalid:bg-red-950
       dark:focus-visible:invalid:text-red-100 
       dark:focus-visible:invalid:placeholder:text-red-300
-      dark:focus-visible:invalid:border-red-300
-  `,
+      dark:focus-visible:invalid:border-red-300`,
 
     // focus-visible:valid:bg-green-50
     // focus-visible:valid:text-green-900

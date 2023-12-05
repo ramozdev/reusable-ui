@@ -57,7 +57,7 @@ const AccordionTrigger = React.forwardRef<
     {children}
     <ChevronDownIcon
       className={`text-black
-      transition-transform
+        transition-transform
         duration-300
         ease-[cubic-bezier(0.87,_0,_0.13,_1)]
         group-data-[state=open]:rotate-180

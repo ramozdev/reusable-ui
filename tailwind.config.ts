@@ -1,7 +1,6 @@
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
-import { animations } from "./src/ui/animations";
-import { plugins } from "./src/ui/plugins";
+import { animations, plugins } from "./src/ui/animations-plugins";
 
 export default {
   content: [

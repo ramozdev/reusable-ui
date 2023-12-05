@@ -135,7 +135,7 @@ const Item = CommandItem;
 const Shortcut = CommandShortcut;
 const Separator = CommandSeparator;
 
-const Cmdk = {
+const Command = {
   Root,
   Dialog,
   Input,
@@ -147,4 +147,4 @@ const Cmdk = {
   Separator,
 };
 
-export default Cmdk;
+export default Command;

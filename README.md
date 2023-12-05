@@ -1,17 +1,17 @@
-# Papel UI (Next.js Example)
+# Reusable UI (Next.js Example)
 
-Papel UI is a collection of reusable React components for quick prototyping. Instead of installing a dependency, you copy and paste the components into your project.
+Reusable UI is a collection of reusable React components tailored for web3 development. Instead of installing a dependency, you copy and paste the components into your project.
 
 ## Installation
 
-Papel UI requires the following dev dependencies.
+Reusable UI requires the following dev dependencies.
 
 - [TailwindCSS](https://tailwindcss.com/docs/installation/framework-guides)
 - [TypeScript](https://www.typescriptlang.org/download)
 - [class-variance-authority](https://cva.style/docs/getting-started/installation)
 - [tailwind-merge](https://github.com/dcastil/tailwind-merge#readme)
 
-Use this command to install class-variance-authority and tailwind-merge.
+Use this command to install `class-variance-authority` and `tailwind-merge`.
 
 ```bash
 pnpm install -D class-variance-authority tailwind-merge
@@ -29,7 +29,7 @@ Follow the official guide for your framkework to install [TailwindCSS](https://t
 
 ## Usage
 
-Copy and paste the `/ui` folder from this repository into your project.
+Copy and paste the [`/ui`](https://github.com/ramozdev/reusable-ui/tree/main/src/ui) folder from this repository into your project.
 
 ### File structure (Recommended)
 
@@ -50,14 +50,12 @@ Copy and paste the `/ui` folder from this repository into your project.
     │   │   │   ├── index.tsx
     │   │   │   ├── item.ts
     │   │   │   ├── root.ts
-    │   │   │   ├── tailwind.ts
     │   │   │   ├── trigger.ts
     │   │   │   └── variants.ts
     │   │   ├── alert-dialog/
     │   │   └── ...
-    │   ├── animations.ts
-    │   ├── globals.ts
-    │   └── plugins.ts
+    │   ├── animations-plugins.ts
+    │   └── globals.ts
     ├── tailwindcss.config.ts
     └── tsconfig.json
 ```
@@ -88,7 +86,7 @@ export default function Page() {
 }
 ```
 
-### ui/globals.ts
+### /ui/globals.ts
 
 We use `globals.ts` to make global changes to the components. You can change the border radius, shadow and border for all targeted components by changing the values in this file.
 
@@ -104,49 +102,53 @@ export { ROUNDED, SHADOW, BORDER };
 
 The use of `globals.ts` is optional, but highly recommended. You can exclude or include any component to use `globals.ts`.
 
-### ui/animations.ts
+### /ui/animations-plugins.ts
 
-Contains all the animations created for any of the components.
+Contains all the animations and plugins created for the components.
 
-```ts filename="globals.ts"
+```ts filename="animations-plugins.ts"
 import { type Config } from "tailwindcss";
-import { dropdownMenu } from "./radix/dropdown-menu/tailwind";
-// ...
+import plugin from "tailwindcss/plugin";
 
 const animations: NonNullable<Config["theme"]>["extend"] = {
   keyframes: {
-    ...dropdownMenu?.keyframes,
+    // ACCORDION
+    "accordion-slide-down": {
+      from: { height: "0" },
+      to: { height: "var(--radix-accordion-content-height)" },
+    },
     // ...
   },
   animation: {
-    ...dropdownMenu?.animation,
+    // ACCORDION
+    "accordion-slide-down":
+      "accordion-slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1)",
     // ....
   },
 };
 
-export { animations };
-```
-
-### ui/plugins.ts
-
-Contains all the plugins created for any of the components.
-
-```ts filename="plugins.ts"
-import { navigationMenuPlugin } from "./radix/navigation-menu/tailwind";
+const navigationMenuPlugin: NonNullable<Config["plugins"]> = [
+  plugin(({ matchUtilities }) => {
+    matchUtilities({
+      perspective: (value) => ({
+        perspective: value,
+      }),
+    });
+  }),
+];
 
 const plugins = [...navigationMenuPlugin];
 
-export { plugins };
+export { animations, plugins };
 ```
 
 ### TailwindCSS Configuration
 
-Certain components, such as the `<Dialog>`, require animations. We use `tailwindcss.config.ts` to add animations to the components. Import the animations and plugins from `ui/animations.ts` and `ui/plugins.ts` respectively.
+Certain components, such as the `<Dialog>`, require animations. We use `tailwindcss.config.ts` to add animations to the components. Import the animations and plugins from `ui/animations-plugins.ts`.
 
 ```ts filename="tailwind.config.ts"
 import { type Config } from "tailwindcss";
-import { animations } from "./src/ui/animations";
-import { plugins } from "./src/ui/plugins";
+import { animations, plugins } from "./src/ui/animations-plugins";
 
 export default {
   // ...
@@ -160,4 +162,4 @@ export default {
 } satisfies Config;
 ```
 
-Now you're ready to use Papel UI in your project.
+Now you're ready to use Reusable UI in your project.

@@ -15,7 +15,7 @@ const Navbar = () => (
         </Link>
         <Link href="/examples/swap">Examples</Link>
         <Link
-          href="https://github.com/ramozdev/papel-next/tree/main/src/ui"
+          href="https://github.com/ramozdev/reusable-ui/tree/main/src/ui"
           target="_blank"
         >
           Components
@@ -23,7 +23,7 @@ const Navbar = () => (
       </div>
 
       <div className="flex items-center gap-4">
-        <Link href="https://github.com/ramozdev/papel-next" target="_blank">
+        <Link href="https://github.com/ramozdev/reusable-ui" target="_blank">
           <GitHubLogoIcon className="h-6 w-6" />
         </Link>
 
