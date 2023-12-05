@@ -9,6 +9,7 @@ const links = [
   { href: "/forms", name: "Forms" },
   { href: "/cards", name: "Cards" },
   { href: "/typography", name: "Typography" },
+  { href: "/buttons", name: "Buttons" },
 ];
 
 const Nav = () => (
