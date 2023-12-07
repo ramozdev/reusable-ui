@@ -19,7 +19,8 @@ disabled:opacity-75
 focus:ring-offset-2
 focus:ring-offset-white
 dark:focus:ring-offset-black
-focus:ring-2`,
+focus:ring-2
+hover:border-b-2 hover:border-r-2 hover:border-black`,
   ROUNDED,
   BORDER,
 );

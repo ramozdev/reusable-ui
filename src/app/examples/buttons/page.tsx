@@ -55,7 +55,9 @@ export default function Page() {
               ))}
             </select>
           </div>
-          <div className="flex justify-center">
+
+          {/* COLOR SELECTED */}
+          <div className="flex justify-center space-x-2">
             <Button.Solid color={color}>Solid Default</Button.Solid>
             <Button.Solid color={color} variant="ghost">
               Solid Ghost
@@ -64,7 +66,7 @@ export default function Page() {
               Solid Outline
             </Button.Solid>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center space-x-2">
             <Button.Subtle color={color}>Subtle Default</Button.Subtle>
             <Button.Subtle color={color} variant="ghost">
               Subtle Ghost

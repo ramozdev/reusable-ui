@@ -30,9 +30,8 @@ const solidButton = cva(globalButtonStyles, {
     color: {
       brand: cx(
         // HOVER
-        `hover:bg-brand-700
-          hover:text-white
-          dark:hover:text-white`,
+        `dark:hover:bg-brand-800 hover:bg-brand-700 hover:text-white
+          dark:hover:text-white dark:hover:border-brand-600 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-brand-950
@@ -45,9 +44,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       slate: cx(
         // HOVER
-        `hover:bg-slate-700
-          hover:text-white
-          dark:hover:text-white`,
+        `dark:hover:bg-slate-800 hover:bg-slate-700 hover:text-white
+        dark:hover:text-white
+         dark:hover:border-slate-600 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-slate-950
@@ -60,9 +59,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       gray: cx(
         // HOVER
-        `hover:bg-gray-700
-          hover:text-white
-          dark:hover:text-white`,
+        `dark:hover:bg-gray-800 hover:bg-gray-700 hover:text-white
+        dark:hover:text-white
+         dark:hover:border-gray-600 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-gray-950
@@ -75,9 +74,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       zinc: cx(
         // HOVER
-        `hover:bg-zinc-700
-          hover:text-white
-          dark:hover:text-white`,
+        `dark:hover:bg-zinc-800 hover:bg-zinc-700 hover:text-white
+        dark:hover:text-white
+         dark:hover:border-zinc-600 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-zinc-950
@@ -90,9 +89,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       neutral: cx(
         // HOVER
-        `hover:bg-neutral-700
-          hover:text-white
-          dark:hover:text-white`,
+        `dark:hover:bg-neutral-800 hover:bg-neutral-700 hover:text-white
+        dark:hover:text-white
+         dark:hover:border-neutral-600 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-neutral-950
@@ -105,9 +104,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       stone: cx(
         // HOVER
-        `hover:bg-stone-700
-          hover:text-white
-          dark:hover:text-white`,
+        `dark:hover:bg-stone-800 hover:bg-stone-700 hover:text-white
+        dark:hover:text-white
+         dark:hover:border-stone-600 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-stone-950
@@ -120,9 +119,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       red: cx(
         // HOVER
-        `hover:bg-red-700
-          hover:text-white
-          dark:hover:text-white`,
+        `dark:hover:bg-red-800 hover:bg-red-700 hover:text-white
+        dark:hover:text-white
+         dark:hover:border-red-700 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-red-950
@@ -135,7 +134,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       orange: cx(
         // HOVER
-        `hover:bg-orange-500`,
+        `dark:hover:bg-orange-600 hover:bg-orange-500
+        dark:hover:text-white hover:text-black
+         dark:hover:border-orange-800 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-orange-950
@@ -146,7 +147,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       amber: cx(
         // HOVER
-        `hover:bg-amber-500`,
+        `dark:hover:bg-amber-600 hover:bg-amber-500
+        dark:hover:text-white hover:text-black
+         dark:hover:border-amber-800 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-amber-950
@@ -157,7 +160,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       yellow: cx(
         // HOVER
-        `hover:bg-yellow-500`,
+        `dark:hover:bg-yellow-600 hover:bg-yellow-500
+        dark:hover:text-white hover:text-black
+         dark:hover:border-yellow-800 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-yellow-950
@@ -168,7 +173,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       lime: cx(
         // HOVER
-        `hover:bg-lime-600`,
+        `dark:hover:bg-lime-600 hover:bg-lime-500
+        dark:hover:text-white hover:text-black
+         dark:hover:border-lime-800 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-lime-950
@@ -181,7 +188,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       green: cx(
         // HOVER
-        `hover:bg-green-600`,
+        `dark:hover:bg-green-600 hover:bg-green-500
+        dark:hover:text-white hover:text-black
+         dark:hover:border-green-800 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-green-950
@@ -194,7 +203,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       emerald: cx(
         // HOVER
-        `hover:bg-emerald-600`,
+        `dark:hover:bg-emerald-600 hover:bg-emerald-500
+        dark:hover:text-white hover:text-black
+         dark:hover:border-emerald-800 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-emerald-950
@@ -207,7 +218,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       teal: cx(
         // HOVER
-        `hover:bg-teal-500`,
+        `dark:hover:bg-teal-600 hover:bg-teal-500
+        dark:hover:text-white hover:text-black
+         dark:hover:border-teal-800 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-teal-950
@@ -218,7 +231,9 @@ const solidButton = cva(globalButtonStyles, {
       ),
       cyan: cx(
         // HOVER
-        `hover:bg-cyan-500`,
+        `dark:hover:bg-cyan-600 hover:bg-cyan-500
+        dark:hover:text-white hover:text-black 
+         dark:hover:border-cyan-800 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-cyan-950
@@ -229,7 +244,8 @@ const solidButton = cva(globalButtonStyles, {
       ),
       sky: cx(
         // HOVER
-        `hover:bg-sky-500`,
+        `hover:bg-sky-500 hover:text-black
+         dark:hover:border-sky-950 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-sky-950
@@ -240,9 +256,8 @@ const solidButton = cva(globalButtonStyles, {
       ),
       blue: cx(
         // HOVER
-        `hover:bg-blue-700
-          hover:text-white
-          dark:hover:text-white`,
+        `hover:bg-blue-700 hover:text-white
+          dark:hover:text-white  dark:hover:border-blue-950 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-blue-950
@@ -255,9 +270,8 @@ const solidButton = cva(globalButtonStyles, {
       ),
       indigo: cx(
         // HOVER
-        `hover:bg-indigo-700
-          hover:text-white
-          dark:hover:text-white`,
+        `hover:bg-indigo-700 hover:text-white
+        dark:hover:text-white  dark:hover:border-indigo-950 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-indigo-950
@@ -270,9 +284,8 @@ const solidButton = cva(globalButtonStyles, {
       ),
       violet: cx(
         // HOVER
-        `hover:bg-violet-700
-          hover:text-white
-          dark:hover:text-white`,
+        ` hover:bg-violet-700 hover:text-white
+         dark:hover:border-violet-950 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-violet-950
@@ -285,9 +298,8 @@ const solidButton = cva(globalButtonStyles, {
       ),
       purple: cx(
         // HOVER
-        `hover:bg-purple-700
-          hover:text-white
-          dark:hover:text-white`,
+        `hover:bg-purple-700 hover:text-white
+        dark:hover:text-white  dark:hover:border-purple-950 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-purple-950
@@ -300,9 +312,8 @@ const solidButton = cva(globalButtonStyles, {
       ),
       fuchsia: cx(
         // HOVER
-        `hover:bg-fuchsia-700
-          hover:text-white
-          dark:hover:text-white`,
+        `hover:bg-fuchsia-700 hover:text-white
+        dark:hover:text-white  dark:hover:border-fuchsia-950 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-fuchsia-950
@@ -315,9 +326,8 @@ const solidButton = cva(globalButtonStyles, {
       ),
       pink: cx(
         // HOVER
-        `hover:bg-pink-700
-          hover:text-white
-          dark:hover:text-white`,
+        `hover:bg-pink-700 hover:text-white
+        dark:hover:text-white  dark:hover:border-pink-950 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-pink-950
@@ -330,9 +340,8 @@ const solidButton = cva(globalButtonStyles, {
       ),
       rose: cx(
         // HOVER
-        `hover:bg-rose-700
-          hover:text-white
-          dark:hover:text-white`,
+        `hover:bg-rose-700 hover:text-white
+        dark:hover:text-white  dark:hover:border-rose-950 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-rose-950
@@ -366,126 +375,199 @@ const solidButton = cva(globalButtonStyles, {
     {
       color: "brand",
       variant: "default",
-      className: `bg-brand-600`,
+      className: `dark:bg-brand-700  
+              bg-brand-600  
+              border-black
+              dark:border-brand-600 
+              text-white`,
     },
     {
       color: "slate",
       variant: "default",
-      className: `bg-slate-600`,
+      className: `dark:bg-slate-700 
+              bg-slate-600 
+              border-black
+              dark:border-slate-600`,
     },
     {
       color: "gray",
       variant: "default",
-      className: `bg-gray-600`,
+      className: `dark:bg-gray-700 
+              bg-gray-600   
+              border-black
+              dark:border-gray-600`,
     },
     {
       color: "zinc",
       variant: "default",
-      className: `bg-zinc-600`,
+      className: `dark:bg-zinc-700 
+                bg-zinc-600   
+                border-black
+                dark:border-zinc-600`,
     },
     {
       color: "neutral",
       variant: "default",
-      className: `bg-neutral-600`,
+      className: `dark:bg-neutral-700 
+                bg-neutral-600   
+                border-black
+                dark:border-neutral-600`,
     },
     {
       color: "stone",
       variant: "default",
-      className: `bg-stone-600`,
+      className: `dark:bg-stone-700 
+                bg-stone-600   
+                border-black
+                dark:border-stone-600`,
     },
     {
       color: "red",
       variant: "default",
-      className: `bg-red-600`,
+      className: `dark:bg-red-700 
+                bg-red-600   
+                border-black
+                dark:border-red-600`,
     },
     {
       color: "orange",
       variant: "default",
-      className: `bg-orange-400
-            text-black`,
+      className: `bg-orange-400 
+                dark:bg-orange-500   
+                border-black
+                dark:border-orange-800
+                dark:text-orange-100
+                text-black`,
     },
     {
       color: "amber",
       variant: "default",
-      className: `bg-amber-400
-            text-black`,
+      className: `bg-amber-400 
+                dark:bg-amber-500   
+                border-black
+                dark:border-amber-800
+                dark:text-white
+                text-black`,
     },
     {
       color: "yellow",
       variant: "default",
-      className: `bg-yellow-400
+      className: `bg-yellow-400 
+                dark:bg-yellow-500   
+                border-black
+                dark:border-yellow-800
+                dark:text-white
                 text-black`,
     },
     {
       color: "lime",
       variant: "default",
-      className: `bg-lime-500
+      className: `bg-lime-400 
+                dark:bg-lime-500   
+                border-black
+                dark:border-lime-800
+                dark:text-white
                 text-black`,
     },
     {
       color: "green",
       variant: "default",
-      className: `bg-green-500
-              text-black`,
+      className: `bg-green-400 
+                dark:bg-green-500   
+                border-black
+                dark:border-green-800
+                dark:text-white
+                text-black`,
     },
     {
       color: "emerald",
       variant: "default",
       className: `bg-emerald-500
-      text-black`,
+                text-white
+                border-black
+                dark:border-emerald-800`,
     },
     {
       color: "teal",
       variant: "default",
       className: `bg-teal-400
-              text-black`,
+                text-black
+                dark:text-white
+                border-black
+                dark:border-teal-800`,
     },
     {
       color: "cyan",
       variant: "default",
       className: `bg-cyan-400
-                text-black`,
+                text-black
+                dark:text-white
+                border-black
+                dark:border-cyan-800`,
     },
     {
       color: "sky",
       variant: "default",
       className: `bg-sky-400
-                 text-black`,
+                text-black
+                border-black
+                dark:border-sky-800`,
     },
     {
       color: "blue",
       variant: "default",
-      className: `bg-blue-600`,
+      className: `bg-blue-400
+                text-black
+                border-black
+                dark:border-blue-800`,
     },
     {
       color: "indigo",
       variant: "default",
-      className: `bg-indigo-600`,
+      className: `bg-indigo-400
+                text-white
+                border-black
+                dark:border-indigo-800`,
     },
     {
       color: "violet",
       variant: "default",
-      className: `bg-violet-600`,
+      className: `bg-violet-400
+                text-white
+                border-black
+                dark:border-violet-800`,
     },
     {
       color: "purple",
       variant: "default",
-      className: `bg-purple-600`,
+      className: `bg-purple-400
+                text-black
+                border-black
+                dark:border-purple-800`,
     },
     {
       color: "fuchsia",
       variant: "default",
-      className: `bg-fuchsia-600`,
+      className: `bg-fuchsia-400
+                text-black
+                border-black
+                dark:border-fuchsia-800`,
     },
     {
       color: "pink",
       variant: "default",
-      className: `bg-pink-600`,
+      className: `bg-pink-400
+                text-black
+                border-black
+                dark:border-pink-800`,
     },
     {
       color: "rose",
       variant: "default",
-      className: `bg-rose-600`,
+      className: `bg-rose-400
+                text-black
+                border-black
+                dark:border-rose-800`,
     },
     {
       color: "white-black",
@@ -499,172 +581,209 @@ const solidButton = cva(globalButtonStyles, {
     {
       color: "brand",
       variant: "outline",
-      className: `bg-brand-600
-                border-brand-800
-                dark:border-brand-400`,
+      className: `bg-transparent
+                border-black
+                dark:text-brand-100
+                text-brand-900
+                dark:border-brand-600`,
     },
     {
       color: "slate",
       variant: "outline",
-      className: `bg-slate-600
-                border-slate-800
-                dark:border-slate-400`,
+      className: `bg-transparent
+                border-black
+                dark:text-slate-100
+                text-slate-900
+                dark:border-slate-600`,
     },
     {
       color: "gray",
       variant: "outline",
-      className: `bg-gray-600
-                border-gray-800
-                dark:border-gray-400`,
+      className: `bg-transparent
+                border-black
+                dark:text-gray-100
+                text-gray-900
+                dark:border-gray-600`,
     },
     {
       color: "zinc",
       variant: "outline",
-      className: `bg-zinc-600
-                border-zinc-800
-                dark:border-zinc-400`,
+      className: `bg-transparent
+                border-black
+                dark:text-zinc-100
+                text-zinc-900
+                dark:border-zinc-600`,
     },
     {
       color: "neutral",
       variant: "outline",
-      className: `bg-neutral-600
-                border-neutral-800
-                dark:border-neutral-400`,
+      className: `bg-transparent
+                border-black
+                dark:text-neutral-100
+                text-neutral-900
+                dark:border-neutral-600`,
     },
     {
       color: "stone",
       variant: "outline",
-      className: `bg-stone-600
-                border-stone-800
-                dark:border-stone-400`,
+      className: `bg-transparent
+                border-black
+                dark:text-stone-100
+                text-stone-900
+                dark:border-stone-600`,
     },
     {
       color: "red",
       variant: "outline",
-      className: `bg-red-600
-                border-red-800
-                dark:border-red-400`,
+      className: `bg-transparent
+                border-black
+                dark:text-red-100
+                text-red-900
+                dark:border-red-600`,
     },
     {
       color: "orange",
       variant: "outline",
-      className: `bg-orange-400
+      className: `bg-transparent
+                border-black
+                dark:text-orange-100
                 text-black
-                border-orange-800
-                dark:border-orange-300`,
+                dark:border-orange-800`,
     },
     {
       color: "amber",
       variant: "outline",
-      className: `bg-amber-400
+      className: `bg-transparent
+                border-black
+                dark:text-amber-100
                 text-black
-                border-amber-800
-                dark:border-amber-300`,
+                dark:border-amber-800`,
     },
     {
       color: "yellow",
       variant: "outline",
-      className: `bg-yellow-400
+      className: `bg-transparent
+                border-black
+                dark:text-yellow-100
                 text-black
-                border-yellow-800
-                dark:border-yellow-300`,
+                dark:border-yellow-800`,
     },
     {
       color: "lime",
       variant: "outline",
-      className: `bg-lime-500
+      className: `bg-transparent
+                border-black
+                dark:text-lime-100
                 text-black
-                border-lime-800
-                dark:border-lime-300`,
+                dark:border-lime-800`,
     },
     {
       color: "green",
       variant: "outline",
-      className: `bg-green-500
+      className: `bg-transparent
+                border-black
+                dark:text-green-100
                 text-black
-                border-green-800
-                dark:border-green-300`,
+                dark:border-green-800`,
     },
     {
       color: "emerald",
       variant: "outline",
-      className: `bg-emerald-500
+      className: `bg-transparent
+                border-black
+                dark:text-emerald-100
                 text-black
-                border-emerald-800
-                dark:border-emerald-300`,
+                dark:border-emerald-800`,
     },
     {
       color: "teal",
       variant: "outline",
-      className: `bg-teal-400
+      className: `bg-transparent
+                border-black
+                dark:text-teal-100
                 text-black
-                border-teal-800
-                dark:border-teal-300`,
+                dark:border-teal-800`,
     },
     {
       color: "cyan",
       variant: "outline",
-      className: `bg-cyan-400
+      className: `bg-transparent
+                border-black
+                dark:text-cyan-100
                 text-black
-                border-cyan-800
-                dark:border-cyan-300`,
+                dark:border-cyan-800`,
     },
     {
       color: "sky",
       variant: "outline",
-      className: `bg-sky-400
-              text-black
-                border-sky-800
-                dark:border-sky-400`,
+      className: `bg-transparent
+                dark:text-sky-100
+                text-sky-900
+                border-black
+                dark:border-sky-800`,
     },
     {
       color: "blue",
       variant: "outline",
-      className: `bg-blue-600
-                border-blue-800
-                dark:border-blue-400`,
+      className: `bg-transparent
+                dark:text-blue-100
+                text-blue-900
+                border-black
+                dark:border-blue-800`,
     },
     {
       color: "indigo",
       variant: "outline",
-      className: `bg-indigo-600
-                border-indigo-800
-                dark:border-indigo-400`,
+      className: `bg-transparent
+                dark:text-indigo-100
+                text-indigo-900
+                border-black
+                dark:border-indigo-800`,
     },
     {
       color: "violet",
       variant: "outline",
-      className: `bg-violet-600
-                border-violet-800
-                dark:border-violet-400`,
+      className: `bg-transparent
+                dark:text-violet-100
+                text-violet-900
+                border-black
+                dark:border-violet-800`,
     },
     {
       color: "purple",
       variant: "outline",
-      className: `bg-purple-600
-                border-purple-800
-                dark:border-purple-400`,
+      className: `bg-transparent
+                dark:text-purple-100
+                text-purple-900
+                border-black
+                dark:border-purple-800`,
     },
     {
       color: "fuchsia",
       variant: "outline",
-      className: `bg-fuchsia-600
-                border-fuchsia-800
-                dark:border-fuchsia-400`,
+      className: `bg-transparent
+                dark:text-fuchsia-100
+                text-fuchsia-900
+                border-black
+                dark:border-fuchsia-800`,
     },
     {
       color: "pink",
       variant: "outline",
-      className: `bg-pink-600
-                border-pink-800
-                dark:border-pink-400`,
+      className: `bg-transparent
+                dark:text-pink-100
+                text-pink-900
+                border-black
+                dark:border-pink-800`,
     },
     {
       color: "rose",
       variant: "outline",
-      className: `bg-rose-600
-                border-rose-800
-                dark:border-rose-400`,
+      className: `bg-transparent
+                dark:text-rose-100
+                text-rose-900
+                border-black
+                dark:border-rose-800`,
     },
     {
       color: "white-black",
@@ -723,73 +842,55 @@ const solidButton = cva(globalButtonStyles, {
       color: "orange",
       variant: "ghost",
       className: `text-orange-700
-            dark:text-orange-400
-            hover:text-black
-            dark:hover:text-black`,
+            dark:text-orange-400`,
     },
     {
       color: "amber",
       variant: "ghost",
       className: `text-amber-700
-            dark:text-amber-400
-            hover:text-black
-            dark:hover:text-black`,
+            dark:text-amber-400`,
     },
     {
       color: "yellow",
       variant: "ghost",
       className: `text-yellow-700
-            dark:text-yellow-400
-            hover:text-black
-            dark:hover:text-black`,
+      dark:text-yellow-400`,
     },
     {
       color: "lime",
       variant: "ghost",
       className: `text-lime-700
-            dark:text-lime-400
-            hover:text-black
-            dark:hover:text-black`,
+      dark:text-lime-400`,
     },
     {
       color: "green",
       variant: "ghost",
       className: `text-green-700
-            dark:text-green-400
-            hover:text-black
-            dark:hover:text-black`,
+      dark:text-green-400`,
     },
     {
       color: "emerald",
       variant: "ghost",
       className: `text-emerald-700
-            dark:text-emerald-400
-            hover:text-black
-            dark:hover:text-black`,
+      dark:text-emerald-400`,
     },
     {
       color: "teal",
       variant: "ghost",
       className: `text-teal-700
-            dark:text-teal-400
-            hover:text-black
-            dark:hover:text-black`,
+      dark:text-teal-400`,
     },
     {
       color: "cyan",
       variant: "ghost",
       className: `text-cyan-700
-            dark:text-cyan-400
-            hover:text-black
-            dark:hover:text-black`,
+      dark:text-cyan-400`,
     },
     {
       color: "sky",
       variant: "ghost",
       className: `text-sky-700
-            dark:text-sky-400
-            hover:text-black
-            dark:hover:text-black`,
+            dark:text-sky-400`,
     },
     {
       color: "blue",
