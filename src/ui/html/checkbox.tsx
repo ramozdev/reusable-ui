@@ -9,12 +9,13 @@ const checkbox = cva(
   focus:ring-offset-white
   dark:focus:ring-offset-black
   focus:ring-2
+  ease-in 
+  duration-100
 
   w-5
   h-5
 
   m-px
-  transition
   focus:outline-none
   disabled:pointer-events-none
   disabled:opacity-75`,
@@ -29,7 +30,7 @@ const checkbox = cva(
     },
     variants: {
       variant: {
-        outline: "",
+        outline: "hover:border-b-2 hover:border-r-2 ",
         plane: "border-transparent",
       },
       color: {

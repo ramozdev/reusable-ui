@@ -256,8 +256,7 @@ const solidButton = cva(globalButtonStyles, {
       ),
       blue: cx(
         // HOVER
-        `hover:bg-blue-700 hover:text-white
-          dark:hover:text-white  dark:hover:border-blue-950 border-transparent border-b-2 border-r-2`,
+        `hover:bg-blue-500 dark:hover:text-white  dark:hover:border-blue-950 border-transparent border-b-2 border-r-2`,
 
         // FOCUS
         `focus:ring-blue-950

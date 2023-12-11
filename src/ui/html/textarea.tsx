@@ -37,7 +37,7 @@ const textarea = cva(
     },
     variants: {
       variant: {
-        outline: "",
+        outline: "border-b-[3px] border-r-[3px]",
         plane: "border-transparent",
       },
       color: {

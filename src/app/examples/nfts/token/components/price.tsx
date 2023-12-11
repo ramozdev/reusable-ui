@@ -25,7 +25,7 @@ export default function Price() {
         </div>
 
         <div className="grid w-full grid-cols-2 gap-4">
-          <Button.Solid color="blue">Buy 1 now</Button.Solid>
+          <Button.Solid>Buy 1 now</Button.Solid>
           <Button.Solid>Make offer</Button.Solid>
         </div>
         <div>

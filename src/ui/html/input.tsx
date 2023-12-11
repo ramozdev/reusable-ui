@@ -39,7 +39,7 @@ const input = cva(
     },
     variants: {
       variant: {
-        outline: "",
+        outline: "border-b-2 border-r-2",
         plane: "border-transparent",
       },
       file: {

@@ -13,7 +13,7 @@ const select = cva(
   py-1
   leading-5
   m-px
-  transition
+  ease-in duration-75
   focus:outline-none
   disabled:pointer-events-none
   disabled:opacity-75
@@ -35,8 +35,7 @@ const select = cva(
     },
     variants: {
       variant: {
-        outline: "",
-        plane: "border-transparent",
+        outline: `border-b-2 border-r-2`,
       },
       color: {
         brand: cx(

@@ -196,6 +196,7 @@ export default function DataTableDemo() {
     <div className="mx-8 max-w-screen-xl xl:mx-auto">
       <div className="flex items-center py-4">
         <Input
+          color="blue"
           placeholder="Filter emails..."
           value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
