@@ -25,7 +25,6 @@ export default function DisplayForm() {
               <div key={i}>
                 <div className="my-2 space-x-1">
                   <Checkbox
-                    color="blue"
                     name="accept"
                     id={`accept${i}`}
                     className="h-4 w-4"

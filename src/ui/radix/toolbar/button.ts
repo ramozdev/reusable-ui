@@ -26,7 +26,7 @@ const button = cva(
   {
     defaultVariants: {
       variant: "default",
-      color: "blue",
+      color: "neutral",
       size: "default",
     },
     variants: {

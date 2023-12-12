@@ -3,30 +3,7 @@
 import Button from "@/ui/html/button";
 import Card from "@/ui/html/card";
 import { useState } from "react";
-
-const colors = [
-  "neutral",
-  "brand",
-  "slate",
-  "gray",
-  "zinc",
-  "stone",
-  "red",
-  "orange",
-  "amber",
-  "yellow",
-  "lime",
-  "green",
-  "emerald",
-  "teal",
-  "cyan",
-  "sky",
-  "blue",
-  "indigo",
-  "violet",
-] as const;
-
-type Colors = (typeof colors)[number];
+import { type Colors, colors } from "@/lib/colors";
 
 export default function Page() {
   const [color, setColor] = useState<Colors>("amber");

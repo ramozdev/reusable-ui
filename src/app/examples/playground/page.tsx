@@ -6,28 +6,7 @@ import Badge from "@/ui/html/badge";
 import Text from "@/ui/html/text";
 import Select from "@/ui/html/select";
 import Card from "@/ui/html/card";
-
-const colors = [
-  "neutral",
-  "brand",
-  "slate",
-  "gray",
-  "zinc",
-  "stone",
-  "red",
-  "orange",
-  "amber",
-  "yellow",
-  "lime",
-  "green",
-  "emerald",
-  "teal",
-  "cyan",
-  "sky",
-  "blue",
-  "indigo",
-  "violet",
-] as const;
+import { colors } from "@/lib/colors";
 
 export default function page() {
   return (

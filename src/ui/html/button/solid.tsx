@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 const solidButton = cva(globalButtonStyles, {
   defaultVariants: {
     variant: "default",
-    color: "blue",
+    color: "neutral",
     size: "default",
   },
   variants: {

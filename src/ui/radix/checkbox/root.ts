@@ -28,7 +28,7 @@ const root = cva(
   ),
   {
     defaultVariants: {
-      color: "blue",
+      color: "neutral",
     },
     variants: {
       color: {

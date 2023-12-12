@@ -16,7 +16,7 @@ const root = cva(
   focus:ring-2`,
   {
     defaultVariants: {
-      color: "blue",
+      color: "neutral",
     },
     variants: {
       color: {

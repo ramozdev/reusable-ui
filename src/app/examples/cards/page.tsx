@@ -38,11 +38,7 @@ export default function Page() {
           </Text.P>
         </div>
         <div className="flex space-x-2">
-          <Input
-            value="http://example.com/link/to/document"
-            color="blue"
-            readOnly
-          />
+          <Input value="http://example.com/link/to/document" readOnly />
           <Button.Subtle className="shrink-0" color="green">
             Copy Link
           </Button.Subtle>
@@ -72,7 +68,7 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <Select color="blue">
+                <Select>
                   <option value="Can edit">Can edit</option>
                   <option value="Can view">Can view</option>
                 </Select>

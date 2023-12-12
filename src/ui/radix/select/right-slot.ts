@@ -5,7 +5,7 @@ const rightSlot = cva(
   pl-5`,
   {
     defaultVariants: {
-      color: "blue",
+      color: "neutral",
     },
     variants: {
       color: {

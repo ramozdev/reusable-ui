@@ -1,3 +1,4 @@
+import { type Colors } from "@/lib/colors";
 import Badge from "@/ui/html/badge";
 import Card from "@/ui/html/card";
 import Text from "@/ui/html/text";
@@ -9,26 +10,7 @@ type CardItem = {
   name: string;
   time: string;
   badge: string;
-  badgeColor:
-    | "neutral"
-    | "brand"
-    | "slate"
-    | "gray"
-    | "zinc"
-    | "stone"
-    | "red"
-    | "orange"
-    | "amber"
-    | "yellow"
-    | "lime"
-    | "green"
-    | "emerald"
-    | "teal"
-    | "cyan"
-    | "sky"
-    | "blue"
-    | "indigo"
-    | "violet";
+  badgeColor: Colors;
   estOutput: string;
   gasFees: string;
   reason: string;

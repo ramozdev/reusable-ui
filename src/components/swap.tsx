@@ -159,7 +159,7 @@ export default function Swap() {
             </Accordion.Root>
           </div>
           <div className="p-4">
-            <Button.Solid color="blue" size="lg" className="w-full py-2">
+            <Button.Solid size="lg" className="w-full py-2">
               Swap
             </Button.Solid>
           </div>

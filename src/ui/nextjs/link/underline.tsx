@@ -24,7 +24,7 @@ dark:focus-visible:ring-offset-black
 focus-visible:ring-2`,
   {
     defaultVariants: {
-      color: "blue",
+      color: "neutral",
     },
     variants: {
       color: {

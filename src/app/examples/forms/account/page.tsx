@@ -5,10 +5,8 @@ import TextInput from "@/ui/html/text-input";
 import Select from "@/ui/html/select";
 
 export default function AccountForm() {
-  const handleSubmit = (e: React.FormEvent) => e.preventDefault();
-
   return (
-    <form onSubmit={handleSubmit} className="w-full space-y-8">
+    <form onSubmit={(e) => e.preventDefault()} className="w-full space-y-8">
       <div>
         <TextInput
           id="email"

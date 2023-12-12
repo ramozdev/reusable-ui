@@ -24,7 +24,7 @@ const item = cva(
   ),
   {
     defaultVariants: {
-      color: "blue",
+      color: "neutral",
     },
     variants: {
       color: {

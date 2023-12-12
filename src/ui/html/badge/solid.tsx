@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 const solidBadge = cva(globalBadgeStyles, {
   defaultVariants: {
     variant: "default",
-    color: "blue",
+    color: "neutral",
   },
   variants: {
     variant: {

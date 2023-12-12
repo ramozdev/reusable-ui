@@ -5,10 +5,7 @@ import TextInput from "@/ui/html/text-input";
 
 export function ProfileForm() {
   return (
-    <form
-      onSubmit={(e: React.FormEvent) => e.preventDefault()}
-      className="w-full space-y-8"
-    >
+    <form onSubmit={(e) => e.preventDefault()} className="w-full space-y-8">
       <div>
         <TextInput
           id="username"
