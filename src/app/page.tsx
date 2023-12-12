@@ -8,6 +8,7 @@ import ContextMenuDemo from "@/components/homepage/context-menu";
 import DropdownMenuDemo from "@/components/homepage/dropdown-menu";
 import DialogDemo from "@/components/homepage/dialog";
 import TootlipDemo from "@/components/homepage/tooltip";
+import SwitchDemo from "@/components/homepage/switch";
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
       <DropdownMenuDemo />
       <DialogDemo />
       <TootlipDemo />
+      <SwitchDemo />
       <InputDemo />
       <TextareaDemo />
       <CheckboxDemo />
