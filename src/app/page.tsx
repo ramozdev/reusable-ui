@@ -7,6 +7,7 @@ import SelectDemo from "@/components/homepage/select";
 import ContextMenuDemo from "@/components/homepage/context-menu";
 import DropdownMenuDemo from "@/components/homepage/dropdown-menu";
 import DialogDemo from "@/components/homepage/dialog";
+import TootlipDemo from "@/components/homepage/tooltip";
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <ContextMenuDemo />
       <DropdownMenuDemo />
       <DialogDemo />
+      <TootlipDemo />
       <InputDemo />
       <TextareaDemo />
       <CheckboxDemo />
