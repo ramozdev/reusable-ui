@@ -10,6 +10,7 @@ import DialogDemo from "@/components/homepage/dialog";
 import TootlipDemo from "@/components/homepage/tooltip";
 import SwitchDemo from "@/components/homepage/switch";
 import SeparatorDemo from "@/components/homepage/separator";
+import { ScrollAreaDemo } from "@/components/homepage/scroll-area";
 
 export default function Page() {
   return (
@@ -19,6 +20,7 @@ export default function Page() {
       <DialogDemo />
       <TootlipDemo />
       <SwitchDemo />
+      <ScrollAreaDemo />
       <SeparatorDemo />
       <InputDemo />
       <TextareaDemo />
