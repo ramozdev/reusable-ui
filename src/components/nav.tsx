@@ -10,6 +10,7 @@ const links = [
   { href: "/cards", name: "Cards" },
   { href: "/typography", name: "Typography" },
   { href: "/buttons", name: "Buttons" },
+  { href: "/playground", name: "Playground" },
 ];
 
 const Nav = () => (
