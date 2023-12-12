@@ -9,7 +9,7 @@ import { Fragment } from "react";
 export default function ContextMenuDemo() {
   return (
     <div>
-      <Text.H3>ContextMenu</Text.H3>
+      <Text.H3>Context Menu</Text.H3>
       <div className="grid w-96 grid-cols-2 gap-y-4">
         {colors.map((color) => (
           <Fragment key={color}>
