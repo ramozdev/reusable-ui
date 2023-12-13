@@ -13,10 +13,10 @@ export default function PopoverDemo() {
   return (
     <div>
       <Text.H3>Popover</Text.H3>
-      <div className="grid w-96 grid-cols-2 gap-y-4">
+      <div className="grid w-96 grid-cols-2 gap-y-3">
         {colors.map((color) => (
           <Fragment key={`popover-${color}`}>
-            <Label>{color}</Label>
+            <Label className="capitalize">{color}</Label>
             <Popover.Root>
               <Popover.Trigger asChild>
                 <Button.Solid

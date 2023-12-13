@@ -10,10 +10,10 @@ export default function SliderDemo() {
   return (
     <div>
       <Text.H3>Slide</Text.H3>
-      <div className="grid w-96 grid-cols-2 gap-y-4">
+      <div className="grid w-96 grid-cols-2 gap-y-3">
         {colors.map((color) => (
           <Fragment key={`slider-${color}`}>
-            <Label>{color}</Label>
+            <Label className="capitalize">{color}</Label>
             <form>
               <Slider.Root
                 className="w-[200px]"

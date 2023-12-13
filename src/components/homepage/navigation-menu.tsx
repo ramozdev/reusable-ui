@@ -71,7 +71,7 @@ export default function NavigationMenuDemo() {
                 <NavigationMenu.Trigger color={color}>
                   Learn <NavigationMenu.CaretDown />
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content>
+                <NavigationMenu.Content color={color}>
                   <ul className="m-0 grid list-none gap-[10px] p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
                     <li className="row-span-3 grid">
                       <NavigationMenu.ListItemNextjs
@@ -99,13 +99,22 @@ export default function NavigationMenuDemo() {
                       </NavigationMenu.ListItemNextjs>
                     </li>
 
-                    <NavigationMenu.ListItem href="#" title="Stitches">
+                    <NavigationMenu.ListItem
+                      color={color}
+                      href="#"
+                      title="Stitches"
+                    >
                       CSS-in-JS with best-in-class developer experience.
                     </NavigationMenu.ListItem>
-                    <NavigationMenu.ListItem href="#" title="Colors">
+                    <NavigationMenu.ListItem
+                      color={color}
+                      href="#"
+                      title="Colors"
+                    >
                       Beautiful, thought-out palettes with auto dark mode.
                     </NavigationMenu.ListItem>
                     <NavigationMenu.ListItem
+                      color={color}
                       href="https://icons.radix-ui.com/"
                       title="Icons"
                     >
@@ -116,10 +125,10 @@ export default function NavigationMenuDemo() {
               </NavigationMenu.Item>
 
               <NavigationMenu.Item>
-                <NavigationMenu.Trigger>
+                <NavigationMenu.Trigger color={color}>
                   Overview <NavigationMenu.CaretDown />
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content>
+                <NavigationMenu.Content color={color}>
                   <ul className="m-0 grid list-none gap-[10px] p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-3">
                     {links.map(({ children, href, title }) => (
                       <li key={href}>

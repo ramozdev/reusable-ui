@@ -11,10 +11,10 @@ export default function HoverCardDemo() {
   return (
     <div>
       <Text.H3>Hover Card</Text.H3>
-      <div className="grid w-96 grid-cols-2 gap-y-4">
+      <div className="grid w-96 grid-cols-2 gap-y-3">
         {colors.map((color) => (
           <Fragment key={`hover-${color}`}>
-            <Label>{color}</Label>
+            <Label className="capitalize">{color}</Label>
             <HoverCard.Root>
               <HoverCard.Trigger asChild>
                 <a
