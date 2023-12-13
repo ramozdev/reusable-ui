@@ -13,12 +13,14 @@ import SeparatorDemo from "@/components/homepage/separator";
 import { ScrollAreaDemo } from "@/components/homepage/scroll-area";
 import { AlertDialogDemo } from "@/components/homepage/alert-dialog";
 import { AspectRatioDemo } from "@/components/homepage/aspect-ratio";
+import { AvatarDemo } from "@/components/homepage/avatar";
 
 export default function Page() {
   return (
     <div className="mx-auto my-12 max-w-screen-xl space-y-8">
       <AlertDialogDemo />
       <AspectRatioDemo />
+      <AvatarDemo />
       <ContextMenuDemo />
       <DropdownMenuDemo />
       <DialogDemo />
