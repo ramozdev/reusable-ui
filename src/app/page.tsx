@@ -10,6 +10,7 @@ import CardDemo from "@/components/homepage/card";
 import LabelDemo from "@/components/homepage/label";
 import CodeDemo from "@/components/homepage/code";
 import { HoverCardDemo } from "@/components/homepage/hover-card";
+import { PopoverDemo } from "@/components/homepage/popover";
 
 export default function Page() {
   return (
@@ -26,6 +27,7 @@ export default function Page() {
       <LabelDemo />
       <CodeDemo />
       <HoverCardDemo />
+      <PopoverDemo />
     </div>
   );
 }
