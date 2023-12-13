@@ -9,7 +9,7 @@ import { Fragment } from "react";
 import { colors } from "@/lib/colors";
 import Text from "@/ui/html/text";
 
-export function PopoverDemo() {
+export default function PopoverDemo() {
   return (
     <div>
       <Text.H3>Popover</Text.H3>

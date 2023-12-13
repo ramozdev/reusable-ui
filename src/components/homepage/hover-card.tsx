@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Fragment } from "react";
 import Text from "@/ui/html/text";
 
-export function HoverCardDemo() {
+export default function HoverCardDemo() {
   return (
     <div>
       <Text.H3>Hover Card</Text.H3>

@@ -9,8 +9,9 @@ import AnchorDemo from "@/components/homepage/anchor";
 import CardDemo from "@/components/homepage/card";
 import LabelDemo from "@/components/homepage/label";
 import CodeDemo from "@/components/homepage/code";
-import { HoverCardDemo } from "@/components/homepage/hover-card";
-import { PopoverDemo } from "@/components/homepage/popover";
+import HoverCardDemo from "@/components/homepage/hover-card";
+import PopoverDemo from "@/components/homepage/popover";
+import TabsDemo from "@/components/homepage/tabs";
 
 export default function Page() {
   return (
@@ -28,6 +29,7 @@ export default function Page() {
       <CodeDemo />
       <HoverCardDemo />
       <PopoverDemo />
+      <TabsDemo />
     </div>
   );
 }
