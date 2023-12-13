@@ -2,13 +2,14 @@ import { colors } from "@/lib/colors";
 import Badge from "@/ui/html/badge";
 import Card from "@/ui/html/card";
 import Text from "@/ui/html/text";
+import { Fragment } from "react";
 
 export default function BadgeDemo() {
   return (
     <div>
       <Text.H3>Badge</Text.H3>
       {colors.map((color) => (
-        <div key={color}>
+        <Fragment key={`badge-${color}`}>
           <p className="font-semibold">{color}</p>
           <div className="space-y-2">
             <Card className="space-x-2">
@@ -35,7 +36,7 @@ export default function BadgeDemo() {
               </Badge.Subtle>
             </Card>
           </div>
-        </div>
+        </Fragment>
       ))}
     </div>
   );
