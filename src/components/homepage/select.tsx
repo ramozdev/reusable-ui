@@ -7,7 +7,7 @@ export default function SelectDemo() {
     <div>
       <Text.H3>Select</Text.H3>
       {colors.map((color) => (
-        <div key={color}>
+        <div key={`select${color}`}>
           <p className="font-semibold">{color}</p>
           <Select color={color}>
             <option>Option 1</option>

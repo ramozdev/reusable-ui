@@ -7,7 +7,7 @@ export default function CheckboxDemo() {
     <div>
       <Text.H3>Checkbox</Text.H3>
       {colors.map((color) => (
-        <div key={color}>
+        <div key={`checkbox-${color}`}>
           <p className="font-semibold">{color}</p>
           <div className="flex space-x-2">
             <Checkbox color={color} />

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { type VariantProps, cva, cx } from "class-variance-authority";
+import { type VariantProps, cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
 const label = cva("font-medium text-sm leading-loose", {

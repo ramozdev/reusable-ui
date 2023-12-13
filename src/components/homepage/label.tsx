@@ -10,7 +10,7 @@ export default function LabelDemo() {
       <Text.H3>Label</Text.H3>
       <Card className="max-w-sm">
         {colors.map((color) => (
-          <div key={color}>
+          <div key={`label-${color}`}>
             <Label color={color}>{color.toUpperCase()}</Label>
           </div>
         ))}

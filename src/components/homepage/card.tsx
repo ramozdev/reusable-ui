@@ -23,7 +23,7 @@ export default function CardDemo() {
         onChange={handleColor}
       >
         {colors.map((color) => (
-          <option key={color} value={color}>
+          <option key={`card-${color}`} value={color}>
             {color}
           </option>
         ))}

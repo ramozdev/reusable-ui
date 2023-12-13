@@ -7,7 +7,7 @@ export default function TextareaDemo() {
     <div>
       <Text.H3>TextArea</Text.H3>
       {colors.map((color) => (
-        <div key={color}>
+        <div key={`textare-${color}`}>
           <p className="font-semibold">{color}</p>
           <div className="flex space-x-2">
             <Textarea placeholder={color} color={color} />

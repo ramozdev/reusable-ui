@@ -5,11 +5,11 @@ import TextInput from "@/ui/html/text-input";
 export default function TextInputDemo() {
   return (
     <div>
-      <Text.H3>Select</Text.H3>
+      <Text.H3>Text Input</Text.H3>
       <div className="flex space-x-5">
         <div>
           {colors.map((color) => (
-            <div key={color}>
+            <div key={`text-input-${color}`}>
               <p className="font-semibold">{color}</p>
               <TextInput color={color} />
             </div>

@@ -4,7 +4,7 @@ import Text from "@/ui/html/text";
 
 export default function AnchorDemo() {
   const solidAnchors = colors.map((color) => (
-    <div key={color} className="flex space-x-4">
+    <div key={`anchor-${color}`} className="flex space-x-4">
       <Anchor.Solid color={color} href="#">
         Default
       </Anchor.Solid>
@@ -40,18 +40,21 @@ export default function AnchorDemo() {
   ));
 
   return (
-    <div className="grid grid-cols-3 gap-4">
-      <div className="space-y-4">
-        <Text.H3>Solid</Text.H3>
-        {solidAnchors}
-      </div>
-      <div className="space-y-4">
-        <Text.H3>Subtle</Text.H3>
-        {subtleAnchors}
-      </div>
-      <div className="space-y-4">
-        <Text.H3>Underline</Text.H3>
-        {underlineAnchors}
+    <div>
+      <Text.H3>Anchors</Text.H3>
+      <div className="grid grid-cols-3 gap-4">
+        <div className="space-y-4">
+          <Text.H4>Solid</Text.H4>
+          {solidAnchors}
+        </div>
+        <div className="space-y-4">
+          <Text.H4>Subtle</Text.H4>
+          {subtleAnchors}
+        </div>
+        <div className="space-y-4">
+          <Text.H4>Underline</Text.H4>
+          {underlineAnchors}
+        </div>
       </div>
     </div>
   );

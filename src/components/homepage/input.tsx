@@ -7,7 +7,7 @@ export default function InputDemo() {
     <div>
       <Text.H3>Inputs</Text.H3>
       {colors.map((color) => (
-        <div key={color}>
+        <div key={`input-${color}`}>
           <p className="font-semibold">{color}</p>
           <div className="flex space-x-2">
             <Input placeholder={color} color={color} />

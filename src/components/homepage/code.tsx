@@ -4,7 +4,7 @@ import Text from "@/ui/html/text";
 
 export default function CodeDemo() {
   const defaultCode = colors.map((color) => (
-    <div key={color} className="flex space-x-4">
+    <div key={`code-${color}`} className="flex space-x-4">
       <Code color={color}>console.log()</Code>
     </div>
   ));
