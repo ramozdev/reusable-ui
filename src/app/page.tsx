@@ -9,6 +9,7 @@ import AnchorDemo from "@/components/homepage/anchor";
 import CardDemo from "@/components/homepage/card";
 import LabelDemo from "@/components/homepage/label";
 import CodeDemo from "@/components/homepage/code";
+import { HoverCardDemo } from "@/components/homepage/hover-card";
 
 export default function Page() {
   return (
@@ -24,6 +25,7 @@ export default function Page() {
       <CardDemo />
       <LabelDemo />
       <CodeDemo />
+      <HoverCardDemo />
     </div>
   );
 }
