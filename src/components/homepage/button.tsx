@@ -7,7 +7,7 @@ export default function ButtonDemo() {
     <div>
       <Text.H3>Buttons</Text.H3>
       {colors.map((color) => (
-        <div key={color}>
+        <div key={`button-${color}`}>
           <p className="font-semibold">{color}</p>
           <div className="space-y-2">
             <div>

@@ -14,6 +14,16 @@ import { ScrollAreaDemo } from "@/components/homepage/scroll-area";
 import { AlertDialogDemo } from "@/components/homepage/alert-dialog";
 import { AspectRatioDemo } from "@/components/homepage/aspect-ratio";
 import { AvatarDemo } from "@/components/homepage/avatar";
+import TextInputDemo from "@/components/homepage/text-input";
+import AnchorDemo from "@/components/homepage/anchor";
+import CardDemo from "@/components/homepage/card";
+import LabelDemo from "@/components/homepage/label";
+import CodeDemo from "@/components/homepage/code";
+import HoverCardDemo from "@/components/homepage/hover-card";
+import PopoverDemo from "@/components/homepage/popover";
+import TabsDemo from "@/components/homepage/tabs";
+import SliderDemo from "@/components/homepage/slider";
+import NavigationMenuDemo from "@/components/homepage/navigation-menu";
 
 export default function Page() {
   return (
@@ -34,6 +44,16 @@ export default function Page() {
       <BadgeDemo />
       <Buttons />
       <SelectDemo />
+      <TextInputDemo />
+      <AnchorDemo />
+      <CardDemo />
+      <LabelDemo />
+      <CodeDemo />
+      <HoverCardDemo />
+      <PopoverDemo />
+      <TabsDemo />
+      <SliderDemo />
+      <NavigationMenuDemo />
     </div>
   );
 }
